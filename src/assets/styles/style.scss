@@ -1,0 +1,142 @@
+
+@import "variables";
+@import "fonts";
+
+@import "basestyle";
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: $cWhite;
+
+    min-width: 400px;
+    
+    display: grid;
+    grid-template-areas:
+        'line' 
+        'header'
+        'main'
+        'footer'
+    ;
+
+    
+
+}
+
+main {
+    grid-area: main;
+    width: 100vw;
+    
+    flex: 1;
+}
+
+section {
+    margin-bottom: 6rem;
+}
+
+.container-center{
+    max-width: calc(1300px + 2rem);
+    padding: 0 1.2rem;
+    justify-self: center;
+}
+
+.container-full{
+    width: 100%;
+    padding: 0 1.2rem;
+}
+
+@media screen and (min-width: 1024px) { 
+    body {
+        background-size: 180px;
+
+    }
+
+    section {
+        margin-bottom: 12rem;
+    }
+    
+
+    .container-center { 
+        padding: 0 2rem;
+    }
+
+
+}
+
+
+@media screen and (min-width: 1440px) { 
+
+    .container-full{
+        width: 80%;
+        min-width: 1440px;
+    }
+    
+
+}
+
+
+/* ---------- Line ---------- */
+
+.line {
+    grid-area: line;
+    min-height: 10px;
+    width: 100%;
+    z-index: 3;
+    display: none;
+    background: linear-gradient(to right,
+        $color1 14.286%,
+        $color2 14.286% 28.57%,
+        $color3 28.57% 42.85%,
+        $color4 42.85% 57.142%,
+        $color5 57.142% 71.428%,
+        $color6 71.428% 85.714%,
+        $color7 85.714% 100%);
+}
+
+@media screen and (min-width: 1024px) {
+
+    .line{
+        display: flex;
+    }
+
+}
+
+.line2 {
+    min-height: 10px;
+    width: 100%;
+}
+
+
+
+/* ------------------------------------------------------------------- */
+
+
+.main-music,
+.main-artists,
+.main-radio,
+.main-video,
+.main-merch,
+.main-about,
+.main-contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+// @import "./views/index";
+// //@import "./views/music";
+// @import "./views/artists";
+// @import "./views/radio";
+// @import "./views/videos";
+// @import "./views/merch";
+// @import "./views/about";
+// @import "./views/contact";
+
+
+
+ /* background: rgba(255, 255, 255, 0.05);
+        box-shadow: 0 4px 30px rgb(0 0 0 / 10%);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(5.8px);
+        border: 2px solid rgba(255, 255, 255, 2); */

@@ -1,0 +1,444 @@
+<script>
+export default {};
+</script>
+
+<template lang="">
+  <header class="header">
+    <input type="checkbox" name="burger-btn" id="burger" />
+    <div class="header__logo-burger">
+      <svg
+        class="header__line"
+        width="203"
+        height="2"
+        viewBox="0 0 203 2"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M1.73206 1L201.732 0.999983"
+          stroke="white"
+          stroke-width="2"
+          stroke-linecap="round"
+        />
+      </svg>
+
+      <router-link class="header__logo" to="/">
+        <img alt="OWSLA Logo"
+      /></router-link>
+
+      <svg
+        class="header__line"
+        width="203"
+        height="2"
+        viewBox="0 0 203 2"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M1.73206 1L201.732 0.999983"
+          stroke="white"
+          stroke-width="2"
+          stroke-linecap="round"
+        />
+      </svg>
+
+      <label for="burger" class="burger-btn"><div class="burger"></div></label>
+    </div>
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <router-link class="nav__link" to="/music">Music</router-link>
+        </li>
+        <li class="nav__item">
+          <router-link class="nav__link" to="/artists">Artists</router-link>
+        </li>
+        <li class="nav__item">
+          <router-link class="nav__link" to="/videos">Videos</router-link>
+        </li>
+        <li class="nav__item">
+          <router-link class="nav__link" to="/radio">Radio</router-link>
+        </li>
+        <li class="nav__item">
+          <router-link class="nav__link" to="/nest">NEST</router-link>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="https://owslagoods.netlify.app/">Merch</a>
+        </li>
+        <li class="nav__item">
+          <router-link class="nav__link" to="/contact">Contact</router-link>
+        </li>
+      </ul>
+    </nav>
+  </header>
+</template>
+
+<style lang="scss">
+/* -------------------- Header -------------------- */
+
+.header {
+  grid-area: header;
+
+  @include flex(column, nowrap);
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  #burger {
+    display: none;
+
+    &:checked + .header__logo-burger > .burger-btn > .burger {
+      width: 0;
+    }
+
+    &:checked + .header__logo-burger > .burger-btn > .burger::before {
+      top: 0;
+      width: 34px;
+      transform: rotate(-45deg);
+      transition: all 0.5s;
+    }
+
+    &:checked + .header__logo-burger > .burger-btn > .burger::after {
+      top: 0;
+      width: 34px;
+      transform: rotate(45deg);
+      transition: all 0.5s;
+    }
+
+    &:checked ~ .nav {
+      max-height: 100%;
+      transition: all 1s;
+    }
+  }
+
+  .header__logo-burger {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    z-index: 2;
+
+    .header__line {
+      display: none;
+      margin: 0 4rem;
+    }
+
+    .burger-btn {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      height: 34px;
+      width: 34px;
+      cursor: pointer;
+
+      .burger {
+        position: relative;
+        width: 22px;
+
+        &::before {
+          top: -10px;
+          width: 34px;
+          transition: all 0.5s;
+        }
+
+        &::after {
+          top: 10px;
+          width: 28px;
+          transition: all 0.5s;
+        }
+      }
+
+      .burger,
+      .burger::before,
+      .burger::after {
+        height: 3px;
+        border-radius: 5px;
+        background-color: $cWhite;
+      }
+
+      .burger::before,
+      .burger::after {
+        content: "";
+        position: absolute;
+        right: 0;
+      }
+    }
+  }
+
+  .header__logo img {
+    max-height: 42px;
+    content: url(@/assets/image/owslaLogo2.svg);
+  }
+}
+
+/* ---------- Navbar ---------- */
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  position: absolute;
+  top: 70px;
+  right: 0;
+
+  background-color: $cBlack;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  transition: all 1s;
+  max-height: 0;
+  overflow: hidden;
+
+  &--column {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 1rem 0;
+
+    .nav__item {
+      display: flex;
+      width: 100%;
+      margin: -1px 1rem;
+
+      .nav__link {
+        @extend .f-monument;
+        position: relative;
+        color: $cBlack;
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        font-weight: 500;
+        line-height: calc(150%);
+
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0;
+          height: 4px;
+          border-radius: 5px;
+          transition: all 0.5s;
+        }
+      }
+
+      @include respond(md) {
+        width: auto;
+      }
+    }
+  }
+}
+
+.nav__item:nth-child(1),
+.nav__item:nth-child(1).nav__item--active .nav__link::after,
+.nav__item:nth-child(1) .nav__link:hover::after {
+  background-color: $color1;
+  width: 100%;
+}
+
+.nav__item:nth-child(2),
+.nav__item:nth-child(2).nav__item--active .nav__link::after,
+.nav__item:nth-child(2) .nav__link:hover::after {
+  background-color: $color2;
+  width: 100%;
+}
+
+.nav__item:nth-child(3),
+.nav__item:nth-child(3).nav__item--active .nav__link::after,
+.nav__item:nth-child(3) .nav__link:hover::after {
+  background-color: $color3;
+  width: 100%;
+}
+
+.nav__item:nth-child(4),
+.nav__item:nth-child(4).nav__item--active .nav__link::after,
+.nav__item:nth-child(4) .nav__link:hover::after {
+  background-color: $color4;
+  width: 100%;
+}
+
+.nav__item:nth-child(5),
+.nav__item:nth-child(5).nav__item--active .nav__link::after,
+.nav__item:nth-child(5) .nav__link:hover::after {
+  background-color: $color5;
+  width: 100%;
+}
+
+.nav__item:nth-child(6),
+.nav__item:nth-child(6).nav__item--active .nav__link::after,
+.nav__item:nth-child(6) .nav__link:hover::after {
+  background-color: $color6;
+  width: 100%;
+}
+
+.nav__item:nth-child(7),
+.nav__item:nth-child(7).nav__item--active .nav__link::after,
+.nav__item:nth-child(7) .nav__link:hover::after {
+  background-color: $color7;
+  width: 100%;
+}
+
+.nav__solcial-media {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  .nav__icon {
+    margin: 0.5rem;
+    display: flex;
+
+    a {
+      padding: 0.5rem;
+
+      svg {
+        height: 24px;
+        width: auto;
+
+        path {
+          fill: $cWhite;
+        }
+
+        circle {
+          fill: $cWhite;
+        }
+      }
+
+      #soundcloud {
+        height: 20px;
+      }
+
+      &:hover {
+        path {
+          fill: $color1;
+        }
+
+        circle {
+          fill: $cWhite;
+        }
+      }
+    }
+  }
+}
+
+.nav__solcial-media--column {
+  flex-direction: column;
+
+  .nav__icon {
+    margin: 0.5rem;
+    display: flex;
+
+    a {
+      padding: 0.5rem;
+
+      svg {
+        height: 28px;
+        width: 28px;
+      }
+
+      #soundcloud {
+        width: 32px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /* -------------------- Header / Navbar -------------------- */
+
+  .header {
+    justify-content: space-between;
+    padding: 2rem 2rem 3rem;
+
+    .burger {
+      display: none;
+    }
+
+    .header__logo-burger {
+      width: fit-content;
+      padding: 0;
+      margin-bottom: 2rem;
+
+      .header__line {
+        display: block;
+      }
+
+      .header__logo img {
+        max-height: 100px;
+        content: url(@/assets/image/owslaLogo.svg);
+      }
+
+      .burger-btn {
+        display: none;
+      }
+    }
+  }
+
+  /* ---------- Navbar ---------- */
+
+  .nav {
+    flex-direction: row;
+    position: relative;
+    top: 0;
+    width: fit-content;
+    height: fit-content;
+    background-color: transparent;
+    max-height: 100%;
+
+    &--column {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .nav__list {
+      flex-direction: row;
+      width: fit-content;
+
+      .nav__item {
+        .nav__link {
+          padding: 0;
+          color: $cWhite;
+          -webkit-text-stroke: 0.5px $cWhite;
+
+          &::after {
+            bottom: -8px;
+          }
+        }
+      }
+    }
+  }
+
+  .nav__item:nth-child(1),
+  .nav__item:nth-child(2),
+  .nav__item:nth-child(3),
+  .nav__item:nth-child(4),
+  .nav__item:nth-child(5),
+  .nav__item:nth-child(6),
+  .nav__item:nth-child(7) {
+    background-color: transparent;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  /* -------------------- Header / Navbar -------------------- */
+
+  .nav {
+    justify-content: space-between;
+  }
+
+  .nav__solcial-media {
+    display: flex;
+  }
+}
+</style>
