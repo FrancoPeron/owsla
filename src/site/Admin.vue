@@ -13,7 +13,7 @@
         urlsImgOld: [],
         urlsImgNew: [],
         nameImgNew: [],
-        urlfirebase: "artists",
+        urlfirebase: "owslaradio",
         data: artists
       };
     },
