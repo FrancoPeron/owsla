@@ -1,13 +1,10 @@
-<script>
-export default {};
-</script>
+<script></script>
 
 <template lang="">
   <header class="header">
     <input type="checkbox" name="burger-btn" id="burger" />
     <div class="header__logo-burger">
-      <svg
-        class="header__line"
+      <svg class="header__line"
         width="203"
         height="2"
         viewBox="0 0 203 2"
@@ -86,25 +83,25 @@ export default {};
   #burger {
     display: none;
 
-    &:checked + .header__logo-burger > .burger-btn > .burger {
+    &:checked+.header__logo-burger>.burger-btn>.burger {
       width: 0;
     }
 
-    &:checked + .header__logo-burger > .burger-btn > .burger::before {
+    &:checked+.header__logo-burger>.burger-btn>.burger::before {
       top: 0;
       width: 34px;
       transform: rotate(-45deg);
       transition: all 0.5s;
     }
 
-    &:checked + .header__logo-burger > .burger-btn > .burger::after {
+    &:checked+.header__logo-burger>.burger-btn>.burger::after {
       top: 0;
       width: 34px;
       transform: rotate(45deg);
       transition: all 0.5s;
     }
 
-    &:checked ~ .nav {
+    &:checked~.nav {
       max-height: 100%;
       transition: all 1s;
     }
@@ -359,7 +356,7 @@ export default {};
 
   .header {
     justify-content: space-between;
-    padding: 2rem 2rem 3rem;
+    padding-top: 2rem;
 
     .burger {
       display: none;
@@ -369,6 +366,10 @@ export default {};
       width: fit-content;
       padding: 0;
       margin-bottom: 2rem;
+
+      a{
+        height: 100px;
+      }
 
       .header__line {
         display: block;
@@ -404,6 +405,7 @@ export default {};
     .nav__list {
       flex-direction: row;
       width: fit-content;
+      margin: 0 0 1rem;
 
       .nav__item {
         .nav__link {
@@ -435,6 +437,7 @@ export default {};
 
   .nav {
     justify-content: space-between;
+    margin-bottom: 1rem;
   }
 
   .nav__solcial-media {

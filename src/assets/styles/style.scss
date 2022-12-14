@@ -34,8 +34,7 @@ section {
 }
 
 .container-center{
-    max-width: calc(1000px + 2rem);
-    padding: 0 1.2rem;
+    max-width: 1000px;
     justify-self: center;
 }
 
@@ -52,11 +51,6 @@ section {
 
     section {
         margin-bottom: 12rem;
-    }
-    
-
-    .container-center { 
-        padding: 0 2rem;
     }
 
 

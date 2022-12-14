@@ -173,8 +173,7 @@ export default {
         .slider__video {
           height: 100%;
           width: 100%;
-          min-height: 550px;
-          max-height: 650px;
+          max-height: 562.5px;
           object-fit: cover;
         }
 
@@ -199,13 +198,13 @@ export default {
 
           .slider__title {
             @extend .f-monument;
-            @extend .f-bt;
+            @extend .f-h;
             letter-spacing: 0.3rem;
             font-weight: 700;
             color: $cWhite;
 
             .slider__subtitle {
-              @extend .f-hl1;
+              @extend .f-hl2;
               font-weight: 500;
               margin-bottom: 1rem;
 
@@ -220,7 +219,7 @@ export default {
               //font-size: clamp(1.25rem, 5vw, 2.25rem);
               margin-left: 0.1rem;
               color: transparent;
-              -webkit-text-stroke: 1.5px $cWhite;
+              -webkit-text-stroke: 1.2px $cWhite;
             }
           }
 
