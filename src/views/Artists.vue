@@ -106,7 +106,7 @@ $artists-grid: minmax(300px, 1fr);
 
   .main-artists__title {
     @extend %f-monument;
-    @extend .f-bt2;
+    @extend %f-bt2;
     color: $cWhite;
 
     text-align: center;
@@ -117,7 +117,7 @@ $artists-grid: minmax(300px, 1fr);
     &::before {
       content: "-";
 
-      @extend .f-bt2;
+      @extend %f-bt2;
       color: $cWhite;
       margin-right: 3rem;
     }
@@ -125,7 +125,7 @@ $artists-grid: minmax(300px, 1fr);
     &::after {
       content: "-";
 
-      @extend .f-bt2;
+      @extend %f-bt2;
       color: $cWhite;
       margin-left: 3rem;
     }
@@ -154,7 +154,7 @@ $artists-grid: minmax(300px, 1fr);
 
   .artist__name {
     @extend %f-monument;
-    @extend .f-hl1;
+    @extend %f-hl1;
     line-height: calc(140%);
     letter-spacing: 0.05rem;
     color: $cBlack;
@@ -193,7 +193,7 @@ $artists-grid: minmax(300px, 1fr);
 
 .modal-title {
   @extend %f-monument;
-  @extend .f-t2;
+  @extend %f-t2;
 }
 
 @media screen and (min-width: 768px) {
