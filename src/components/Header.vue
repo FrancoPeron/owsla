@@ -206,7 +206,7 @@
       margin: -1px 1rem;
 
       .nav__link {
-        @extend .f-monument;
+        @extend %f-monument;
         position: relative;
         color: $cBlack;
         font-size: 1rem;

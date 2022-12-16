@@ -55,7 +55,7 @@ $music-grid: minmax(240px, 1fr);
 
 .main-music {
   .main-music__background {
-    @extend .backgrounds-pos;
+    @extend %backgrounds-pos;
     background: url(https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/background%2Fmain-music.webp?alt=media&token=ca5751aa-6cbe-4fd3-9e9e-4df998f55147);
     background-size: cover;
     background-position: center;
@@ -82,7 +82,7 @@ $music-grid: minmax(240px, 1fr);
   }
 
   .main-music__title {
-    @extend .f-monument;
+    @extend %f-monument;
     @extend .f-bt2;
     color: $cWhite;
 
@@ -140,14 +140,14 @@ $music-grid: minmax(240px, 1fr);
     padding: 1rem;
 
     .release__title {
-      @extend .f-headline;
+      @extend %f-headline;
       color: $cWhite;
       text-align: center;
       margin-bottom: 1rem;
     }
 
     .release__artist {
-      @extend .f-body;
+      @extend %f-body;
       color: $cWhite;
       text-align: center;
     }

@@ -29,7 +29,7 @@ $video-grid: minmax(48%, 1fr);
 
 .main-video {
   .main-video__background {
-    @extend .backgrounds-pos;
+    @extend %backgrounds-pos;
     background: url(https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/background%2Fmain-video.gif?alt=media&token=eea0e7fc-7c78-4e49-98c5-3c65ec09ee80);
     background-size: cover;
     background-position: center;
@@ -46,7 +46,7 @@ $video-grid: minmax(48%, 1fr);
   }
 
   .main-video__title {
-    @extend .f-monument;
+    @extend %f-monument;
     @extend .f-bt2;
     color: $cWhite;
 
@@ -145,7 +145,7 @@ $video-grid: minmax(48%, 1fr);
   }
 
   .video-item__title {
-    @extend .f-monument;
+    @extend %f-monument;
     @extend .f-hl1;
     line-height: calc(140%);
     font-weight: 500;

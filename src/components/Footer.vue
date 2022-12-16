@@ -240,7 +240,7 @@ export default {};
   }
 
   .footer__copyright {
-    @extend .f-headline;
+    @extend %f-headline;
     color: $cWhite;
     margin-top: 2rem;
     margin-bottom: 1rem;

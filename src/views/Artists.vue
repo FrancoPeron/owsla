@@ -66,14 +66,14 @@
   }  
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 /* ------------------------------ Artists ------------------------------ */
 
 $artists-grid: minmax(300px, 1fr);
 
 .main-artists {
   .main-artists__background {
-    @extend .backgrounds-pos;
+    @extend %backgrounds-pos;
     background: url(https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/background%2Fmain-artists.webp?alt=media&token=ab1cccfa-d469-4700-962d-87e774f9dc4a);
     background-size: cover;
     background-position: center;
@@ -105,7 +105,7 @@ $artists-grid: minmax(300px, 1fr);
   }
 
   .main-artists__title {
-    @extend .f-monument;
+    @extend %f-monument;
     @extend .f-bt2;
     color: $cWhite;
 
@@ -149,11 +149,11 @@ $artists-grid: minmax(300px, 1fr);
     height: 400px;
     object-fit: cover;
     cursor: pointer;
-    // @extend .shadow;
+    // @extend %shadow;
   }
 
   .artist__name {
-    @extend .f-monument;
+    @extend %f-monument;
     @extend .f-hl1;
     line-height: calc(140%);
     letter-spacing: 0.05rem;
@@ -192,7 +192,7 @@ $artists-grid: minmax(300px, 1fr);
 }
 
 .modal-title {
-  @extend .f-monument;
+  @extend %f-monument;
   @extend .f-t2;
 }
 

@@ -1,89 +1,3 @@
-<template>
-  <section class="banner">
-    <div class="slider">
-      <div class="slider__videos">
-        <input type="radio" name="radio-btn" id="radio1" />
-        <input type="radio" name="radio-btn" id="radio2" />
-        <input type="radio" name="radio-btn" id="radio3" />
-        <div id="video1" class="slider__box-video">
-          <video
-            class="slider__video"
-            src="@/assets/video/WarmWinters.webm"
-            muted
-            loop
-            autoplay
-          ></video>
-          <div class="slider__box-info">
-            <h2 class="slider__title">
-              <p class="slider__subtitle">Collection Clothing</p>
-              Warm Winters<br />
-              <p class="slider__title--outline">OWSLA GOODS</p>
-            </h2>
-            <a
-              class="slider__btn"
-              href="https://www.youtube.com/watch?v=k4XX7TTeTvI"
-              target="_blank"
-              >Watch Now</a
-            >
-          </div>
-        </div>
-        <div id="video2" class="slider__box-video">
-          <video
-            class="slider__video"
-            src="@/assets/video/BirdyNamNam-Goinin.mp4#t=15"
-            muted
-            loop
-            autoplay
-          ></video>
-          <div class="slider__box-info">
-            <h2 class="slider__title">
-              <p class="slider__subtitle">Music Video</p>
-              Goin'in<br />
-              <p class="slider__title--outline">Birdy Nam Nam</p>
-            </h2>
-            <a
-              class="slider__btn"
-              href="https://www.youtube.com/watch?v=3JJsq0GbpPg"
-              target="_blank"
-              >Watch Now</a
-            >
-          </div>
-        </div>
-        <div id="video3" class="slider__box-video">
-          <video
-            class="slider__video"
-            src="@/assets/video/FriendlyFire.mp4#t=0"
-            muted
-            loop
-            autoplay
-          ></video>
-          <div class="slider__box-info">
-            <h2 class="slider__title">
-              <p class="slider__subtitle">Music Video</p>
-              Frendly Fire<br />
-              <p class="slider__title--outline">Skrillex</p>
-            </h2>
-            <a
-              class="slider__btn"
-              href="https://www.youtube.com/watch?v=F6CNaD21gC0"
-              target="_blank"
-              >Watch Now</a
-            >
-          </div>
-        </div>
-
-        <!-- <img class="slider__img" src="@/assets/image/slider3.jpg" alt=""> -->
-      </div>
-
-      <div class="slider__nav">
-        <label class="slider__link" id="label-radio1" for="radio1"></label>
-        <label class="slider__link" id="label-radio2" for="radio2"></label>
-        <label class="slider__link" id="label-radio3" for="radio3"></label>
-      </div>
-    </div>
-  </section>
-</template>
-
 <script>
 export default {
   mounted() {
@@ -144,13 +58,68 @@ export default {
 }
 </script>
 
+
+<template>
+  <section class="banner">
+    <div class="slider">
+      <div class="slider__videos">
+        
+        <input type="radio" name="radio-btn" id="radio1" />
+        <input type="radio" name="radio-btn" id="radio2" />
+        <input type="radio" name="radio-btn" id="radio3" />
+
+        <div id="video1" class="slider__box-video">
+          <video class="slider__video" src="@/assets/video/WarmWinters.webm" muted loop autoplay></video>
+
+          <div class="slider__box-info">
+            <p class="slider__category">Collection Clothing</p>
+            <h2 class="slider__title">Warm Winters<br/></h2>
+            <p class="slider__subtitle">OWSLA GOODS</p>
+            <a class="slider__btn" href="https://www.youtube.com/watch?v=k4XX7TTeTvI" target="_blank">Watch Now</a>
+          </div>
+        </div>
+
+        <div id="video2" class="slider__box-video">
+          <video class="slider__video" src="@/assets/video/BirdyNamNam-Goinin.mp4#t=15" muted loop autoplay></video>
+          
+          <div class="slider__box-info">
+            <p class="slider__category">Music Video</p>
+            <h2 class="slider__title">Goin'in<br/></h2>
+            <p class="slider__subtitle">Birdy Nam Nam</p>
+            <a class="slider__btn" href="https://www.youtube.com/watch?v=3JJsq0GbpPg" target="_blank">Watch Now</a>
+          </div>
+        </div>
+
+        <div id="video3" class="slider__box-video">
+          <video  class="slider__video"  src="@/assets/video/FriendlyFire.mp4#t=0" muted loop autoplay></video>
+          
+          <div class="slider__box-info">
+            <p class="slider__category">Music Video</p>
+            <h2 class="slider__title">Frendly Fire<br/></h2>
+            <p class="slider__subtitle">Skrillex</p>
+            <a class="slider__btn" href="https://www.youtube.com/watch?v=F6CNaD21gC0" target="_blank">Watch Now</a>
+          </div>
+        </div>
+
+        <!-- <img class="slider__img" src="@/assets/image/slider3.jpg" alt=""> -->
+      </div>
+
+      <div class="slider__nav">
+        <label class="slider__link" id="label-radio1" for="radio1"></label>
+        <label class="slider__link" id="label-radio2" for="radio2"></label>
+        <label class="slider__link" id="label-radio3" for="radio3"></label>
+      </div>
+    </div>
+  </section>
+</template>
+
 <style lang="scss" scoped>
 
   /* -------------------- Banner -------------------- */
 
   .banner {
     grid-area: banner;
-    @extend .container-center;
+    @extend %container-center;
     width: 100%;
   }
 
@@ -171,9 +140,9 @@ export default {
         transition: all ease-in-out 0.5s;
 
         .slider__video {
-          height: 100%;
           width: 100%;
-          max-height: 562.5px;
+          height: 570px;
+          // aspect-ratio: 16/8;
           object-fit: cover;
         }
 
@@ -181,57 +150,64 @@ export default {
           position: absolute;
           bottom: 0;
 
-          display: flex;
+          display: grid;
+          grid-template-areas:
+            "category btn"
+            "title btn"
+            "subtitle btn";
+            gap: 1rem;
           flex-wrap: wrap;
           align-items: flex-end;
           justify-content: space-between;
           z-index: 1;
           width: 100%;
-          min-height: 350px;
           padding: 2rem 3rem;
           background: rgb(0, 0, 0);
-          background: linear-gradient(
-            0deg,
-            rgba(0, 0, 0, 0.95) 0%,
-            rgba(0, 0, 0, 0) 100%
-          );
-
-          .slider__title {
-            @extend .f-monument;
-            @extend .f-h;
-            letter-spacing: 0.3rem;
-            font-weight: 700;
+          background: linear-gradient(0deg, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0) 100%);
+          
+          .slider__category {
+            grid-area: category;
+            @extend %f-monument;
+            @extend %f-hl2;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            font-weight: 500;
             color: $cWhite;
 
-            .slider__subtitle {
-              @extend .f-hl2;
-              font-weight: 500;
-              margin-bottom: 1rem;
-
-              &::before {
-                content: "|";
-                margin-right: 1rem;
-              }
-            }
-
-            .slider__title--outline {
-              @extend .f-t1;
-              //font-size: clamp(1.25rem, 5vw, 2.25rem);
-              margin-left: 0.1rem;
-              color: transparent;
-              -webkit-text-stroke: 1.2px $cWhite;
+            &::before {
+              content: "|";
+              margin-right: 1rem;
             }
           }
-
+          .slider__title {
+            grid-area: title;
+            @extend %f-monument;
+            @extend %f-h;
+            letter-spacing: 0.3rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: $cWhite;
+          }
+          .slider__subtitle {
+            grid-area: subtitle;
+            @extend %f-monument;
+            @extend %f-t1;
+            color: transparent;
+            letter-spacing: 0.1em;
+            font-weight: 700;
+            -webkit-text-stroke: 1.2px $cWhite;
+          }
+          
           .slider__btn {
-            @extend .btn__outline;
-            margin-bottom: 1rem;
+            grid-area: btn;
+            align-self: flex-end;
+            @extend %btn__outline;
           }
         }
       }
 
       #video1 {
-        .slider__subtitle {
+        .slider__category {
           &::before {
             color: $color2;
           }
@@ -245,7 +221,7 @@ export default {
         top: 0;
         margin-top: auto;
         margin-bottom: auto;
-        .slider__subtitle {
+        .slider__category {
           &::before {
             color: $color5;
           }
@@ -326,4 +302,23 @@ export default {
   }
   /*#t=30*/
 
+  @media screen and (max-width: 600px) { 
+    .slider__box-info {
+      grid-template-areas:
+        "category"
+        "title"
+        "subtitle"
+        "btn" !important;
+        gap: 24px;
+      }
+
+      .active2 {
+        width:100%;
+
+      }
+
+  }
+
 </style>
+
+//aregglar nav sincroniza y se acomoda mal

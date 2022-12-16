@@ -36,7 +36,7 @@
 
   .suscribe {
     grid-area: suscribe;
-    @extend .container-center;
+    @extend %container-center;
 
     display: flex;
     flex-direction: column;
@@ -47,7 +47,7 @@
     margin: 10rem 0;
 
     .suscribe__title {
-      @extend .f-title2;
+      @extend %f-title2;
       color: $cWhite;
 
       margin-bottom: 1rem;
@@ -55,7 +55,7 @@
     }
 
     .suscribe__subtitle {
-      @extend .f-subtitle2;
+      @extend %f-subtitle2;
       color: $cWhite;
 
       margin-bottom: 3rem;
@@ -64,7 +64,7 @@
   }
 
   .suscribe__form {
-    @extend .formulario__form;
+    @extend %formulario__form;
 
     .suscribe__email {
       @extend .formulario__input;

@@ -61,7 +61,7 @@ export default {};
 /* ------------------------------ Contact ------------------------------ */
 
 .main-contact__background {
-  @extend .backgrounds-pos;
+  @extend %backgrounds-pos;
   height: 100%;
   background: url();
   background-size: cover;
@@ -80,7 +80,7 @@ export default {};
 
 .main-contact {
   .main-contact__title {
-    @extend .f-monument;
+    @extend %f-monument;
     @extend .f-bt2;
     font-weight: 500;
     color: $cWhite;
@@ -120,7 +120,7 @@ export default {};
 }
 
 .contact_title {
-  @extend .f-title2;
+  @extend %f-title2;
   @extend .f-t2;
   color: $cWhite;
   margin: 2rem;
@@ -172,7 +172,7 @@ export default {};
       }
 
       .contact__suscribe-box {
-        @extend .formulario__form;
+        @extend %formulario__form;
 
         .contact__suscribe-email {
           @extend .formulario__input;
@@ -201,7 +201,7 @@ export default {};
       }
 
       .contact__demo-box {
-        @extend .formulario__form;
+        @extend %formulario__form;
 
         .contact__demo-file {
           @extend .formulario__input-file;
@@ -231,7 +231,7 @@ export default {};
       }
 
       .contact__description-box {
-        @extend .formulario__form;
+        @extend %formulario__form;
         flex-direction: column;
 
         .contact__description-textarea {

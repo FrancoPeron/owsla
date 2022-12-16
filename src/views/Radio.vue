@@ -67,7 +67,7 @@ $radio-grid: minmax(240px, 1fr);
 
 .main-radio {
   .main-radio__background {
-    @extend .backgrounds-pos;
+    @extend %backgrounds-pos;
     background: url(https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/background%2Fmain-radio.webp?alt=media&token=f42944e5-507b-4f20-834b-113c1399d933);
     background-color: black;
     background-size: cover;
@@ -107,7 +107,7 @@ $radio-grid: minmax(240px, 1fr);
         padding: 3rem;
 
         .main-radio__title {
-          @extend .f-monument;
+          @extend %f-monument;
           @extend .f-bt2;
           color: transparent;
           -webkit-text-stroke: 1.5px #ffffff;
@@ -116,7 +116,7 @@ $radio-grid: minmax(240px, 1fr);
         }
 
         .main-radio__subtitle {
-          @extend .f-monument;
+          @extend %f-monument;
           @extend .f-hl1;
           line-height: 1.6;
           text-align: start;
@@ -133,7 +133,7 @@ $radio-grid: minmax(240px, 1fr);
         }
 
         .main-radio__btn {
-          @extend .btn__outline;
+          @extend %btn__outline;
         }
       }
 
@@ -184,13 +184,13 @@ $radio-grid: minmax(240px, 1fr);
         padding: 1rem;
 
         .main-radio__subtitle {
-          @extend .f-headline;
+          @extend %f-headline;
           color: $cWhite;
           margin-bottom: 1rem;
         }
 
         .main-radio__description {
-          @extend .f-body;
+          @extend %f-body;
           color: $cWhite;
         }
       }
