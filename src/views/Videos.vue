@@ -72,7 +72,7 @@ $video-grid: minmax(48%, 1fr);
   }
 
   .main-video__list {
-    @extend .container-full;
+    @extend %container-center;
     background: $cWhite;
     padding: 2rem;
     display: grid;

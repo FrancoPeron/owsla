@@ -132,7 +132,7 @@ $artists-grid: minmax(300px, 1fr);
   }
 
   .main-artists__list {
-    @extend .container-full;
+    @extend %container-center;
     background: $cWhite;
     padding: 2rem;
     display: grid;

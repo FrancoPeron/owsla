@@ -86,7 +86,7 @@ $radio-grid: minmax(240px, 1fr);
   }
 
   .main-radio__banner {
-    @extend .container-full;
+    @extend %container-center;
     display: flex;
     flex-direction: column;
     margin-bottom: 0;
@@ -159,7 +159,7 @@ $radio-grid: minmax(240px, 1fr);
     display: grid;
     grid-template-columns: repeat(auto-fit, $radio-grid);
     gap: 1rem;
-    @extend .container-full;
+    @extend %container-center;
 
     .main-radio__item {
       position: relative;

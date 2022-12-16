@@ -127,7 +127,7 @@ export default {};
 }
 
 .contact {
-  @extend .container-full;
+  @extend %container-center;
 
   .contact__box {
     display: grid;

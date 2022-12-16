@@ -108,7 +108,7 @@ $music-grid: minmax(240px, 1fr);
   }
 
   .main-music__list {
-    @extend .container-full;
+    @extend %container-center;
     background: $cWhite;
     padding: 2rem;
     display: grid;
