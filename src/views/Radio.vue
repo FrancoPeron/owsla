@@ -108,7 +108,7 @@ $radio-grid: minmax(240px, 1fr);
 
         .main-radio__title {
           @extend %f-monument;
-          @extend %f-bt2;
+          @extend %f-bt1;
           color: transparent;
           -webkit-text-stroke: 1.5px #ffffff;
           text-align: start;
@@ -184,7 +184,7 @@ $radio-grid: minmax(240px, 1fr);
         padding: 1rem;
 
         .main-radio__subtitle {
-          @extend %f-headline;
+          @extend %f-h1eadline;
           color: $cWhite;
           margin-bottom: 1rem;
         }

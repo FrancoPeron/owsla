@@ -84,7 +84,7 @@
     padding-left: 1rem;
 
     .radio__title {
-      @extend %f-title;
+      @include font(fh1,w500,MonumentE);
       margin-bottom: 2rem;
       grid-column: span 2;
     }
@@ -159,7 +159,7 @@
   width: 100%;
 
   .playlists__title {
-    @extend %f-title;
+    @include font(fh1,w500,MonumentE)
     grid-column: span 2;
     margin-bottom: 0;
   }

@@ -141,10 +141,23 @@ main {
 
   }
 
-  /* section {
-    margin-bottom: 12rem;
-  } */
+}
 
+@keyframes move {
+  0% {
+    background-position: bottom; }
+  50% {
+    background-position: top; }
+  100% {
+    background-position: bottom; } 
+}
+
+
+@keyframes multcolor {
+  from {
+    filter: hue-rotate(0deg); }
+  to {
+    filter: hue-rotate(360deg); } 
 }
 
 
@@ -161,3 +174,4 @@ main {
     flex-direction: column;
     align-items: center;
 }
+

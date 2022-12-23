@@ -1,14 +1,81 @@
-
-
+/* ---------- Flexbox ---------- */
 
 @mixin flex($dir: row, $wrap: nowrap){
   display: flex;
   flex-direction: $dir;
   flex-wrap: $wrap;
-}
+  @content
+};
+
+/* ---------- Font ---------- */
+
+@mixin font($f-size:fb1,$f-width:w500,$f-family:MontS,$f-letterS:lsNormal) {
+
+	$fFamily: (
+		MontS: 'Montserrat',
+		MonumentE: "MonumentExtended",
+	);
+
+  $fSize: (
+		fbt1: clamp(2rem, 5vw, 4rem), /* 64px */
+    fbt2: clamp(2.5rem, 5vw, 3.5rem), /* 56px */
+    fh1: clamp(1.825rem, 5vw, 2.625rem), /* 42px */
+    fh2: clamp(1.625rem, 5vw, 2.25rem), /* 36px */
+    ft1: clamp(1.5rem, 4vw, 2rem), /* 32px */
+    ft2: clamp(1.225rem, 4vw, 1.5rem), /* 24px */
+    fhl1: clamp(1rem, 3.75vw, 1.3125rem), /* 21px */
+    fhl2: clamp(1rem, 3.75vw, 1.125rem), /* 18px */
+    fb1: 1rem, /* 16px */
+    fb2: 0.875rem, /* 14px */
+    fc: 0.75rem, /* 12px */
+	);
+
+	$fWeights: (
+    w100: 100, /*Thin*/
+    w200: 200, /*Extra Light*/
+    w300: 300, /*Light*/
+    w400: 400, /*Normal*/
+    w500: 500, /*Medium*/
+    w600: 600, /*Semi Bold*/
+    w700: 700, /*Bold*/
+    w800: 800, /*Extra Bold*/
+    w900: 900, /*Ultra Bold*/
+	);
+
+  $fLetterS: (
+    lsTighter : -0.05em,
+    lsTight : -0.025em,
+    lsNormal : 0em,
+    lsWide : 0.025em,
+    lsWider : 0.05em,
+    lsWidest : 0.1em,
+  );
+
+  $fPos: (
+    tLeft : left,
+    tCenter	: center,
+    tRight : right,
+    tJustify: justify,
+  );
+
+	font-family: map-get($fFamily, $f-family), sans-serif;
+  font-size: map-get($fSize, $f-size);
+	font-weight: map-get($fWeights, $f-width);
+  letter-spacing: map-get($fLetterS, $f-letterS);
+  line-height: calc(130%);
+  // text-align: map-get($fPos, $f-pos);
+
+};
+
+
+// @include respond(sm){}
+/* ---------- Responsive ---------- */
 
 @mixin respond($breakpoint) {
   
+  @if($breakpoint == xs)  {
+    @media (min-width: 640px) { @content }
+  };
   @if($breakpoint == sm)  {
     @media (min-width: 768px) { @content }
   };
@@ -21,4 +88,21 @@
   @if($breakpoint == xl)  {
     @media (min-width: 1440px) { @content }
   }
-}
+};
+
+/* ----------  ---------- */
+
+@mixin alignment($j,$a,$p){
+
+
+  $justifyC: (
+    jcStart : flex-start,
+    jcEnd : flex-end,
+    jcCenter : center,
+    jcBetween : space-between,
+    jcAround : space-around,
+    jcEvenly : space-evenly,
+	);
+  
+  justify-content: map-get($justifyC, $jc)
+};

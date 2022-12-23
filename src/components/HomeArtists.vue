@@ -1,150 +1,78 @@
-%<script>
-  // Data Base
-  import {db} from '@/firebase/firebase.config'
-  import { getDocs, addDoc, collection, query, limit, orderBy } from "firebase/firestore"
+%
+<script>
+// Data Base
+import { db } from '@/firebase/firebase.config'
+import { getDocs, addDoc, collection, query, limit, orderBy } from 'firebase/firestore'
 
-  export default {
-
-    data() {
-      return {
-        artistsList: [],
-      };
-    },
-    mounted() {
-
-       //obtener datos
-      getDocs(query(collection(db, 'artists'),orderBy("date", "desc"),limit(12)))
-      .then(result => {
-          const resultDocs = result.docs.map(doc => {
-              return {
-                  id: doc.id,
-                  ...doc.data(),
-              }
-          })
-
-          this.artistsList = resultDocs
-          console.log( this.artistsList)
-      })
-      .catch(error => console.log(error))
-      
-    },
-    
-    methods: {
-      nextArtist(){
-
-        console.log(artistsList.scrollLeft); //Muestra en consola la posicion del scroll
-        artistsList.scroll({left: artistsList.scrollLeft + 900, behavior: "smooth"});/*Obtiene la posicion del scroll de la seccion y le suma el ancho de la tarjeta para ir a la siguiente*/
-        if(artistsList.scrollLeft>1200){
-          artistsList.scroll({left: 0, behavior: "smooth"});
-        }
-      },
-
+export default {
+  data() {
+    return {
+      cantData: 20,
+      scrollLeftAux: -1,
+      artistsList: [],
     }
-  }
+  },
+  mounted() {
+    //obtener datos
+    getDocs(query(collection(db, 'artists'), orderBy('date', 'desc'), limit(this.cantData)))
+      .then((result) => {
+        const resultDocs = result.docs.map((doc) => {
+          return {
+            id: doc.id,
+            ...doc.data(),
+          }
+        })
+
+        this.artistsList = resultDocs
+        console.log(this.artistsList)
+      })
+      .catch((error) => console.log(error))
+  },
+
+  methods: {
+    nextArtist() {
+      artistsList.scroll({ left: artistsList.scrollLeft + artistsList.offsetWidth, behavior: 'smooth' }) /*Obtiene la posicion del scroll de la seccion y le suma el ancho de la tarjeta para ir a la siguiente*/
+      console.log(this.scrollLeftAux) //Muestra en consola la posicion del scroll
+      console.log(artistsList.scrollLeft) //Muestra en consola la posicion del scroll
+      console.log(artistsList.scrollWidth - artistsList.offsetWidth)
+      if (artistsList.scrollLeft >= artistsList.scrollWidth - artistsList.offsetWidth - 1) {
+        artistsList.scroll({ left: 0, behavior: 'smooth' })
+      }
+    },
+  },
+}
 </script>
 
 <template>
-
   <section class="our-artists">
-
     <h2 class="our-artists__title">Our Artists</h2>
-    
+
     <div class="our-artists__boxBtn">
-      <hr class="our-artists__line">
+      <hr class="our-artists__line" />
       <button class="our-artists__scroll-button" @click="nextArtist" id="bLess">></button>
     </div>
 
     <div class="our-artists__list" id="artistsList">
-
-      <div v-for="(val,index) in artistsList" :key="index" class="artist d-flex flex-column position-relative overflow-hidden m-0 w-100">
-        <img class="artist__img w-100" data-bs-toggle="modal" :src="val.img" :alt="val.artist">
-        <p class="artist__name">{{val.artist}}</p>
-        
-          <!-- <div class="artist__info">
-              <ul class="nav__solcial-media nav__solcial-media--column">
-                  <li class="nav__icon nav__icon--color">
-                      <a href="https://soundcloud.com/owslaofficial" target="_blank" rel="noopener noreferrer">
-                          <svg id="soundcloud" xmlns="http://www.w3.org/2000/svg" width="39.087" height="21.975" viewBox="0 0 39.087 21.975">
-                              <g transform="translate(0 0)">
-                                  <path d="M256.876-399.847a1.323,1.323,0,0,0-.688.833c-.023.138-.031,4.755-.023,10.275.023,9.992.023,10.03.184,10.236a2.08,2.08,0,0,0,.367.367c.206.161.26.161,7.026.161,6.276,0,6.857-.008,7.308-.138a6.194,6.194,0,0,0,4.5-4.5,5.184,5.184,0,0,0,.13-1.483,4.612,4.612,0,0,0-.214-1.682,6.142,6.142,0,0,0-6.223-4.373,4.6,4.6,0,0,0-.787.092c-.107.038-.138-.031-.183-.4a11.231,11.231,0,0,0-1.131-3.532,11.158,11.158,0,0,0-6.016-5.3C259.529-399.839,257.488-400.114,256.876-399.847Z" transform="translate(-236.589 399.95)"/>
-                                  <path d="M192.876-367.6a1.323,1.323,0,0,0-.688.833c-.023.138-.031,4.2-.023,9.051.023,8.753.023,8.807.183,9.013a1.079,1.079,0,0,0,1.024.527,1.079,1.079,0,0,0,1.024-.527c.161-.206.161-.237.161-9.22s0-9.013-.161-9.22a1.961,1.961,0,0,0-.352-.359A1.416,1.416,0,0,0,192.876-367.6Z" transform="translate(-177.481 370.151)"/>
-                                  <path d="M64.837-303.6a1.323,1.323,0,0,0-.688.833c-.023.138-.038,3.1-.023,6.605.023,6.284.023,6.36.183,6.567a1.079,1.079,0,0,0,1.024.527,1.079,1.079,0,0,0,1.024-.527c.161-.206.161-.26.161-6.773s0-6.567-.161-6.773a1.961,1.961,0,0,0-.352-.359A1.415,1.415,0,0,0,64.837-303.6Z" transform="translate(-59.227 311.043)"/>
-                                  <path d="M128.837-303.6a1.323,1.323,0,0,0-.688.833c-.023.138-.038,3.1-.023,6.605.023,6.284.023,6.36.183,6.567a1.079,1.079,0,0,0,1.024.527,1.079,1.079,0,0,0,1.024-.527c.161-.206.161-.26.161-6.773s0-6.567-.161-6.773a1.961,1.961,0,0,0-.352-.359A1.415,1.415,0,0,0,128.837-303.6Z" transform="translate(-118.334 311.043)"/>
-                                  <path d="M.837-255.6a1.323,1.323,0,0,0-.688.833c-.023.138-.038,2-.023,4.159.023,3.815.031,3.914.183,4.121a1.079,1.079,0,0,0,1.024.527,1.079,1.079,0,0,0,1.024-.527c.161-.206.161-.29.161-4.327s0-4.121-.161-4.327a1.961,1.961,0,0,0-.352-.359A1.415,1.415,0,0,0,.837-255.6Z" transform="translate(-0.119 266.713)"/>
-                              </g>
-                          </svg>
-                      </a>
-                  </li>
-  
-                  <li class="nav__icon nav__icon--color">
-                      <a href="https://open.spotify.com/user/owslaofficial?si=af08e69b87934cd4" target="_blank" rel="noopener noreferrer">
-                          <svg id="spotify" xmlns="http://www.w3.org/2000/svg" width="27.469" height="27.469" viewBox="0 0 27.469 27.469">
-                              <path d="M13.987.277A13.734,13.734,0,1,0,27.722,14.011,13.735,13.735,0,0,0,13.987.277h0Zm6.3,19.809a.856.856,0,0,1-1.178.284c-3.225-1.97-7.284-2.416-12.065-1.324a.856.856,0,0,1-.381-1.67c5.232-1.2,9.719-.681,13.34,1.532A.856.856,0,0,1,20.286,20.086Zm1.681-3.74a1.071,1.071,0,0,1-1.473.353A18.026,18.026,0,0,0,6.808,15.1a1.071,1.071,0,1,1-.622-2.049,20.037,20.037,0,0,1,15.428,1.825,1.07,1.07,0,0,1,.353,1.472Zm.144-3.894c-4.426-2.629-11.73-2.871-15.956-1.588a1.285,1.285,0,1,1-.746-2.458c4.851-1.473,12.916-1.188,18.013,1.837a1.284,1.284,0,1,1-1.31,2.21Z" transform="translate(-0.253 -0.277)"/>
-                          </svg>
-                      </a>
-                  </li>
-  
-                  <li class="nav__icon nav__icon--color">
-                      <a href="https://www.youtube.com/c/owsla" target="_blank" rel="noopener noreferrer">
-                          <svg id="youtube" xmlns="http://www.w3.org/2000/svg" width="23.139" height="27.469" viewBox="0 0 23.139 27.469">
-                              <path d="M99-509.628c.435,1.31.88,2.721.988,3.134l.188.762v4.2h1.556v-4.235l.912-3.022c.5-1.664.929-3.065.945-3.118.027-.086-.032-.091-.767-.091h-.794l-.451,1.76c-.252.966-.494,1.884-.542,2.045l-.086.29-.44-1.632c-.242-.9-.488-1.819-.553-2.05L99.842-512H98.2Z" transform="translate(-95.099 512)"/>
-                              <path d="M200.885-463.553a1.822,1.822,0,0,0-.918.472,2.352,2.352,0,0,0-.682,1.755,34.46,34.46,0,0,0,.059,4.079,2.111,2.111,0,0,0,1.116,1.481,3.066,3.066,0,0,0,1.487.107,2.033,2.033,0,0,0,1.326-1.267c.113-.306.118-.419.14-2.437.021-2.265-.005-2.608-.231-3.1a2.032,2.032,0,0,0-.929-.945A2.709,2.709,0,0,0,200.885-463.553Zm.875,1.369c.225.2.242.376.242,2.63a8.011,8.011,0,0,1-.091,2.319.579.579,0,0,1-.558.338.6.6,0,0,1-.606-.5,40.127,40.127,0,0,1,0-4.4.988.988,0,0,1,.215-.37c.145-.145.188-.156.429-.134A.807.807,0,0,1,201.76-462.184Z" transform="translate(-190.726 466.183)"/>
-                              <path d="M299-458.79c0,1.932.021,3.387.059,3.66.091.751.3.977.912,1.009a1.051,1.051,0,0,0,.708-.14,3.447,3.447,0,0,0,.671-.467l.333-.306v.816h1.4V-462h-1.4v5.941l-.22.252c-.327.37-.671.5-.9.36-.134-.086-.161-.676-.161-3.671L300.4-462H299Z" transform="translate(-285.122 464.684)"/>
-                              <path d="M47.375-300.789c-.161.005-.816.038-1.449.07a18.145,18.145,0,0,0-3.113.322,2.817,2.817,0,0,0-1.551,1.127,5.979,5.979,0,0,0-.741,2.823c-.118,1.106-.14,5.947-.027,7.133a14.055,14.055,0,0,0,.37,2.254,3,3,0,0,0,1.723,1.878,22.048,22.048,0,0,0,5.109.462c2.217.07,8.555.038,10.251-.059,1.17-.064,2.587-.188,2.989-.263A2.982,2.982,0,0,0,63.095-287a13.877,13.877,0,0,0,.392-2.319c.1-.977.1-5.909,0-6.924-.188-1.98-.451-2.78-1.122-3.446a2.7,2.7,0,0,0-1.648-.816,68.251,68.251,0,0,0-8.915-.317C49.532-300.81,47.536-300.8,47.375-300.789ZM47-297.606v.751H45.335v8.909H43.779v-8.909H42.115v-1.5H47Zm6.87.945v1.7l.284-.268a1.549,1.549,0,0,1,1.514-.5,1.247,1.247,0,0,1,.762.843,14.362,14.362,0,0,1,.1,3.075c0,3.167,0,3.188-.419,3.617-.494.515-1.24.44-1.959-.209l-.279-.252v.708h-1.4v-10.412h1.4Zm6.784,1.057a1.953,1.953,0,0,1,.859.762c.258.435.311.768.338,2.05l.027,1.2h-2.8v.923a2.792,2.792,0,0,0,.1,1.154.639.639,0,0,0,.59.392c.451,0,.649-.322.649-1.036v-.467h1.465l-.032.606a3.088,3.088,0,0,1-.145.9,1.835,1.835,0,0,1-1.884,1.245,2.039,2.039,0,0,1-1.315-.386,1.8,1.8,0,0,1-.676-1c-.118-.365-.123-.44-.123-2.6a9.483,9.483,0,0,1,.1-2.523,1.941,1.941,0,0,1,1.438-1.342A2.857,2.857,0,0,1,60.653-295.6Zm-12.044,3.043a29.059,29.059,0,0,0,.064,3.247c.134.3.547.215.923-.188l.247-.263v-5.909h1.4v7.729h-1.4v-.827l-.2.188c-.639.6-1.122.805-1.648.692a.875.875,0,0,1-.682-.628,33.941,33.941,0,0,1-.086-3.682l-.021-3.473h1.4Z" transform="translate(-40.42 312.151)"/>
-                              <path d="M291.483-183.851a1.2,1.2,0,0,0-.333.161l-.15.1v4.766l.182.14a.637.637,0,0,0,.977-.1c.1-.161.1-.29.1-2.4,0-2.05-.005-2.243-.1-2.4a.677.677,0,0,0-.279-.258.934.934,0,0,0-.2-.07C291.676-183.91,291.585-183.883,291.483-183.851Z" transform="translate(-277.551 201.52)"/>
-                              <path d="M388.537-183.49a.752.752,0,0,0-.483.494,4.356,4.356,0,0,0-.054.741v.553h1.412l-.032-.606a3.24,3.24,0,0,0-.107-.8A.651.651,0,0,0,388.537-183.49Z" transform="translate(-369.345 201.131)"/>
-                          </svg>
-                      </a>
-                  </li>
-  
-                  <li class="nav__icon nav__icon--color">
-                      <a href="https://www.instagram.com/owsla/" target="_blank" rel="noopener noreferrer">
-                          <svg id="instagram" xmlns="http://www.w3.org/2000/svg" width="27.469" height="27.469" viewBox="0 0 258.8 258.8">
-                              <path d="M252,44.6a63.24,63.24,0,0,0-14.9-22.9A63.24,63.24,0,0,0,214.2,6.8c-8.2-3.2-17.7-5.4-31.4-6S164.6,0,129.4,0,89.8.1,76,.8s-23.2,2.8-31.4,6A63.24,63.24,0,0,0,21.7,21.7,63.24,63.24,0,0,0,6.8,44.6C3.6,52.8,1.4,62.3.8,76S0,94.2,0,129.4s.1,39.6.8,53.4,2.8,23.2,6,31.4a63.24,63.24,0,0,0,14.9,22.9A63.24,63.24,0,0,0,44.6,252c8.2,3.2,17.7,5.4,31.4,6s18.2.8,53.4.8,39.6-.1,53.4-.8,23.2-2.8,31.4-6A66,66,0,0,0,252,214.2c3.2-8.2,5.4-17.7,6-31.4s.8-18.2.8-53.4-.1-39.6-.8-53.4S255.2,52.8,252,44.6ZM234.7,181.7c-.6,12.6-2.7,19.5-4.5,24a40.08,40.08,0,0,1-9.7,14.9,40.51,40.51,0,0,1-14.9,9.7c-4.6,1.8-11.4,3.9-24,4.5-13.7.6-17.7.8-52.3.8s-38.7-.1-52.3-.8c-12.6-.6-19.5-2.7-24-4.5a40.08,40.08,0,0,1-14.9-9.7,40.51,40.51,0,0,1-9.7-14.9c-1.8-4.6-3.9-11.4-4.5-24-.6-13.7-.8-17.8-.8-52.3s.1-38.7.8-52.3c.6-12.6,2.7-19.5,4.5-24a40.08,40.08,0,0,1,9.7-14.9A40.51,40.51,0,0,1,53,28.5c4.6-1.8,11.4-3.9,24-4.5,13.7-.6,17.8-.8,52.3-.8s38.7.1,52.3.8c12.6.6,19.5,2.7,24,4.5a40.08,40.08,0,0,1,14.9,9.7,40.51,40.51,0,0,1,9.7,14.9c1.8,4.6,3.9,11.4,4.5,24,.6,13.7.8,17.8.8,52.3S235.3,168.1,234.7,181.7Z"/>
-                              <path d="M129.3,62.9a66.5,66.5,0,1,0,66.5,66.5A66.53,66.53,0,0,0,129.3,62.9Zm0,109.7a43.2,43.2,0,1,1,43.2-43.2A43.21,43.21,0,0,1,129.3,172.6Z"/>
-                              <circle class="cls-3" cx="198.4" cy="60.3" r="15.5"/>
-                          </svg>
-                      </a>
-                  </li>
-  
-                  <li class="nav__icon nav__icon--color">
-                      <a href="https://twitter.com/owsla" target="_blank" rel="noopener noreferrer">
-                          <svg id="twitter" xmlns="http://www.w3.org/2000/svg" width="29.751" height="24.172" viewBox="0 0 29.751 24.172">
-                              <path d="M29.751,50.862a12.717,12.717,0,0,1-3.514.963,6.065,6.065,0,0,0,2.683-3.371,12.189,12.189,0,0,1-3.868,1.476A6.1,6.1,0,0,0,14.5,54.1a6.28,6.28,0,0,0,.141,1.391,17.264,17.264,0,0,1-12.572-6.38,6.1,6.1,0,0,0,1.874,8.152,6.023,6.023,0,0,1-2.756-.751v.067a6.127,6.127,0,0,0,4.887,5.993,6.087,6.087,0,0,1-1.6.2,5.393,5.393,0,0,1-1.155-.1,6.157,6.157,0,0,0,5.7,4.249,12.255,12.255,0,0,1-7.562,2.6A11.421,11.421,0,0,1,0,69.435a17.171,17.171,0,0,0,9.357,2.737c11.223,0,17.36-9.3,17.36-17.356,0-.27-.009-.53-.022-.788A12.167,12.167,0,0,0,29.751,50.862Z" transform="translate(0 -48)"/>
-                          </svg>
-                      </a>
-                  </li>
-  
-                  <li class="nav__icon nav__icon--color">
-                      <a href="https://www.facebook.com/owsla/" target="_blank" rel="noopener noreferrer">
-                          <svg id="facebook" xmlns="http://www.w3.org/2000/svg" width="14.838" height="28.469" viewBox="0 0 14.838 28.469">
-                              <path data-name="Trazado 1" d="M129.771,9l.007-2.369c0-1.234.086-1.9,1.854-1.9H134.9V0h-4.689c-4.55,0-5.6,2.35-5.6,6.211L124.624,9l-3.452,0v4.733h3.452V27.469h5.149l0-13.734,4.675,0,.5-4.733Z" transform="translate(-120.672 0.5)"/>
-                          </svg>
-                      </a>
-                  </li>
-              </ul>
-          </div> -->
-
-        </div>
-        
+      <div v-for="(val, index) in artistsList" :key="index" class="artist d-flex flex-column position-relative overflow-hidden m-0 w-100">
+        <img class="artist__img w-100" data-bs-toggle="modal" :src="val.img" :alt="val.artist" />
+        <p class="artist__name">{{ val.artist }}</p>
+      </div>
     </div>
-        
   </section>
 
   <span class="our-artists-background"></span>
-
 </template>
 
 <style lang="scss" scoped>
-
 /* -------------------- Artists -------------------- */
 
 .our-artists {
   grid-area: artists;
   @extend %container-center;
   display: grid;
-  grid-template-areas: "title"
-                      "listart";
+  grid-template-areas:
+    'title'
+    'listart';
   width: inherit;
   height: fit-content;
   background-color: $cWhite;
@@ -152,21 +80,33 @@
   gap: 24px;
   margin: 106px 0;
 
+  @include respond(sm) {
+    grid-template-areas:
+      'title btn'
+      'title listart';
+  }
   .our-artists__title {
     grid-area: title;
-    @extend %f-monument;
-    @extend %f-t1;
-    letter-spacing: 0.1em;
-    font-weight: 400;
-    text-align: center;
-  }
-  .our-artists__boxBtn{
 
+    @include font(ft1, w500, MonumentE, lsWidest);
+    text-align: center;
+
+    @include respond(sm) {
+      writing-mode: vertical-rl;
+      transform: scale(-1);
+      white-space: nowrap;
+    }
+  }
+  .our-artists__boxBtn {
     grid-area: btn;
     display: none;
     align-items: center;
     gap: 24px;
     height: fit-content;
+
+    @include respond(sm) {
+      display: flex;
+    }
 
     .our-artists__scroll-button {
       font-family: monospace;
@@ -187,111 +127,67 @@
       width: 100%;
       background: $cBlack;
     }
-
   }
   .our-artists__list {
     grid-area: listart;
 
-    display: flex;
+    @include flex();
     align-items: center;
     gap: 24px;
     position: relative;
     overflow-y: hidden;
     scroll-snap-type: x mandatory;
-  
+
+    @include respond(sm) {
+      overflow-x: auto;
+    }
+
     .artist {
       scroll-snap-align: start;
-  
+      position: relative;
+      min-width: 100%;
+
+      @include respond(sm){
+        scroll-snap-align: end;
+        min-width: calc((100% - 24px) / 2);
+      }
+
+      @include respond(sm) {
+        scroll-snap-align: end;
+        min-width: calc((100% - 48px) / 3);
+      }
+
+      @include respond(md) {
+        scroll-snap-align: end;
+        min-width: calc((100% - 72px) / 4);
+      }
+
       .artist__img {
-        width: 218px;
+        width: 100%;
         height: 330px;
         object-fit: cover;
-        cursor: pointer;
-        // @extend %shadow;
+        //cursor: pointer;
       }
-  
+
       .artist__name {
-        @extend %f-monument;
-        @extend %f-b2;
-        line-height: calc(140%);
-        letter-spacing: 0.1em;
+        @include font(fb2, w500, MonumentE);
         text-transform: uppercase;
         color: $cBlack;
         padding-top: 0.75rem;
       }
-  
-      .artist__info {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        position: absolute;
-        right: 0;
-        opacity: 0;
-        background-color: #000;
-        height: 400px;
-        padding: 0.5rem 0;
-        transition: all ease-in-out 0.5s;
-        max-width: 0;
-      }
-  
-      &:hover > .artist__img {
-        filter: grayscale(100%);
-        transition: all ease-in-out 0.5s;
-      }
-  
-      &:hover > .artist__info {
-        max-width: 100px;
-        opacity: 1;
-        transition: all ease-in-out 0.5s;
-      }
     }
-  
   }
-
 }
 
-.our-artists-background{
-    grid-area: artists;
-    background-image: url(https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/background%2Fmain-radio.webp?alt=media&token=f42944e5-507b-4f20-834b-113c1399d933);
-    background-size: cover;
-    background-position: center;
-    z-index: -1;
-    background-repeat: no-repeat;
-    width: calc(45% + 2rem);
-    margin-left: -1rem;
-    height: 100%;
+.our-artists-background {
+  grid-area: artists;
+  background-image: url(https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/background%2Fmain-radio.webp?alt=media&token=f42944e5-507b-4f20-834b-113c1399d933);
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  background-repeat: no-repeat;
+  width: 45%;
+  height: 100%;
 }
-
-
-@media screen and (min-width: 768px) {
-  /* -------------------- Artists -------------------- */
-
-  .our-artists {
-    grid-template-areas: "title btn"
-                      "title listart";
-
-    .our-artists__title {
-      writing-mode: vertical-rl;
-      transform: scale(-1);
-      white-space: nowrap;
-    }
-
-    .our-artists__boxBtn{
-      display: flex;
-      
-    }
-
-    .our-artists__list {
-      overflow-x: auto;
-  
-      .artist {
-        scroll-snap-align: end;
-      }
-    }
-
-  }
-
-}
-
 
 </style>

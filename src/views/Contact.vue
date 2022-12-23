@@ -81,7 +81,7 @@ export default {};
 .main-contact {
   .main-contact__title {
     @extend %f-monument;
-    @extend %f-bt2;
+    @extend %f-bt1;
     font-weight: 500;
     color: $cWhite;
 
@@ -93,14 +93,14 @@ export default {};
 
     &::before {
       content: "-";
-      @extend %f-bt2;
+      @extend %f-bt1;
       color: $cWhite;
       margin-right: 3rem;
     }
 
     &::after {
       content: "-";
-      @extend %f-bt2;
+      @extend %f-bt1;
       color: $cWhite;
       margin-left: 3rem;
     }

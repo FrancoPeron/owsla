@@ -47,7 +47,7 @@ $video-grid: minmax(48%, 1fr);
 
   .main-video__title {
     @extend %f-monument;
-    @extend %f-bt2;
+    @extend %f-bt1;
     color: $cWhite;
 
     text-align: center;
@@ -58,14 +58,14 @@ $video-grid: minmax(48%, 1fr);
 
     &::before {
       content: "-";
-      @extend %f-bt2;
+      @extend %f-bt1;
       color: $cWhite;
       margin-right: 3rem;
     }
 
     &::after {
       content: "-";
-      @extend %f-bt2;
+      @extend %f-bt1;
       color: $cWhite;
       margin-left: 3rem;
     }

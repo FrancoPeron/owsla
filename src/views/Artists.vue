@@ -106,7 +106,7 @@ $artists-grid: minmax(300px, 1fr);
 
   .main-artists__title {
     @extend %f-monument;
-    @extend %f-bt2;
+    @extend %f-bt1;
     color: $cWhite;
 
     text-align: center;
@@ -117,7 +117,7 @@ $artists-grid: minmax(300px, 1fr);
     &::before {
       content: "-";
 
-      @extend %f-bt2;
+      @extend %f-bt1;
       color: $cWhite;
       margin-right: 3rem;
     }
@@ -125,7 +125,7 @@ $artists-grid: minmax(300px, 1fr);
     &::after {
       content: "-";
 
-      @extend %f-bt2;
+      @extend %f-bt1;
       color: $cWhite;
       margin-left: 3rem;
     }

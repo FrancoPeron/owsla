@@ -22,7 +22,7 @@
       
       window.addEventListener('scroll', () => {
           this.scrollPos = scrollY + window.innerHeight
-          console.log(this.scrollPos)
+         // console.log(this.scrollPos)
       })
     },
     
@@ -40,10 +40,10 @@
     <span class="main-index__background"></span>
     <HomeBanner />
     <HomeNewMusic/>
-    <HomeArtists v-if="scrollPos > 1500"/>
-    <HomeOwslaGoods v-if="scrollPos > 2500"/>
+    <HomeArtists v-if="scrollPos > 1100"/>
+    <HomeOwslaGoods v-if="scrollPos > 2100"/>
     <!-- <HomeRadio /> -->
-    <HomeSuscribe  v-if="scrollPos > 3500"/>
+    <HomeSuscribe  v-if="scrollPos > 3100"/>
   </div>
 </template>
 
@@ -57,7 +57,6 @@
       "merch"
       "radio"
       "suscribe";
-    padding: 2rem 1rem 0;
     grid-row-gap: 148px;
 
     .main-index__background {
@@ -66,7 +65,7 @@
       background-size: cover;
       background-position: center;
       height: 500px;
-      animation: multcolor 30s infinite, move 160s infinite;
+      animation: move 160s infinite;
     }
   }
 

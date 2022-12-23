@@ -12,9 +12,9 @@
 
 <template>
   <section class="suscribe">
-    <h2 class="suscribe__title">Don't Miss The Next News</h2>
+    <h2 class="suscribe__title">Don't Miss The News</h2>
     <h3 class="suscribe__subtitle">
-      Sign up to receive an email with all new releases, show dates and more
+      Sign up to receive all new releases, show, dates and more!
     </h3>
     <form class="suscribe__form">
       <input
@@ -38,28 +38,30 @@
     grid-area: suscribe;
     @extend %container-center;
 
-    display: flex;
-    flex-direction: column;
+
+    @include flex(column);
     align-items: center;
 
     width: 100%;
-    padding: 0 1rem;
-    margin: 10rem 0;
+    height: 440px;
+    padding: 100px 0;
 
     .suscribe__title {
-      @extend %f-title2;
-      color: $cWhite;
+      @include font(fh1, w500, MonumentE, lsWidest);
+      color: $cBlack;
 
       margin-bottom: 1rem;
       max-width: 800px;
+      text-align: center
     }
 
     .suscribe__subtitle {
-      @extend %f-subtitle2;
-      color: $cWhite;
+      @include font(fhl1, w500);
+      color: $cBlack;
 
       margin-bottom: 3rem;
-      max-width: 500px;
+      max-width: 800px;
+      text-align: center
     }
   }
 
@@ -82,12 +84,15 @@
 
   .suscribe-background {
     grid-area: suscribe;
-    background-image: url(@/assets/image/background/suscribe.webp);
+    background-image:
+    linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 57.37%, rgba(255, 255, 255, 0.85) 85.94%, #FFFFFF 100%),
+    url(https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/background%2Fsuscribe.webp?alt=media&token=03255be4-dc3f-4843-8ef7-505c40a20e2c);
     background-size: cover;
-    filter: brightness(0.7) saturate(1.8);
-    background-position: bottom;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 440px;
+    // filter: brightness(0.7) saturate(1.8);
 
     z-index: -1;
-    background-repeat: no-repeat;
   }
 </style>

@@ -83,7 +83,7 @@ $music-grid: minmax(240px, 1fr);
 
   .main-music__title {
     @extend %f-monument;
-    @extend %f-bt2;
+    @extend %f-bt1;
     color: $cWhite;
 
     text-align: center;
@@ -94,14 +94,14 @@ $music-grid: minmax(240px, 1fr);
 
     &::before {
       content: "-";
-      @extend %f-bt2;
+      @extend %f-bt1;
       color: $cWhite;
       margin-right: 3rem;
     }
 
     &::after {
       content: "-";
-      @extend %f-bt2;
+      @extend %f-bt1;
       color: $cWhite;
       margin-left: 3rem;
     }
@@ -140,7 +140,7 @@ $music-grid: minmax(240px, 1fr);
     padding: 1rem;
 
     .release__title {
-      @extend %f-headline;
+      @extend %f-h1eadline;
       color: $cWhite;
       text-align: center;
       margin-bottom: 1rem;

@@ -8,14 +8,17 @@
 }
 
 
+%f-bt1{
+    font-size: clamp(2rem, 5vw, 4rem); /* 64px */
+}
 %f-bt2{
-    font-size: clamp(2rem, 5vw, 4rem); /* 94px */
+    font-size: clamp(2.5rem, 5vw, 3.5rem); /* 56px */
 }
-%f-bt{
-    font-size: clamp(2.5rem, 5vw, 3.5rem); /* 94px */
-}
-%f-h{
+%f-h1{
     font-size: clamp(1.825rem, 5vw, 2.625rem); /* 42px */
+}
+%f-h2{
+    font-size: clamp(1.625rem, 5vw, 2.25rem); /* 36px */
 }
 %f-t1{
     font-size: clamp(1.5rem, 4vw, 2rem); /* 32px */
@@ -35,16 +38,17 @@
 %f-b2{
     font-size: 0.875rem; /* 14px */
 }
-%f-12{
+%f-c{
     font-size: 0.75rem; /* 14px */
 }
 
 
 %f-title {
     @extend %f-monument;
-    @extend %f-h;
-    line-height: calc(120%);
+    @extend %f-h1;
     font-weight: 500;
+    
+    line-height: calc(120%);
     letter-spacing: 0.1rem;
     color: $cBlack;
     margin-bottom: 2rem;
@@ -84,7 +88,7 @@
 
 }
 
-%f-headline{
+%f-h1eadline{
     @extend %f-monument;
     @extend %f-hl2;
     line-height: calc(140%);
