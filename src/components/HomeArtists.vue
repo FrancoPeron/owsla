@@ -64,7 +64,6 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-/* -------------------- Artists -------------------- */
 
 .our-artists {
   grid-area: artists;
@@ -77,13 +76,18 @@ export default {
   height: fit-content;
   background-color: $cWhite;
   box-shadow: 0 0 0 42px #ffffff;
+  filter: drop-shadow(0px 0px 30px rgba(148, 148, 148, 0.12));
   gap: 24px;
   margin: 106px 0;
+  margin-left: 4rem;
 
   @include respond(sm) {
     grid-template-areas:
       'title btn'
       'title listart';
+  }
+  @include respond(lg) {
+  margin-left: 0rem;
   }
   .our-artists__title {
     grid-area: title;
@@ -145,28 +149,22 @@ export default {
     .artist {
       scroll-snap-align: start;
       position: relative;
-      min-width: 100%;
 
-      @include respond(sm){
+      @include respond(lg) {
         scroll-snap-align: end;
-        min-width: calc((100% - 24px) / 2);
-      }
-
-      @include respond(sm) {
-        scroll-snap-align: end;
-        min-width: calc((100% - 48px) / 3);
-      }
-
-      @include respond(md) {
-        scroll-snap-align: end;
+        width: 100%;
         min-width: calc((100% - 72px) / 4);
       }
 
       .artist__img {
-        width: 100%;
-        height: 330px;
         object-fit: cover;
+        width: 240px;
+        aspect-ratio: 7/10;
         //cursor: pointer;
+
+        @include respond(lg) {
+          width: 100%;
+        }
       }
 
       .artist__name {

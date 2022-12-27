@@ -17,13 +17,7 @@
       Sign up to receive all new releases, show, dates and more!
     </h3>
     <form class="suscribe__form">
-      <input
-        class="suscribe__email"
-        placeholder="Email Address"
-        type="email"
-        name="subscribe"
-        id=""
-      />
+      <input class="suscribe__email" placeholder="Email Address" type="email" name="subscribe" id="" />
       <button class="suscribe__btn">Sign Up</button>
     </form>
   </section>

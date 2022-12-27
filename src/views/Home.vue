@@ -40,10 +40,10 @@
     <span class="main-index__background"></span>
     <HomeBanner />
     <HomeNewMusic/>
-    <HomeArtists v-if="scrollPos > 1100"/>
-    <HomeOwslaGoods v-if="scrollPos > 2100"/>
-    <!-- <HomeRadio /> -->
-    <HomeSuscribe  v-if="scrollPos > 3100"/>
+    <HomeArtists v-if="scrollPos > 1000"/>
+    <HomeOwslaGoods v-if="scrollPos > 2000"/>
+    <HomeRadio v-if="scrollPos > 3000" />
+    <HomeSuscribe  v-if="scrollPos > 4000"/>
   </div>
 </template>
 

@@ -34,47 +34,63 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-/* -------------------- Playlists -------------------- */
 
 .merch {
   grid-area: merch;
   @extend %container-center;
 
-  display: flex;
-  flex-direction: column;
+  @include flex(column);
   align-items: center;
-  margin-top: 32px;
 
   .merch__title {
-    @include font(fh1, w500, MonumentE);
-    margin-bottom: 2rem;
-    grid-column: span 6;
-    justify-self: center;
+    margin: 32px 0 24px 0;
+
+    @include font(fh1, w500, MonumentE, lsWidest);
+    text-align: center;
+    line-height: 100%;
   }
 
   .merch__subtitle {
-    @extend %f-subtitle;
-    grid-column: span 6;
-    justify-self: center;
-    max-width: 800px;
-    margin-bottom: 6rem;
+    max-width: 850px;
+    margin-bottom: 32px;
+
+    @include font(ft2, w500, MontS, lsWider);
+    text-align: center;
+    line-height: 100%;
+
   }
   .merch__imgBox {
     display: grid;
     grid-template-areas:
+      'img1'
+      'img2'
+      'img4'
+      'btn';
+    grid-template-columns: 1fr;
+    grid-column-gap: 12%;
+    grid-row-gap: 64px;
+    max-width: 60%;
+
+    @include respond(xs) {
+      grid-template-areas:
       'img1 img2'
       'img4 img4'
       'btn btn';
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 12%;
-    grid-row-gap: 64px;
-    width: 100%;
+      grid-template-columns: 1fr 1fr;
+      max-width: 90%;
+    }
+
+    @include respond(sm) {
+      
+      max-width: 75%;
+    }
 
     @include respond(md) {
       grid-template-areas:
       'img1 img2 img3'
       'img4 img4 btn';
       grid-template-columns: 1fr 1fr 1fr;
+      max-width: 100%;
     }
 
     .merch__img {
@@ -85,6 +101,7 @@ export default {
         aspect-ratio: 29/39;
         border: 4px solid #ffffff;
         object-fit: cover;
+        // min-width: 270px;
 
       }
       p {
@@ -108,6 +125,8 @@ export default {
         padding-top: .4rem
       }
     }
+
+
     .merch__img:nth-child(1) {
       grid-area: img1;
       
@@ -163,6 +182,7 @@ export default {
     }
   }
 }
+
 .merch-background {
   grid-area: merch;
   background-image: url(https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/background%2Fmain-artists.webp?alt=media&token=ab1cccfa-d469-4700-962d-87e774f9dc4a);

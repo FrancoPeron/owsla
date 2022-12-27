@@ -55,7 +55,6 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-/* -------------------- New Music -------------------- */
 
 .new-music {
   grid-area: new-music;
@@ -68,18 +67,22 @@ export default {
 
   .new-music__title {
     grid-column: span 6;
+    margin: 32px 0 24px 0;
 
-    @include font(fh1, w500, MonumentE);
+    @include font(fh1, w500, MonumentE, lsWidest);
     text-align: center;
+    line-height: 100%;
   }
 
   .new-music__subtitle {
     grid-column: span 6;
-
-    @include font(ft2, w500);
     justify-self: center;
-    max-width: 800px;
+    max-width: 850px;
+    margin-bottom: 32px;
+
+    @include font(ft2, w500, MontS, lsWider);
     text-align: center;
+    line-height: 100%;
 
     a:hover {
       color: $cBlack;
@@ -93,10 +96,41 @@ export default {
     width: 250px;
     border: solid #000 3px;
     padding: 0 20px 20px 20px;
-    margin: 3rem 1.5rem 3rem 0;
+    margin: 4rem 1.5rem 4rem 0;
     background-color: #fff;
     grid-column: span 6;
     box-shadow: 12px 0px 0px 24px $cWhite;
+
+    &:nth-child(3) {
+      @include respond(sm){
+        grid-column: 1 / 4;
+      }
+      @include respond(md){
+        grid-column: 1 / 3;
+      }
+    }
+    &:nth-child(4) {
+      @include respond(sm){
+        align-self: center;
+        grid-row: 3 / 5;
+        grid-column: 4 / 7;
+      }
+      @include respond(md){
+        transform: translate(0, 64px);
+        grid-column: 3 / 5;
+      }
+    }
+    &:nth-child(5) {
+      @include respond(sm){
+        grid-column: 1 / 4;
+      }
+      @include respond(md){
+        grid-column: 5 / 7;
+      }
+    }
+
+    @include respond(sm){}
+
     .new-music__text {
       @include flex();
       justify-content: space-between;
@@ -109,6 +143,7 @@ export default {
 
       p {
         @include font(fb1, w500, MonumentE);
+        -webkit-text-stroke: 0.3px $cBlack;
       }
 
       a {
@@ -116,8 +151,8 @@ export default {
         align-items: center;
         gap: 8px;
 
-        @include font(fc, w500, MonumentE);
-        -webkit-text-stroke: 0.3px $cBlack;
+        @include font(fc, w500, MonumentE, lsWidest);
+        -webkit-text-stroke: 0.4px $cBlack;
 
         svg {
           margin-top: -3px;
@@ -129,38 +164,63 @@ export default {
       width: 100%;
       min-width: 250px;
       position: relative;
+      box-shadow: 10px 0px 0px 10px $cWhite;
     }
+
   }
 }
 
 .new-music-background {
   grid-area: new-music;
   z-index: -1;
-  margin-top: 45rem;
+  margin-top: 54rem;
   position: relative;
-  height: 4px;
+  height: 3px;
   width: 100%;
   background-color: $cBlack;
+
+  @include respond(sm){
+    margin-top: 43rem;
+  }
+  @include respond(md){
+    margin-top: 26rem;
+    background-color: transparent;
+  }
 
   &::after {
     content: '';
     position: absolute;
-    top: -400px;
+    top: -450px;
     right: 0;
-    width: 90%;
-    height: 4px;
+    width: 92%;
+    height: 3px;
     background-color: $cBlack;
+    
+    @include respond(sm){
+      top: -300px;
+    }
+    @include respond(md){
+      top: -50px;
+    }
   }
 
   &::before {
     content: '';
     position: absolute;
-    bottom: -400px;
+    bottom: -450px;
     left: 0;
     width: 90%;
-    height: 4px;
+    height: 3px;
     background-color: $cBlack;
+
+    @include respond(sm){
+      bottom: -300px;
+    }
+    @include respond(md){
+      bottom: -50px;
+    }
   }
+
 }
 
 @media screen and (min-width: 768px) {
@@ -168,68 +228,6 @@ export default {
   .new-music__album:nth-child(4),
   .new-music__album:nth-child(5) {
     margin-top: 100px;
-  }
-
-  .new-music__album:nth-child(3) {
-    transform: translate(0, -30px);
-    grid-column: 1 / 4;
-  }
-
-  .new-music__album:nth-child(4) {
-    align-self: center;
-    grid-row: 3 / 5;
-    grid-column: 4 / 7;
-  }
-
-  .new-music__album:nth-child(5) {
-    grid-column: 1 / 4;
-  }
-
-  .new-music-background {
-    margin-top: 38rem;
-
-    &::after {
-      top: -300px;
-    }
-
-    &::before {
-      bottom: -300px;
-    }
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .new-music__album:nth-child(3),
-  .new-music__album:nth-child(4),
-  .new-music__album:nth-child(5) {
-    margin-top: 100px;
-  }
-
-  .new-music__album:nth-child(3) {
-    transform: translate(0, -30px);
-    grid-column: 1 / 3;
-  }
-
-  .new-music__album:nth-child(4) {
-    transform: translate(0, 70px);
-    grid-column: 3 / 5;
-  }
-
-  .new-music__album:nth-child(5) {
-    grid-column: 5 / 7;
-  }
-
-  .new-music-background {
-    margin-top: 25rem;
-    background-color: transparent;
-
-    &::after {
-      top: -50px;
-    }
-
-    &::before {
-      bottom: -50px;
-    }
   }
 }
 </style>

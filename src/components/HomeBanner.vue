@@ -111,7 +111,6 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-/* -------------------- Banner -------------------- */
 
 .banner {
   grid-area: banner;

@@ -1,314 +1,269 @@
 <script>
-  export default {
-    mounted() {
-      
-    },
-    
-    methods: {
-      
-    }
-  }
+export default {
+  mounted() {},
+
+  methods: {},
+}
 </script>
 
 <template>
   <section class="radio">
-    <h2 class="radio__title">Our Radio</h2>
+    <h2 class="radio__title">Owsla Radio</h2>
 
-    <h3 class="radio__subtitle">
-      Listen to our program on beat 1 and mixcloud, enjoy our releases and our
-      special guests
-    </h3>
+    <h3 class="radio__subtitle">Listen to our program on beat 1 and mixcloud, enjoy our releases and our special guests</h3>
 
-    <div class="playlists__list">
-      <img class="m-btn playlists__img" m-id="1" src="https://i.scdn.co/image/ab67706c0000bebb59f906f5d309fc1c9b35c95b" alt="Playlists 2"/>
-      <img class="m-btn playlists__img" m-id="2" src="https://i.scdn.co/image/ab67706c0000bebbeec08ebad6313ba4620d1231" alt="Playlists 1"/>
-      <img class="m-btn playlists__img" m-id="3" src="https://i.scdn.co/image/ab67706c0000bebbb528347c16962d66ac3be2d5" alt="Playlists 3"/>
+    <div class="radio__list">
+      <img class="radio__img" m-id="3" src="https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/owslaradio%2F3.webp?alt=media&token=b85e3cf9-ec38-42c9-9262-245b0717b13b" alt="radio 3" />
+      <img class="radio__img" m-id="2" src="https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/owslaradio%2F2.webp?alt=media&token=bc400968-0c69-4931-b7b7-438d03bbd8d3" alt="radio 2" />
+      <img class="radio__img" m-id="1" src="https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/owslaradio%2F1.webp?alt=media&token=95f2c081-5cc9-4de6-8388-86c0aa8b3a91" alt="radio 1" />
     </div>
 
-    <div class="radio__list" href="">
-      <div class="radio__item">
-        <p class="radio__num">1</p>
-        <img
-          class="radio__img"
-          src="https://thumbnailer.mixcloud.com/unsafe/600x600/extaudio/4/4/4/6/b4ed-5190-4280-a38b-6ad22bdb28ce"
-          alt=""
-        />
-        <iframe
-          width="100%"
-          height="180"
-          src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2FCreateRadio%2Fowsla-radio-1-beats-1%2F"
-          frameborder="0"
-        ></iframe>
+    <div class="radio__player">
+      <p class="radio__player-title">Skrillex & OWSLA Crew</p>
+      <div class="radio__player-info">
+        <p>Introducing OWSLA Radio</p>
+        <p>Skrillex chats to tons of great guests.</p>
       </div>
-      <div class="radio__item">
-        <p class="radio__num">2</p>
-        <img
-          class="radio__img"
-          src="https://thumbnailer.mixcloud.com/unsafe/600x600/extaudio/4/4/4/6/b4ed-5190-4280-a38b-6ad22bdb28ce"
-          alt=""
-        />
-        <iframe
-          width="100%"
-          height="180"
-          src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2FCreateRadio%2Fowsla-radio-2-beats-1%2F"
-          frameborder="0"
-        ></iframe>
+      <div class="radio__play">
       </div>
-      <div class="radio__item">
-        <p class="radio__num">3</p>
-        <img
-          class="radio__img"
-          src="https://thumbnailer.mixcloud.com/unsafe/600x600/extaudio/4/4/4/6/b4ed-5190-4280-a38b-6ad22bdb28ce"
-          alt=""
-        />
-        <iframe
-          width="100%"
-          height="180"
-          src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2FPAUL_DI%2Fskrillex-owsla-radio-3-beats-1%2F"
-          frameborder="0"
-        ></iframe>
-      </div>
+      <img src="https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/owslaradio%2F1.webp?alt=media&token=95f2c081-5cc9-4de6-8388-86c0aa8b3a91" class="radio__img" alt="">
     </div>
   </section>
+  <span class="radio-background"></span>
 </template>
 
 <style lang="scss" scoped>
-  /* -------------------- Radio -------------------- */
 
-  .radio {
-    grid-area: radio;
-    @extend %container-center;
-    @include flex(column, nowrap);
-    align-items: center;
-    width: 100%;
-    padding-left: 1rem;
-
-    .radio__title {
-      @include font(fh1,w500,MonumentE);
-      margin-bottom: 2rem;
-      grid-column: span 2;
-    }
-
-    .radio__subtitle {
-      @extend %f-subtitle;
-      justify-self: center;
-      max-width: 800px;
-    }
-
-    .radio__list {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      position: relative;
-      width: 100%;
-
-      .radio__item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        margin-bottom: 3rem;
-
-        .radio__num {
-          display: none;
-          min-width: 120px;
-
-          @extend %f-monument;
-          font-size: clamp(4rem, 5vw, 4.5rem);
-          line-height: calc(150%);
-          color: transparent;
-          -webkit-text-stroke: 2.5px #000000;
-          margin-bottom: 0;
-        }
-
-        .radio__img {
-          width: 100%;
-        }
-      }
-    }
-  }
-
-  @media screen and (min-width: 476px) {
-    .radio__img {
-      display: none;
-    }
-  }
-
-  @media screen and (min-width: 768px) {
-    .radio {
-      .radio__list {
-        .radio__item {
-          flex-direction: row;
-
-          .radio__num {
-            display: flex;
-          }
-        }
-      }
-    }
-  }
-</style>
-
-<!-- 
-.playlists {
-  grid-area: playlists;
+.radio {
+  grid-area: radio;
   @extend %container-center;
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   width: 100%;
 
-  .playlists__title {
-    @include font(fh1,w500,MonumentE)
-    grid-column: span 2;
-    margin-bottom: 0;
+  filter: drop-shadow(0px 0px 25px rgb(80 80 80 / 12%));
+
+  .radio__title {
+    grid-column: span 6;
+    margin: 32px 0 24px 0;
+
+    @include font(fh1, w500, MonumentE, lsWidest);
+    text-align: center;
+    line-height: 100%;
   }
 
-  .playlists__list {
-    grid-column: span 2;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    margin: 16rem 0rem 3rem;
+  .radio__subtitle {
+    grid-column: span 6;
+    justify-self: center;
+    max-width: 850px;
+    margin-bottom: 32px;
 
-    .playlists__img {
+    @include font(ft2, w500, MontS, lsWider);
+    text-align: center;
+    line-height: 100%;
+  }
+
+  .radio__list {
+    grid-column: 1/2;
+    
+    @include flex();
+    justify-content: flex-start;
+    position: relative;
+    margin: 6rem 0 6rem;
+
+    .radio__img {
       width: 100%;
-      max-width: 500px;
-      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+      max-width: 260px;
+
       transition: all ease-in-out 0.5s;
       cursor: pointer;
 
       &:nth-child(1) {
-        position: absolute;
-        transform: translate(0, -200px);
 
         &:hover {
-          transform: translate(0, -230px);
+          transform: translate(0, -32px);
 
           & ~ :nth-child(2) {
-            transform: translate(0, -20px);
+            transform: translate(48px, 72px);
           }
 
           & ~ :nth-child(3) {
-            transform: translate(0, 50px);
+            transform: translate(96px, 118px);
           }
         }
       }
 
       &:nth-child(2) {
-        box-shadow: 0px -30px 30px 0px rgba(0, 0, 0, 0.64);
         position: absolute;
-        transform: translate(0, -90px);
+        transform: translate(48px, 48px);
 
         &:hover {
-          transform: translate(0, -180px);
+          transform: translate(48px, 16px);
 
           & ~ :nth-child(3) {
-            transform: translate(0, 50px);
+            transform: translate(96px, 118px);
+          }
+
+          & :has(img){
+            transform: translate(0, 118px);
           }
         }
       }
 
       &:nth-child(3) {
-        box-shadow: 0px -30px 30px 0px rgba(0, 0, 0, 0.64);
-        z-index: 1;
-      }
-
-      &:hover {
-        filter: hue-rotate(135deg);
-        transition: all ease-in-out 0.5s;
-      }
-
-      &--up {
-        transform: translate(0, -230px) !important;
+        position: absolute;
+        transform: translate(96px, 96px);
       }
     }
   }
 
-  .playlists__songs {
-    display: none;
-    grid-column: span 2;
-    margin: 2rem 0rem;
-
-    .playlists__iframe {
-      min-height: 500px;
-      width: 100%;
-      height: 100%;
-    }
-  }
-}
+  .radio__player{
+    grid-column: 2/3;
+    clip-path: polygon(0% 8%, 100% 0%, 100% 100%, 3% 97%);
+    background-color: #ffffff;
+    height: fit-content;
+    width: 600px;
+    margin-top: 6rem;
+    padding: 3rem 2.25rem 3rem 3.25rem;
 
 
-@media screen and (min-width: 768px) {
-  .playlists {
-    .playlists__list {
-      .playlists__img {
-        max-width: 380px;
-        width: 100%;
-        margin-left: 140px;
-        &:nth-child(1) {
-          transform: translate(-140px, -140px);
+    display: grid;
+    grid-template-areas:  "title img"
+                          "info img";
+    grid-template-columns: 1fr auto;
+    justify-self: flex-end;
+    align-self: center;
 
-          &:hover {
-            transform: translate(-140px, -250px);
-          }
+    .radio__player-title{
+      grid-area: title;
 
-          &:hover ~ :nth-child(2) {
-            transform: translate(-60px, -10px);
-          }
-        }
+      @include font(ft2, w400, MonumentE, lsWidest);
+      font-style: normal;
+      text-transform: uppercase;
+      line-height: 30px;
+      color: $cBlack;
+      -webkit-text-stroke: 1px #000000;
 
-        &:nth-child(2) {
-          transform: translate(-70px, -70px);
-
-          &:hover {
-            transform: translate(-70px, -250px);
-          }
-          &:hover ~ :nth-child(3) {
-            transform: translate(10px, 10px);
-          }
-        }
-        &:nth-child(3) {
-          z-index: 1;
-        }
-
-        &:hover {
-          filter: hue-rotate(135deg);
-          transition: all ease-in-out 0.5s;
-        }
-      }
-    }
-
-    .playlists__songs {
       display: flex;
+      align-self: center;
     }
+
+    .radio__player-info{
+      grid-area: info;
+      border-left: solid 3px #000000;
+      padding-left: 1rem;
+
+      @include flex(column);
+      align-self: center;
+      text-transform: capitalize;
+
+      :nth-child(1){
+        @include font(fhl1, w700, MontS, lsWider);
+        margin-bottom: .5rem;
+      }
+      :nth-child(2){
+        @include font(fb1, w500, MontS, lsWider);
+        width: 300px;
+      }
+    }
+
+    .radio__img{
+      grid-area: img;
+
+      width: 80px;
+      height: 200px;
+      object-fit: cover;
+      justify-self: center;
+      align-self: center;
+    }
+
+
   }
 
-  .playlists-background {
-    margin-bottom: 20rem;
-  }
 }
 
-@media screen and (min-width: 1024px) {
-  .playlists {
-    .playlists__title {
-      margin-bottom: 3rem;
-    }
+.radio-background {
+  grid-area: radio;
+  justify-self: flex-end;
 
-    .playlists__list {
-      grid-column: span 1;
-      justify-content: start;
-    }
+  background-image: url(https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/background%2Fhome-radio.webp?alt=media&token=782f8e94-87bf-405d-8e01-ceb9fb5807a8);
+  background-size: cover;
+  background-position: right;
 
-    .playlists__songs {
-      grid-column: span 1;
-      justify-content: end;
-      margin: 2rem 0rem;
-      margin-left: 2rem;
-    }
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 4% 96%);
+  
+  margin: 210px 0 0 0;
+  z-index: -1;
+  width: 50%;
+  height: 250px;
+  background-repeat: no-repeat;
   }
 
-  .playlists-background {
-    margin-bottom: 8rem;
-  }
-} -->
+// @media screen and (min-width: 768px) {
+//     .radio__list {
+//       .radio__img {
+//         max-width: 380px;
+//         width: 100%;
+//         margin-left: 140px;
+//         &:nth-child(1) {
+//           transform: translate(-140px, -140px);
+
+//           &:hover {
+//             transform: translate(-140px, -250px);
+//           }
+
+//           &:hover ~ :nth-child(2) {
+//             transform: translate(-60px, -10px);
+//           }
+//         }
+
+//         &:nth-child(2) {
+//           transform: translate(-70px, -70px);
+
+//           &:hover {
+//             transform: translate(-70px, -250px);
+//           }
+//           &:hover ~ :nth-child(3) {
+//             transform: translate(10px, 10px);
+//           }
+//         }
+//         &:nth-child(3) {
+//           z-index: 1;
+//         }
+
+//         &:hover {
+//           filter: hue-rotate(135deg);
+//           transition: all ease-in-out 0.5s;
+//         }
+//       }
+
+//       .radio__songs {
+//         display: flex;
+//       }
+//     }
+
+//     .radio-background {
+//       margin-bottom: 20rem;
+//     }
+//   }
+
+// @media screen and (min-width: 1024px) {
+//   .radio__title {
+//     margin-bottom: 3rem;
+//   }
+
+//   .radio__list {
+//     grid-column: span 1;
+//     justify-content: start;
+//   }
+
+//   .radio__songs {
+//     grid-column: span 1;
+//     justify-content: end;
+//     margin: 2rem 0rem;
+//     margin-left: 2rem;
+//   }
+// }
+
+</style>

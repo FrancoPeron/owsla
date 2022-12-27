@@ -1,4 +1,6 @@
-<script>
+<script> 
+  import Player from '@/components/Player.vue'
+  // import { defineAsyncComponent , ref } from 'vue'
 
   // Data Base
   import {db, storage} from '@/firebase/firebase.config'
@@ -16,6 +18,9 @@
         urlfirebase: "owslaradio",
         data: artists
       };
+    },
+    components: {
+      Player
     },
     mounted() {
       this.getUrl()
@@ -134,6 +139,8 @@
 </script>
 
 <template>
+  <Player />
+
   <div class="container">
     <h1 class="h1">Admin</h1>
 
@@ -156,6 +163,7 @@
     </div>
 
   </div>
+
 </template>
 
 <style lang="scss" scoped>
