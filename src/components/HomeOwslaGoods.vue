@@ -28,6 +28,13 @@ export default {
         <img src="https://firebasestorage.googleapis.com/v0/b/owslagoods-fbf3b.appspot.com/o/products%2Fartist_046%203.png?alt=media&token=7b350a3d-c573-476d-8078-d9026b8f0413" alt="" />
         <p>'Spectrum Flag'</p>
       </div>
+      <a class="merch__btn" href="https://owslagoods.netlify.app/" target="_blank">
+        view all
+        <svg width="29" height="16" viewBox="0 0 29 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M26.9 8L1 8M26.9 8L19.9 15M26.9 8L19.9 1" stroke="black" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </a>
+
     </div>
   </section>
   <span class="merch-background"></span>
@@ -142,7 +149,6 @@ export default {
         }
       }
     }
-
     .merch__img:nth-child(2) {
       grid-area: img2;
       margin-top: 32px;
@@ -153,7 +159,6 @@ export default {
         }
       }
     }
-
     .merch__img:nth-child(3) {
       grid-area: img3;
       margin-top: 64px;
@@ -180,6 +185,23 @@ export default {
         top: 32px;
       }
     }
+
+    .merch__btn{
+      grid-area: btn;
+      justify-self: flex-end;
+      @include btn(cB,bgW,bW,false);
+      
+      svg{
+        transition: ease-in-out 0.5s;
+      }
+
+      &:hover{
+        svg{
+          transform: translateX(6px);
+          transition: ease-in-out 0.5s;
+        }
+      }
+    }
   }
 }
 
@@ -190,7 +212,7 @@ export default {
   background-position: center;
   z-index: -1;
   height: 500px;
-  margin-top: 400px;
+  margin-top: 300px;
   margin-bottom: 3rem;
   background-repeat: no-repeat;
 }

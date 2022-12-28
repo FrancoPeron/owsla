@@ -189,7 +189,7 @@ export default {
         .slider__btn {
           grid-area: btn;
           align-self: flex-end;
-          @extend %btn__outline;
+          @include btn(cW,bgT,bW);
         }
       }
     }

@@ -63,15 +63,15 @@
     @extend %formulario__form;
 
     .suscribe__email {
-      @extend .formulario__input;
+      @include formulario__input(cB);
     }
 
     .suscribe__btn {
-      @extend .formulario__btn;
+      @include btn(cW,bgB,bB);
+      width: 100%;
 
       @include respond(sm) {
-        border-left: 0;
-        margin: 0;
+        width: fit-content;
       }
     }
   }

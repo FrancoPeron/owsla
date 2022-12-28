@@ -8,7 +8,7 @@
 };
 
 /* ---------- Font ---------- */
-
+//@include font(ft2, w400, MonumentE, lsWidest);
 @mixin font($f-size:fb1,$f-width:w500,$f-family:MontS,$f-letterS:lsNormal) {
 
 	$fFamily: (
@@ -67,10 +67,8 @@
 
 };
 
-
-// @include respond(sm){}
 /* ---------- Responsive ---------- */
-
+// @include respond(sm){}
 @mixin respond($breakpoint) {
   
   @if($breakpoint == xs)  {
@@ -90,19 +88,97 @@
   }
 };
 
+/* ---------- Buttons ---------- */
+//@include btn(cW,bgB,bW);
+@mixin btn($color:cW, $bg-color:bgB, $border:none, $hover:true) {
+  
+  $Color: (
+		cB: $cBlack,
+		cW: $cWhite,
+	);
+
+  $bgColor: (
+		bgB: $cBlack,
+		bgW: $cWhite,
+		bgT: transparent,
+	);
+  $Border: (
+		bB: solid 2px $cBlack,
+		bW: solid 2px $cWhite,
+		bN: none,
+	);
+
+  @include font(fb1, w300, MonumentE);
+  // -webkit-text-stroke: thin;
+  letter-spacing: 0.15rem;
+  white-space: nowrap;
+  text-transform: uppercase;
+  text-align: center;
+
+  width: fit-content;
+  height: 52px;
+  padding: 1rem 1.5rem;
+
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+
+  @include flex(row);
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+
+  background-color: map-get($bgColor, $bg-color);
+  border: map-get($Border, $border);
+  color: map-get($Color, $color);
+  @if ($color == "cB"){
+    -webkit-text-stroke: 1px $cBlack;
+  }@else{
+    -webkit-text-stroke: 1px $cWhite;
+  }
+
+  @if($hover){
+
+    &:hover {
+
+      @if ($bg-color == "bgW"){
+        background: $cBlack;
+        color: $cWhite;
+        -webkit-text-stroke: 1px $cWhite;
+      }
+      @else{
+        background: $cWhite;
+        color: $cBlack;
+        -webkit-text-stroke: 1px $cBlack;
+      }
+
+      transition: ease-in-out 0.5s;
+    }
+
+  }
+
+};
+
 /* ----------  ---------- */
 
-@mixin alignment($j,$a,$p){
+// @mixin alignment($j:N,$a:N,$p:N){
 
+//   $justify: (
+//     jcStart: "justify-content: flex-start",
+//     jcEnd: flex-end,
+//     jcCenter: "justify-content: center",
+//     jcBetween: space-between,
+//     jcAround: space-around,
+//     jcEvenly: space-evenly,
+    
+//     jsAuto: auto, 
+//     jsStart: start,
+//     jsEnd: end,
+//     jsCenter: center,
+//     jsStretch: space-evenly,
+// 	);
 
-  $justifyC: (
-    jcStart : flex-start,
-    jcEnd : flex-end,
-    jcCenter : center,
-    jcBetween : space-between,
-    jcAround : space-around,
-    jcEvenly : space-evenly,
-	);
   
-  justify-content: map-get($justifyC, $jc)
-};
+//   @if(map-has-key($justify, $j))  {
+//     map.get($justify, $j);
+//   };
+// };
