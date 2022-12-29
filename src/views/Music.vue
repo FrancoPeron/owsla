@@ -1,54 +1,159 @@
-<template>
-  <div class="main-music">
-    <span class="main-music__background"></span>
-
-    <section for="target" class="main-music__list">
-      <a v-for="(val,index) in musicList" :key="index" :href="val.link" target="_blank" class="release">
-        <img class="release__img shadow" :src="val.cover" :alt="val.title">
-        <div class="release__info">
-            <h2 class="release__title"> {{val.title}}<p v-if="val.featuring[0]">{{`(feat. `+val.featuring[0]+ `)`}}</p></h2>
-            <h3 class="release__artist"> {{val.artist[0]}} <p v-if="val.artist.length>1">{{` & `+ val.artist[1]}}</p> </h3>.
-        </div>
-      </a>
-    </section>
-  </div>
-</template>
-
 <script>
 // Data Base
-import {db} from '@/firebase/firebase.config'
-import { getDocs, addDoc, collection, query, limit, orderBy } from "firebase/firestore"
+import { db } from '@/firebase/firebase.config'
+import { getDocs, collection, query, limit, orderBy, startAfter } from 'firebase/firestore'
+import { useInfiniteScroll } from '@vueuse/core'
 
 export default {
   data() {
     return {
+      showImg: false,
+      skList: 13,
+      skImg: 'https://img.freepik.com/foto-gratis/fondo-estudio-fotografo-vacio-resumen-textura-fondo-belleza-azul-claro-oscuro-claro-gris-frio-pared-plana-degradado-blanco-nevado-piso_1258-54160.jpg?w=600',
+
       musicList: [],
-    };
+      limit: 13,
+      resultLength: null,
+    }
   },
   mounted() {
+    this.getData()
+    this.limit = 16
 
-    //obtener datos
-    getDocs(query(collection(db, 'music'),orderBy("date", "desc")))
-    .then(result => {
-        const resultDocs = result.docs.map(doc => {
-            return {
-                id: doc.id,
-                ...doc.data(),
-            }
-        })
-
-        this.musicList = resultDocs
-        console.log( this.musicList)
-    })
-    .catch(error => console.log(error))
-
+    useInfiniteScroll(
+      window,
+      () => {
+        if (this.resultLength != 0) {
+          this.getData()
+        } else {
+          document.querySelectorAll('.skCuadrado').forEach((element) => {
+            element.classList.add('skHide')
+          })
+        }
+      },
+      { distance: 500 }
+    )
   },
 
-  methods: {},
-};
+  methods: {
+    //obtener datos
+    getData() {
+      let colectionRef = query(collection(db, 'music'), orderBy('date', 'desc'), limit(this.limit))
+
+      if (this.lastDocSnapshot) {
+        colectionRef = query(colectionRef, startAfter(this.lastDocSnapshot))
+      }
+
+      getDocs(colectionRef)
+        .then((result) => {
+          const resultDocs = result.docs.map((doc) => {
+            return {
+              id: doc.id,
+              ...doc.data(),
+            }
+          })
+          this.resultLength = resultDocs.length
+          this.lastDocSnapshot = result.docs[result.docs.length - 1]
+          this.musicList.push(...resultDocs)
+          // if (this.resultLength == 0) {
+          //   document.querySelectorAll(".skCuadrado").forEach(element => {
+          //     element.style.display = 'none'
+          //   });
+          // }
+        })
+        .catch((error) => console.log(error))
+    },
+
+    loadImage() {
+      this.showImg = true
+      this.skList = 4
+
+      document.querySelectorAll('.skCuadrado').forEach((element) => {
+        element.classList.add('skLast')
+      })
+    },
+  },
+}
 </script>
 
+<template>
+  <div class="main-music">
+    <span class="main-music__background"></span>
+    <section for="target" class="main-music__list">
+      <a v-for="(val, index) in musicList" :key="index" :href="val.link" target="_blank" class="release">
+        <img class="release__img shadow" :src="!showImg ? skImg : val.cover" :alt="val.title" @load="loadImage" />
+        <div class="release__info">
+          <h2 class="release__title">
+            {{ val.title }}
+            <p v-if="val.featuring[0]">{{ `(feat. ` + val.featuring[0] + `)` }}</p>
+          </h2>
+          <h3 class="release__artist">
+            {{ val.artist[0] }}
+            <p v-if="val.artist.length > 1">{{ ` & ` + val.artist[1] }}</p>
+          </h3>
+          .
+        </div>
+      </a>
+
+      <span v-for="(val, index) in skList" :key="index" class="release skCuadrado"></span>
+    </section>
+
+    <!-- <button class="music-btn" @click="getData">Load More</button> -->
+  </div>
+</template>
+
 <style lang="scss">
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 2s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.skCuadrado {
+  width: 100%;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  background: url(@/assets/image/sk.webp);
+}
+.skHide {
+  display: none;
+}
+.skLast {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%), url(@/assets/image/sk.webp);
+}
+.skCuadrado::after {
+  display: block;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-100%);
+  animation: 2s loading linear 0.5s infinite;
+  background: linear-gradient(90deg, transparent, #fdfdfd, transparent);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  transform: translateX(-100%);
+  z-index: 1;
+}
+
+@keyframes loading {
+  0% {
+    transform: translateX(-100%);
+  }
+  60% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
 /* ------------------------------ Music ------------------------------ */
 
 $music-grid: minmax(240px, 1fr);
@@ -63,7 +168,7 @@ $music-grid: minmax(240px, 1fr);
     animation: multcolor 30s infinite, move 160s infinite;
 
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       width: 100%;
       height: 100%;
@@ -81,30 +186,6 @@ $music-grid: minmax(240px, 1fr);
     }
   }
 
-  .main-music__title {
-    color: $cWhite;
-
-    text-align: center;
-    margin-top: 2rem;
-    margin-bottom: 3rem;
-    text-transform: uppercase;
-    white-space: nowrap;
-
-    &::before {
-      content: "-";
-      @include font(fb1);
-      color: $cWhite;
-      margin-right: 3rem;
-    }
-
-    &::after {
-      content: "-";
-      @include font(fb1);
-      color: $cWhite;
-      margin-left: 3rem;
-    }
-  }
-
   .main-music__list {
     @extend %container-center;
     background: $cWhite;
@@ -112,14 +193,19 @@ $music-grid: minmax(240px, 1fr);
     display: grid;
     grid-template-columns: repeat(auto-fit, $music-grid);
     gap: 2rem;
+    width: 100%;
   }
 }
 
+.music-btn {
+  @include btn(cB, bgW, bB);
+}
 .release {
   position: relative;
 
   .release__img {
     width: 100%;
+    aspect-ratio: 1/1;
   }
 
   .release__info {
