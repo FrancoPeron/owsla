@@ -46,8 +46,7 @@ $video-grid: minmax(48%, 1fr);
   }
 
   .main-video__title {
-    @extend %f-monument;
-    @extend %f-bt1;
+   
     color: $cWhite;
 
     text-align: center;
@@ -58,14 +57,14 @@ $video-grid: minmax(48%, 1fr);
 
     &::before {
       content: "-";
-      @extend %f-bt1;
+      
       color: $cWhite;
       margin-right: 3rem;
     }
 
     &::after {
       content: "-";
-      @extend %f-bt1;
+    
       color: $cWhite;
       margin-left: 3rem;
     }
@@ -145,8 +144,7 @@ $video-grid: minmax(48%, 1fr);
   }
 
   .video-item__title {
-    @extend %f-monument;
-    @extend %f-hl1;
+    
     line-height: calc(140%);
     font-weight: 500;
     letter-spacing: 0.05rem;

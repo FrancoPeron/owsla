@@ -1,5 +1,5 @@
 <script>
-export default {};
+export default {}
 </script>
 
 <template>
@@ -11,24 +11,13 @@ export default {};
         <div class="main-radio__info">
           <h1 class="main-radio__title">OWSLA RADIO</h1>
           <p class="main-radio__subtitle">
-            Listen to our program on beat 1 and mixcloud, enjoy our releases and
-            our special guests. <br />
+            Listen to our program on beat 1 and mixcloud, enjoy our releases and our special guests. <br />
             "good people, good time."
           </p>
           <hr class="main-radio__line" />
           <div class="d-flex flex-wrap gap-4">
-            <a
-              class="main-radio__btn"
-              href="https://music.apple.com/us/room/1080035340"
-              target="_blank"
-              >On Apple Music</a
-            >
-            <a
-              class="main-radio__btn"
-              href="https://www.mixcloud.com/PAUL_DI/playlists/owsla-radio/"
-              target="_blank"
-              >On Mixcloud</a
-            >
+            <a class="main-radio__btn" href="https://music.apple.com/us/room/1080035340" target="_blank">On Apple Music</a>
+            <a class="main-radio__btn" href="https://www.mixcloud.com/PAUL_DI/playlists/owsla-radio/" target="_blank">On Mixcloud</a>
           </div>
         </div>
         <div class="main-radio__info-img">
@@ -40,20 +29,8 @@ export default {};
     </section>
 
     <section for="target" class="main-radio__list">
-      <div
-        id="reproductor"
-        class="player offcanvas offcanvas-bottom"
-        data-bs-scroll="true"
-        data-bs-backdrop="false"
-        tabindex="-1"
-        aria-labelledby="reproductor"
-      >
-        <button
-          type="button"
-          class="player__btn btn-close text-reset"
-          data-bs-dismiss="offcanvas"
-          aria-label="Close"
-        ></button>
+      <div id="reproductor" class="player offcanvas offcanvas-bottom" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" aria-labelledby="reproductor">
+        <button type="button" class="player__btn btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         <div modal="target" class="content"></div>
       </div>
     </section>
@@ -77,7 +54,7 @@ $radio-grid: minmax(240px, 1fr);
     animation: move 160s infinite;
 
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       width: 100%;
       height: 100%;
@@ -107,8 +84,7 @@ $radio-grid: minmax(240px, 1fr);
         padding: 3rem;
 
         .main-radio__title {
-          @extend %f-monument;
-          @extend %f-bt1;
+          
           color: transparent;
           -webkit-text-stroke: 1.5px #ffffff;
           text-align: start;
@@ -116,8 +92,7 @@ $radio-grid: minmax(240px, 1fr);
         }
 
         .main-radio__subtitle {
-          @extend %f-monument;
-          @extend %f-hl1;
+          
           line-height: 1.6;
           text-align: start;
           color: $cWhite;
@@ -133,7 +108,7 @@ $radio-grid: minmax(240px, 1fr);
         }
 
         .main-radio__btn {
-          @extend %btn__outline;
+          
         }
       }
 
@@ -184,13 +159,13 @@ $radio-grid: minmax(240px, 1fr);
         padding: 1rem;
 
         .main-radio__subtitle {
-          @extend %f-h1eadline;
+          
           color: $cWhite;
           margin-bottom: 1rem;
         }
 
         .main-radio__description {
-          @extend %f-body;
+          
           color: $cWhite;
         }
       }
@@ -207,16 +182,7 @@ $radio-grid: minmax(240px, 1fr);
   grid-column: 1/-1;
   min-height: 16px;
   margin: 2.5rem 0;
-  background: linear-gradient(
-    to left,
-    #f3f3f3 14.286%,
-    #d5d5d5 14.286% 28.57%,
-    #aeaeae 28.57% 42.85%,
-    #797979 42.85% 57.142%,
-    #616161 57.142% 71.428%,
-    #373737 71.428% 85.714%,
-    #1c1c1c 85.714% 100%
-  );
+  background: linear-gradient(to left, #f3f3f3 14.286%, #d5d5d5 14.286% 28.57%, #aeaeae 28.57% 42.85%, #797979 42.85% 57.142%, #616161 57.142% 71.428%, #373737 71.428% 85.714%, #1c1c1c 85.714% 100%);
 }
 
 .player {

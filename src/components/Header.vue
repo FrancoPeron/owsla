@@ -12,6 +12,7 @@ export default {
     document.querySelectorAll('.nav__link').forEach((element) => {
       element.addEventListener('click', function () {
         burger.click()
+        document.body.style.overflow = 'auto'
       })
     })
   },

@@ -10,7 +10,6 @@ export default {
       showImg: false,
       skList: 13,
       skImg: 'https://img.freepik.com/foto-gratis/fondo-estudio-fotografo-vacio-resumen-textura-fondo-belleza-azul-claro-oscuro-claro-gris-frio-pared-plana-degradado-blanco-nevado-piso_1258-54160.jpg?w=600',
-
       musicList: [],
       limit: 13,
       resultLength: null,
@@ -40,26 +39,26 @@ export default {
     getData() {
       let colectionRef = query(collection(db, 'music'), orderBy('date', 'desc'), limit(this.limit))
 
-      if (this.lastDocSnapshot) {
-        colectionRef = query(colectionRef, startAfter(this.lastDocSnapshot))
-      }
+      if (this.lastDocSnapshot) colectionRef = query(colectionRef, startAfter(this.lastDocSnapshot))
 
       getDocs(colectionRef)
         .then((result) => {
+          //guardo snapshoot
+          this.lastDocSnapshot = result.docs[result.docs.length - 1]
+
+          //agrego id
           const resultDocs = result.docs.map((doc) => {
             return {
               id: doc.id,
               ...doc.data(),
             }
           })
-          this.resultLength = resultDocs.length
-          this.lastDocSnapshot = result.docs[result.docs.length - 1]
+
+          //guardo resultado en el array
           this.musicList.push(...resultDocs)
-          // if (this.resultLength == 0) {
-          //   document.querySelectorAll(".skCuadrado").forEach(element => {
-          //     element.style.display = 'none'
-          //   });
-          // }
+
+          //guardo longitud del resultado
+          this.resultLength = resultDocs.length
         })
         .catch((error) => console.log(error))
     },
@@ -97,8 +96,6 @@ export default {
 
       <span v-for="(val, index) in skList" :key="index" class="release skCuadrado"></span>
     </section>
-
-    <!-- <button class="music-btn" @click="getData">Load More</button> -->
   </div>
 </template>
 
