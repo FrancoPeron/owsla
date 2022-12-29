@@ -78,172 +78,172 @@ export default {};
   }
 }
 
-.main-contact {
-  .main-contact__title {
-    font-weight: 500;
-    color: $cWhite;
+// .main-contact {
+//   .main-contact__title {
+//     font-weight: 500;
+//     color: $cWhite;
 
-    text-align: center;
-    margin-bottom: 2rem;
-    margin-top: 3rem;
-    text-transform: uppercase;
-    white-space: nowrap;
+//     text-align: center;
+//     margin-bottom: 2rem;
+//     margin-top: 3rem;
+//     text-transform: uppercase;
+//     white-space: nowrap;
 
-    &::before {
-      content: "-";
+//     &::before {
+//       content: "-";
       
-      color: $cWhite;
-      margin-right: 3rem;
-    }
+//       color: $cWhite;
+//       margin-right: 3rem;
+//     }
 
-    &::after {
-      content: "-";
+//     &::after {
+//       content: "-";
     
-      color: $cWhite;
-      margin-left: 3rem;
-    }
-  }
-}
+//       color: $cWhite;
+//       margin-left: 3rem;
+//     }
+//   }
+// }
 
-.contact_form {
-  grid-column: span 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
+// .contact_form {
+//   grid-column: span 2;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   width: 100%;
 
-  @include respond(md) {
-    grid-column: span 1;
-  }
-}
+//   @include respond(md) {
+//     grid-column: span 1;
+//   }
+// }
 
-.contact_title {
+// .contact_title {
  
-  color: $cWhite;
-  margin: 2rem;
-}
+//   color: $cWhite;
+//   margin: 2rem;
+// }
 
-.contact {
-  @extend %container-center;
+// .contact {
+//   @extend %container-center;
 
-  .contact__box {
-    display: grid;
-    grid-template-areas:
-      "suscribe"
-      "demo"
-      "description";
+//   .contact__box {
+//     display: grid;
+//     grid-template-areas:
+//       "suscribe"
+//       "demo"
+//       "description";
 
-    @include respond(md) {
-      border: solid 2px white;
-      backdrop-filter: blur(4px);
+//     @include respond(md) {
+//       border: solid 2px white;
+//       backdrop-filter: blur(4px);
 
-      grid-template-areas:
-        "img suscribe"
-        "img demo"
-        "img description";
-    }
+//       grid-template-areas:
+//         "img suscribe"
+//         "img demo"
+//         "img description";
+//     }
 
-    .contact__img {
-      display: none;
-      grid-area: img;
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-      border-right: solid 2px white;
+//     .contact__img {
+//       display: none;
+//       grid-area: img;
+//       height: 100%;
+//       width: 100%;
+//       object-fit: cover;
+//       border-right: solid 2px white;
 
-      @include respond(md) {
-        display: flex;
-      }
-    }
+//       @include respond(md) {
+//         display: flex;
+//       }
+//     }
 
-    .contact__suscribe {
-      grid-area: suscribe;
-      @extend .contact_form;
+//     .contact__suscribe {
+//       grid-area: suscribe;
+//       @extend .contact_form;
 
-      @include respond(md) {
-        padding: 2rem 3rem;
-      }
+//       @include respond(md) {
+//         padding: 2rem 3rem;
+//       }
 
-      .contact__suscribe-title {
-        @extend .contact_title;
-      }
+//       .contact__suscribe-title {
+//         @extend .contact_title;
+//       }
 
-      .contact__suscribe-box {
-        @extend %formulario__form;
+//       .contact__suscribe-box {
+//         @extend %formulario__form;
 
-        .contact__suscribe-email {
-          @extend .formulario__input;
-        }
+//         .contact__suscribe-email {
+//           @extend .formulario__input;
+//         }
 
-        .contact__suscribe-btn {
-          @extend .formulario__btn;
-          @include respond(sm) {
-            border-left: 0;
-            margin: 0;
-          }
-        }
-      }
-    }
+//         .contact__suscribe-btn {
+//           @extend .formulario__btn;
+//           @include respond(sm) {
+//             border-left: 0;
+//             margin: 0;
+//           }
+//         }
+//       }
+//     }
 
-    .contact__demo {
-      grid-area: demo;
-      @extend .contact_form;
+//     .contact__demo {
+//       grid-area: demo;
+//       @extend .contact_form;
 
-      @include respond(md) {
-        padding: 2rem 3rem;
-      }
+//       @include respond(md) {
+//         padding: 2rem 3rem;
+//       }
 
-      .contact__demo-title {
-        @extend .contact_title;
-      }
+//       .contact__demo-title {
+//         @extend .contact_title;
+//       }
 
-      .contact__demo-box {
-        @extend %formulario__form;
+//       .contact__demo-box {
+//         @extend %formulario__form;
 
-        .contact__demo-file {
-          @extend .formulario__input-file;
-        }
+//         .contact__demo-file {
+//           @extend .formulario__input-file;
+//         }
 
-        .contact__demo-btn {
-          @extend .formulario__btn;
-          @include respond(sm) {
-            border-left: 0;
-            margin: 0;
-          }
-        }
-      }
-    }
+//         .contact__demo-btn {
+//           @extend .formulario__btn;
+//           @include respond(sm) {
+//             border-left: 0;
+//             margin: 0;
+//           }
+//         }
+//       }
+//     }
 
-    .contact__description {
-      grid-area: description;
-      margin-bottom: 1rem;
-      @extend .contact_form;
+//     .contact__description {
+//       grid-area: description;
+//       margin-bottom: 1rem;
+//       @extend .contact_form;
 
-      @include respond(md) {
-        padding: 2rem 3rem;
-      }
+//       @include respond(md) {
+//         padding: 2rem 3rem;
+//       }
 
-      .contact__description-title {
-        @extend .contact_title;
-      }
+//       .contact__description-title {
+//         @extend .contact_title;
+//       }
 
-      .contact__description-box {
-        @extend %formulario__form;
-        flex-direction: column;
+//       .contact__description-box {
+        
+//         flex-direction: column;
 
-        .contact__description-textarea {
-          @extend .formulario__input-textarea;
-        }
+//         .contact__description-textarea {
+          
+//         }
 
-        .contact__description-btn {
-          @extend .formulario__btn;
-          @include respond(sm) {
-            border-top: 0;
-            margin: 0;
-          }
-        }
-      }
-    }
-  }
-}
+//         .contact__description-btn {
+          
+//           @include respond(sm) {
+//             border-top: 0;
+//             margin: 0;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 </style>
