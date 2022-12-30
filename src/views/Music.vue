@@ -1,127 +1,49 @@
-<script>
+<script setup>
+
 // Data Base
 import { db } from '@/firebase/firebase.config'
-import { getDocs, collection, query, limit, orderBy, startAfter } from 'firebase/firestore'
-import { useInfiniteScroll } from '@vueuse/core'
+import { collection, query, limit, orderBy} from 'firebase/firestore'
 
-export default {
-  data() {
-    return {
-      showImg: false,
-      skList: 13,
-      skImg: 'https://img.freepik.com/foto-gratis/fondo-estudio-fotografo-vacio-resumen-textura-fondo-belleza-azul-claro-oscuro-claro-gris-frio-pared-plana-degradado-blanco-nevado-piso_1258-54160.jpg?w=600',
-      musicList: [],
-      limit: 13,
-      resultLength: null,
-    }
-  },
-  mounted() {
-    this.getData()
-    this.limit = 16
+// Componenet
+import ItemsList from '@/components/ItemsList.vue'
+import MusicRelease from '@/components/MusicRelease.vue'
 
-    useInfiniteScroll(
-      window,
-      () => {
-        if (this.resultLength != 0) {
-          this.getData()
-        } else {
-          document.querySelectorAll('.skCuadrado').forEach((element) => {
-            element.classList.add('skHide')
-          })
-        }
-      },
-      { distance: 500 }
-    )
-  },
 
-  methods: {
-    //obtener datos
-    getData() {
-      let colectionRef = query(collection(db, 'music'), orderBy('date', 'desc'), limit(this.limit))
+/* || Data || ----------------------------------------*/
+const dataInfo = {
+    colectionRef: query(collection(db, 'music'), orderBy('date', 'desc'), limit(13)),
+    limitItems: 16,
+};
 
-      if (this.lastDocSnapshot) colectionRef = query(colectionRef, startAfter(this.lastDocSnapshot))
-
-      getDocs(colectionRef)
-        .then((result) => {
-          //guardo snapshoot
-          this.lastDocSnapshot = result.docs[result.docs.length - 1]
-
-          //agrego id
-          const resultDocs = result.docs.map((doc) => {
-            return {
-              id: doc.id,
-              ...doc.data(),
-            }
-          })
-
-          //guardo resultado en el array
-          this.musicList.push(...resultDocs)
-
-          //guardo longitud del resultado
-          this.resultLength = resultDocs.length
-        })
-        .catch((error) => console.log(error))
-    },
-
-    loadImage() {
-      this.showImg = true
-      this.skList = 4
-
-      document.querySelectorAll('.skCuadrado').forEach((element) => {
-        element.classList.add('skLast')
-      })
-    },
-  },
-}
 </script>
 
 <template>
   <div class="main-music">
     <span class="main-music__background"></span>
-    <section for="target" class="main-music__list">
-      <a v-for="(val, index) in musicList" :key="index" :href="val.link" target="_blank" class="release">
-        <img class="release__img shadow" :src="!showImg ? skImg : val.cover" :alt="val.title" @load="loadImage" />
-        <div class="release__info">
-          <h2 class="release__title">
-            {{ val.title }}
-            <p v-if="val.featuring[0]">{{ `(feat. ` + val.featuring[0] + `)` }}</p>
-          </h2>
-          <h3 class="release__artist">
-            {{ val.artist[0] }}
-            <p v-if="val.artist.length > 1">{{ ` & ` + val.artist[1] }}</p>
-          </h3>
-          .
-        </div>
-      </a>
-
-      <span v-for="(val, index) in skList" :key="index" class="release skCuadrado"></span>
+    <section class="main-music__list ">
+      <Suspense>
+        <template #default>
+          <ItemsList v-slot="val" :info="dataInfo">
+            <MusicRelease :item="val.item" />
+          </ItemsList>
+        </template>
+        <template #fallback>
+          <span v-for="(val, index) in 13" :key="index" class="release skCuadrado"></span>
+        </template>
+      </Suspense>
     </section>
   </div>
 </template>
 
 <style lang="scss">
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 2s ease;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-}
-
 .skCuadrado {
-  width: 100%;
+  min-width: 100%;
+  height: 100%;
   aspect-ratio: 1/1;
+  background: url(../assets/image/sk.webp);
   overflow: hidden;
-  background: url(@/assets/image/sk.webp);
 }
-.skHide {
-  display: none;
-}
-.skLast {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%), url(@/assets/image/sk.webp);
-}
+
 .skCuadrado::after {
   display: block;
   content: '';
@@ -156,6 +78,7 @@ export default {
 $music-grid: minmax(240px, 1fr);
 
 .main-music {
+
   .main-music__background {
     @extend %backgrounds-pos;
     background: url(https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/background%2Fmain-music.webp?alt=media&token=ca5751aa-6cbe-4fd3-9e9e-4df998f55147);
@@ -190,54 +113,12 @@ $music-grid: minmax(240px, 1fr);
     display: grid;
     grid-template-columns: repeat(auto-fit, $music-grid);
     gap: 2rem;
-    width: 100%;
+    margin-bottom: 4rem;
   }
 }
 
-.music-btn {
-  @include btn(cB, bgW, bB);
-}
 .release {
   position: relative;
-
-  .release__img {
-    width: 100%;
-    aspect-ratio: 1/1;
-  }
-
-  .release__info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #000;
-    opacity: 0;
-    transition: all ease-in-out 0.5s;
-    padding: 1rem;
-
-    .release__title {
-      @include font(fhl2);
-      color: $cWhite;
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-
-    .release__artist {
-      @include font(fb1);
-      color: $cWhite;
-      text-align: center;
-    }
-  }
-
-  &:hover .release__info {
-    opacity: 1;
-    transition: all ease-in-out 0.5s;
-  }
 
   &:nth-child(1) {
     grid-column: 1/-1;
@@ -254,3 +135,13 @@ $music-grid: minmax(240px, 1fr);
   }
 }
 </style>
+
+<!-- .fade-enter-active,
+.fade-leave-active {
+  transition: opacity 2s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+} -->

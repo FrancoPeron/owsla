@@ -46,7 +46,6 @@ $video-grid: minmax(48%, 1fr);
   }
 
   .main-video__title {
-   
     color: $cWhite;
 
     text-align: center;

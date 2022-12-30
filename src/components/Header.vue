@@ -68,9 +68,9 @@ export default {
         <li class="nav__item">
           <router-link class="nav__link" to="/radio">Radio</router-link>
         </li>
-        <li class="nav__item">
+        <!-- <li class="nav__item">
           <router-link class="nav__link" to="/nest">NEST</router-link>
-        </li>
+        </li> -->
         <li class="nav__item">
           <a class="nav__link" href="https://owslagoods.netlify.app/">Merch</a>
         </li>

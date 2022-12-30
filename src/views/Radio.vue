@@ -107,9 +107,9 @@ $radio-grid: minmax(240px, 1fr);
           margin: 3rem 0;
         }
 
-        .main-radio__btn {
+        // .main-radio__btn {
           
-        }
+        // }
       }
 
       .main-radio__info-img {
