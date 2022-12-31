@@ -12,7 +12,7 @@ export default {};
       <div class="contact__box">
         <img
           class="contact__img"
-          src="../assets/image/owslacrew.webp"
+          src="@/assets/image/owslacrew.webp"
           alt="owslacrew"
         />
         <form class="contact__demo" action="">
