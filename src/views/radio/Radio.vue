@@ -21,7 +21,7 @@ export default {}
           </div>
         </div>
         <div class="main-radio__info-img">
-          <img src="../assets/image/owsla-radio.webp" alt="" />
+          <img src="@/assets/image/owsla-radio.webp" alt="" />
         </div>
       </div>
 
