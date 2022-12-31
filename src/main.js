@@ -7,7 +7,7 @@ import "./firebase/firebase.config.js"
 
 import { createRouter, createWebHashHistory , createWebHistory} from 'vue-router'
 
-import Site from '@/site/Owsla.vue'
+import Owsla from '@/views/Owsla.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -15,40 +15,38 @@ const router = createRouter({
   routes: [
 
     {
-      path: '/', component: Site,
+      path: '/', component: Owsla,
       children: [
         {
-          path: '/', name: 'Home', component: () => import('@/views/Home.vue')
+          path: '/', name: 'Home', component: () => import('@/views/home/Home.vue')
         },
         {
-          path: '/music', name: 'Music', component: () => import('@/views/Music.vue')
+          path: '/music', name: 'Music', component: () => import('@/views/music/Music.vue')
         },
         {
-          path: '/artists', name: 'Artists', component: () => import('@/views/Artists.vue')
+          path: '/artists', name: 'Artists', component: () => import('@/views/artists/Artists.vue')
         },
         {
-          path: '/videos', name: 'Videos', component: () => import('@/views/Videos.vue')
+          path: '/videos', name: 'Videos', component: () => import('@/views/videos/Videos.vue')
         },
         {
-          path: '/radio', name: 'Radio', component: () => import('@/views/Radio.vue')
+          path: '/radio', name: 'Radio', component: () => import('@/views/radio/Radio.vue')
         },
         {
-          path: '/nest', name: 'Nest',component: () => import('@/views/Nest.vue')
+          path: '/nest', name: 'Nest',component: () => import('@/views/nest/Nest.vue')
         },
         {
-          path: '/Contact', name: 'Contact', cocomponent: () => import('@/views/Contact.vue')
+          path: '/Contact', name: 'Contact', cocomponent: () => import('@/views/contact/Contact.vue')
         },
       ],
     },
     {
-      path: '/admin', name: 'Admin', component: () => import('@/site/Admin.vue')
+      path: '/admin', name: 'Admin', component: () => import('@/views/Admin.vue')
     },
   ]
 })
 
-createApp(App).use(router).mount('#app')
-
-
 // ========== Router ========== //
 
-
+// import LazyTube from "vue-lazytube";
+createApp(App).use(router).mount('#app')

@@ -1,12 +1,51 @@
 <script>
-export default {};
+import { YoutubeVue3 } from 'youtube-vue3'
+
+export default {
+  name: 'App',
+  data() {
+    return { 
+      temp : { video_id:"3P1CnWI62Ik", listType:"search", list:"", loop:0 },
+      play : { video_id:"3P1CnWI62Ik", listType:"search", list:"", loop:0 }
+    }
+  },
+  components: {
+    YoutubeVue3
+  },
+  methods: {
+    applyConfig() {
+      this.play = Object.assign(this.play, this.temp)
+    },
+    playCurrentVideo() {
+      this.$refs.player.playVideo();
+    },
+    stopCurrentVideo() {
+      this.$refs.player.stopVideo();
+    },
+    pauseCurrentVideo() {
+      this.$refs.player.pauseVideo();
+    },
+    onEnded() {
+      console.log("## OnEnded")
+    },
+    onPaused() {
+      console.log("## OnPaused")
+    },
+    onPlayed() {
+      console.log("## OnPlayed")
+    }
+  }
+}
 </script>
 
 <template>
   <div class="main-video">
     <span class="main-video__background"></span>
-
     <section for="target" class="main-video__list">
+ 
+      <YoutubeVue3 ref="player" :videoid="'roRUx-9fFaI'" :width="640" :height="480" :autoplay="1"/>
+      
+ 
       <div
         class="modal fade"
         id="videoplayer"

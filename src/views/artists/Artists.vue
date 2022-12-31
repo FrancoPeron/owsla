@@ -6,7 +6,7 @@ import { collection, query, limit, orderBy} from 'firebase/firestore'
 
 // Componenet
 import ItemsList from '@/components/ItemsList.vue'
-import ArtistsItem from '@/components/ArtistsItem.vue'
+import ArtistsItem from '@/views/artists/ArtistsItem.vue'
 
 
 /* || Data || ----------------------------------------*/

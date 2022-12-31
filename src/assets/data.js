@@ -1166,8 +1166,6 @@ const owsla2018 = []
 const owsla2019 = []
 const owsla2020 = []
 
-
-
 const artists = [
   {
     artist: "AC Slater",

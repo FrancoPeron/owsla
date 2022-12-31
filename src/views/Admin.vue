@@ -9,6 +9,8 @@
 
   import artists from "@/assets/data.js";
 
+  
+
   export default {
     data() {
       return {
@@ -20,7 +22,7 @@
       };
     },
     components: {
-      Player
+      Player,
     },
     mounted() {
       this.getUrl()
@@ -140,7 +142,6 @@
 
 <template>
   <Player />
-
   <div class="container">
     <h1 class="h1">Admin</h1>
 

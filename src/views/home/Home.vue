@@ -10,12 +10,12 @@
     },
 
     components: {
-      HomeBanner: defineAsyncComponent(() => import('@/components/HomeBanner.vue')),
-      HomeNewMusic: defineAsyncComponent(() => import('@/components/HomeNewMusic.vue')),
-      HomeArtists: defineAsyncComponent(() => import('@/components/HomeArtists.vue')),
-      HomeOwslaGoods: defineAsyncComponent(() => import('@/components/HomeOwslaGoods.vue')),
-      HomeRadio: defineAsyncComponent(() => import('@/components/HomeRadio.vue')),
-      HomeSuscribe: defineAsyncComponent(() => import('@/components/HomeSuscribe.vue')),
+      HomeBanner: defineAsyncComponent(() => import('@/views/home/HomeBanner.vue')),
+      HomeNewMusic: defineAsyncComponent(() => import('@/views/home/HomeNewMusic.vue')),
+      HomeArtists: defineAsyncComponent(() => import('@/views/home/HomeArtists.vue')),
+      HomeOwslaGoods: defineAsyncComponent(() => import('@/views/home/HomeOwslaGoods.vue')),
+      HomeRadio: defineAsyncComponent(() => import('@/views/home/HomeRadio.vue')),
+      HomeSuscribe: defineAsyncComponent(() => import('@/views/home/HomeSuscribe.vue')),
     },
 
     mounted() {

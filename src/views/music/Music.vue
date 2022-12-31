@@ -6,7 +6,7 @@ import { collection, query, limit, orderBy} from 'firebase/firestore'
 
 // Componenet
 import ItemsList from '@/components/ItemsList.vue'
-import MusicRelease from '@/components/MusicRelease.vue'
+import MusicItem from '@/views/music/MusicItem.vue'
 
 
 /* || Data || ----------------------------------------*/
@@ -24,7 +24,7 @@ const dataInfo = {
       <Suspense>
         <template #default>
           <ItemsList v-slot="val" :info="dataInfo">
-            <MusicRelease :item="val.item" />
+            <MusicItem :item="val.item" />
           </ItemsList>
         </template>
         <template #fallback>
@@ -40,7 +40,7 @@ const dataInfo = {
   min-width: 100%;
   height: 100%;
   aspect-ratio: 1/1;
-  background: url(../assets/image/sk.webp);
+  background: url(@/assets/image/sk.webp);
   overflow: hidden;
 }
 
