@@ -1,26 +1,23 @@
 <script setup>
-
 // Data Base
 import { db } from '@/firebase/firebase.config'
-import { collection, query, limit, orderBy} from 'firebase/firestore'
+import { collection, query, limit, orderBy } from 'firebase/firestore'
 
 // Componenet
 import ItemsList from '@/components/ItemsList.vue'
 import ArtistsItem from '@/views/artists/ArtistsItem.vue'
 
-
 /* || Data || ----------------------------------------*/
 const dataInfo = {
-    colectionRef: query(collection(db, 'artists'),orderBy("date", "desc"), limit(8)),
-    limitItems: 8,
+  colectionRef: query(collection(db, 'artists'), orderBy('date', 'desc'), limit(8)),
+  limitItems: 8,
 };
-
 </script>
 
 <template>
   <div class="main-artists">
     <span class="main-artists__background"></span>
-    <section class="main-artists__list ">
+    <section class="main-artists__list">
       <Suspense>
         <template #default>
           <ItemsList v-slot="val" :info="dataInfo">
@@ -28,21 +25,21 @@ const dataInfo = {
           </ItemsList>
         </template>
         <template #fallback>
-          <span v-for="(val, index) in 13" :key="index" class="skCuadrado"></span>
+          <div v-for="(val, index) in 13" :key="index" class="sk-box">
+            <span class="sk-artist skeleton"></span>
+            <span class="sk-title skeleton"></span>
+          </div>
         </template>
       </Suspense>
     </section>
   </div>
 </template>
 
-
-<style lang="scss" scoped>
-/* ------------------------------ Artists ------------------------------ */
+<style lang="scss">
 
 $artists-grid: minmax(240px, 1fr);
 
 .main-artists {
-
   .main-artists__background {
     @extend %backgrounds-pos;
     background: url(https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/background%2Fmain-artists.webp?alt=media&token=ab1cccfa-d469-4700-962d-87e774f9dc4a);
@@ -53,7 +50,7 @@ $artists-grid: minmax(240px, 1fr);
     animation: move 160s infinite;
 
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       width: 100%;
       height: 100%;
@@ -82,7 +79,23 @@ $artists-grid: minmax(240px, 1fr);
     display: grid;
     grid-template-columns: repeat(auto-fit, $artists-grid);
     gap: 2rem;
+    margin-bottom: 4rem;
   }
 }
 
+.sk-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  .sk-artist {
+    width: 100%;
+    aspect-ratio: 7/10;
+  }
+
+  .sk-title {
+    width: 70%;
+    height: 20px;
+  }
+}
 </style>

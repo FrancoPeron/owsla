@@ -1,16 +1,22 @@
-
 <script>
 // Data Base
 import { db } from '@/firebase/firebase.config'
 import { getDocs, addDoc, collection, query, limit, orderBy } from 'firebase/firestore'
-
+// import { Fragment } from 'vue-frag'
 export default {
+  // components: { Fragment },
   data() {
     return {
       musicList: [],
+      loadedImg: false,
     }
   },
   mounted() {
+    for (let index = 0; index < 3; index++) {
+      this.musicList.push({cover:'src/assets/image/sk.webp'})
+    }
+
+
     getDocs(query(collection(db, 'music'), orderBy('date', 'desc'), limit(3)))
       .then((result) => {
         const resultDocs = result.docs.map((doc) => {
@@ -27,35 +33,36 @@ export default {
   },
 
   methods: {
-    //obtener datos
+    loaded(){
+      this.loadedImg = true
+    }
   },
 }
 </script>
 
 <template>
-  <section class="new-music">
-    <h2 class="new-music__title">Latest Releases</h2>
-    <h3 class="new-music__subtitle">some of our latest releases from this year, feel and enjoy the music, listen more <router-link to="/music">here</router-link></h3>
-
-    <div v-for="(val, index) in musicList" :key="index" class="new-music__album">
-      <div class="new-music__text">
-        <p>.{{ index + 1 }}</p>
-        <a :href="val.link" target="_blank"
-          >Listen Now
-          <svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 14.25L8 7.74997L1 1.25" stroke="black" stroke-width="2" />
-          </svg>
-        </a>
+  <fragment>
+    <section class="new-music">
+      <h2 class="new-music__title">Latest Releases</h2>
+      <h3 class="new-music__subtitle">some of our latest releases from this year, feel and enjoy the music, listen more <router-link to="/music">here</router-link></h3>
+      <div v-for="(val, index) in musicList" :key="index" class="new-music__album">
+        <div class="new-music__text">
+          <p>.{{ index + 1 }}</p>
+          <a :href="val.link" target="_blank"
+            >Listen Now
+            <svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 14.25L8 7.74997L1 1.25" stroke="black" stroke-width="2" />
+            </svg>
+          </a>
+        </div>
+        <img class="new-music__img" :src="val.cover" :alt="val.title" />
       </div>
-      <img class="new-music__img" :src="val.cover" :alt="val.title" />
-    </div>
-  </section>
-
-  <span class="new-music-background"></span>
+    </section>
+    <span class="new-music-background"></span>
+  </fragment>
 </template>
 
 <style lang="scss" scoped>
-
 .new-music {
   grid-area: new-music;
   @extend %container-center;
@@ -64,6 +71,8 @@ export default {
   grid-template-columns: repeat(6, 1fr);
   grid-column-gap: 8%;
   width: 100%;
+
+  @extend %fadeInDown;
 
   .new-music__title {
     grid-column: span 6;
@@ -102,34 +111,35 @@ export default {
     box-shadow: 12px 0px 0px 24px $cWhite;
 
     &:nth-child(3) {
-      @include respond(sm){
+      @include respond(sm) {
         grid-column: 1 / 4;
       }
-      @include respond(md){
+      @include respond(md) {
         grid-column: 1 / 3;
       }
     }
     &:nth-child(4) {
-      @include respond(sm){
+      @include respond(sm) {
         align-self: center;
         grid-row: 3 / 5;
         grid-column: 4 / 7;
       }
-      @include respond(md){
+      @include respond(md) {
         transform: translate(0, 64px);
         grid-column: 3 / 5;
       }
     }
     &:nth-child(5) {
-      @include respond(sm){
+      @include respond(sm) {
         grid-column: 1 / 4;
       }
-      @include respond(md){
+      @include respond(md) {
         grid-column: 5 / 7;
       }
     }
 
-    @include respond(sm){}
+    @include respond(sm) {
+    }
 
     .new-music__text {
       @include flex();
@@ -163,10 +173,11 @@ export default {
     .new-music__img {
       width: 100%;
       min-width: 250px;
+      aspect-ratio: 1/1;
+      object-fit: cover;
       position: relative;
       box-shadow: 10px 0px 0px 10px $cWhite;
     }
-
   }
 }
 
@@ -179,10 +190,10 @@ export default {
   width: 100%;
   background-color: $cBlack;
 
-  @include respond(sm){
+  @include respond(sm) {
     margin-top: 43rem;
   }
-  @include respond(md){
+  @include respond(md) {
     margin-top: 26rem;
     background-color: transparent;
   }
@@ -195,11 +206,11 @@ export default {
     width: 92%;
     height: 3px;
     background-color: $cBlack;
-    
-    @include respond(sm){
+
+    @include respond(sm) {
       top: -300px;
     }
-    @include respond(md){
+    @include respond(md) {
       top: -50px;
     }
   }
@@ -213,21 +224,13 @@ export default {
     height: 3px;
     background-color: $cBlack;
 
-    @include respond(sm){
+    @include respond(sm) {
       bottom: -300px;
     }
-    @include respond(md){
+    @include respond(md) {
       bottom: -50px;
     }
   }
-
 }
 
-@media screen and (min-width: 768px) {
-  .new-music__album:nth-child(3),
-  .new-music__album:nth-child(4),
-  .new-music__album:nth-child(5) {
-    margin-top: 100px;
-  }
-}
 </style>

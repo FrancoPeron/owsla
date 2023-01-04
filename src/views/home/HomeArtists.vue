@@ -1,4 +1,3 @@
-%
 <script>
 // Data Base
 import { db } from '@/firebase/firebase.config'
@@ -7,12 +6,16 @@ import { getDocs, addDoc, collection, query, limit, orderBy } from 'firebase/fir
 export default {
   data() {
     return {
-      cantData: 20,
+      cantData: 16,
       scrollLeftAux: -1,
       artistsList: [],
     }
   },
   mounted() {
+
+    for (let index = 0; index < this.cantData; index++) {
+      this.artistsList.push({img:'src/assets/image/sk.webp'})
+    }
     //obtener datos
     getDocs(query(collection(db, 'artists'), orderBy('date', 'desc'), limit(this.cantData)))
       .then((result) => {
@@ -159,6 +162,8 @@ export default {
       .artist__img {
         object-fit: cover;
         width: 240px;
+        height: 100%;
+
         aspect-ratio: 7/10;
         //cursor: pointer;
 

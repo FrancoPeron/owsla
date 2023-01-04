@@ -48,5 +48,6 @@ const router = createRouter({
 
 // ========== Router ========== //
 
+import { FragmentPlugin } from 'fragment-for-vue/vue3'
 // import LazyTube from "vue-lazytube";
-createApp(App).use(router).mount('#app')
+createApp(App).use(router).use(FragmentPlugin).mount('#app')

@@ -7,10 +7,15 @@ import { ref } from 'vue'
 const props = defineProps(['item'])
 let val = ref(props.item);
 
+let loadImg = ref(false)
+function loadImage(){
+  loadImg.value = true
+}
+
 </script>
 <template>
   <div class="artist d-flex flex-column position-relative overflow-hidden m-0 w-100">
-    <img class="artist__img w-100" data-bs-toggle="modal" :src="val.img" :alt="val.artist" />
+    <img class="artist__img w-100" data-bs-toggle="modal" :src="loadImg ? val.img : 'src/assets/image/sk.webp'" @load="loadImage" :alt="val.artist" />
     <p class="artist__name">{{ val.artist }}</p>
   </div>
 </template>

@@ -4,59 +4,46 @@ import { YoutubeVue3 } from 'youtube-vue3'
 export default {
   name: 'App',
   data() {
-    return { 
-      temp : { video_id:"3P1CnWI62Ik", listType:"search", list:"", loop:0 },
-      play : { video_id:"3P1CnWI62Ik", listType:"search", list:"", loop:0 }
+    return {
+      temp: { video_id: '3P1CnWI62Ik', listType: 'search', list: '', loop: 0 },
+      play: { video_id: '3P1CnWI62Ik', listType: 'search', list: '', loop: 0 },
     }
   },
   components: {
-    YoutubeVue3
+    YoutubeVue3,
   },
   methods: {
     applyConfig() {
       this.play = Object.assign(this.play, this.temp)
     },
     playCurrentVideo() {
-      this.$refs.player.playVideo();
+      this.$refs.player.playVideo()
     },
     stopCurrentVideo() {
-      this.$refs.player.stopVideo();
+      this.$refs.player.stopVideo()
     },
     pauseCurrentVideo() {
-      this.$refs.player.pauseVideo();
+      this.$refs.player.pauseVideo()
     },
     onEnded() {
-      console.log("## OnEnded")
+      console.log('## OnEnded')
     },
     onPaused() {
-      console.log("## OnPaused")
+      console.log('## OnPaused')
     },
     onPlayed() {
-      console.log("## OnPlayed")
-    }
-  }
+      console.log('## OnPlayed')
+    },
+  },
 }
 </script>
 
+<!-- <YoutubeVue3 :videoid="'roRUx-9fFaI'" /> -->
 <template>
   <div class="main-video">
     <span class="main-video__background"></span>
     <section for="target" class="main-video__list">
- 
-      <YoutubeVue3 ref="player" :videoid="'roRUx-9fFaI'" :width="640" :height="480" :autoplay="1"/>
       
- 
-      <div
-        class="modal fade"
-        id="videoplayer"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-dialog-centered modal-xl">
-          <div modal="target" class="video-modal modal-content shadow">dd</div>
-        </div>
-      </div>
     </section>
   </div>
 </template>
@@ -76,7 +63,7 @@ $video-grid: minmax(48%, 1fr);
     animation: multcolor 30s infinite, move 160s infinite;
 
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       width: 100%;
       height: 100%;
@@ -94,15 +81,15 @@ $video-grid: minmax(48%, 1fr);
     white-space: nowrap;
 
     &::before {
-      content: "-";
-      
+      content: '-';
+
       color: $cWhite;
       margin-right: 3rem;
     }
 
     &::after {
-      content: "-";
-    
+      content: '-';
+
       color: $cWhite;
       margin-left: 3rem;
     }
@@ -133,7 +120,7 @@ $video-grid: minmax(48%, 1fr);
     }
 
     &::before {
-      content: "";
+      content: '';
       width: 80px;
       height: 80px;
       background: $cWhite;
@@ -152,10 +139,10 @@ $video-grid: minmax(48%, 1fr);
     }
 
     &::after {
-      content: "";
+      content: '';
       width: 30px;
       height: 30px;
-      background: url("./assets/image/play.svg");
+      background: url('./assets/image/play.svg');
       background-size: cover;
       margin-left: 0.2rem;
 
@@ -182,7 +169,6 @@ $video-grid: minmax(48%, 1fr);
   }
 
   .video-item__title {
-    
     line-height: calc(140%);
     font-weight: 500;
     letter-spacing: 0.05rem;

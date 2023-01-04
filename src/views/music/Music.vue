@@ -28,7 +28,7 @@ const dataInfo = {
           </ItemsList>
         </template>
         <template #fallback>
-          <span v-for="(val, index) in 13" :key="index" class="release skCuadrado"></span>
+          <span v-for="(val, index) in 13" :key="index" class="sk-release skeleton"></span>
         </template>
       </Suspense>
     </section>
@@ -36,42 +36,7 @@ const dataInfo = {
 </template>
 
 <style lang="scss">
-.skCuadrado {
-  min-width: 100%;
-  height: 100%;
-  aspect-ratio: 1/1;
-  background: url(@/assets/image/sk.webp);
-  overflow: hidden;
-}
 
-.skCuadrado::after {
-  display: block;
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  transform: translateX(-100%);
-  animation: 2s loading linear 0.5s infinite;
-  background: linear-gradient(90deg, transparent, #fdfdfd, transparent);
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 0;
-  transform: translateX(-100%);
-  z-index: 1;
-}
-
-@keyframes loading {
-  0% {
-    transform: translateX(-100%);
-  }
-  60% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
 
 /* ------------------------------ Music ------------------------------ */
 
@@ -117,9 +82,11 @@ $music-grid: minmax(240px, 1fr);
   }
 }
 
-.release {
+.sk-release {
   position: relative;
-
+  aspect-ratio: 1/1;
+  width: 100%;
+  
   &:nth-child(1) {
     grid-column: 1/-1;
     grid-row: span 1/-1;
@@ -127,7 +94,7 @@ $music-grid: minmax(240px, 1fr);
 }
 
 @media screen and (min-width: 768px) {
-  .release {
+  .sk-release {
     &:nth-child(1) {
       grid-column: span 2;
       grid-row: span 2;

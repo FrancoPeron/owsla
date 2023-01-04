@@ -8,10 +8,15 @@ import { ref } from 'vue'
 const props = defineProps(['item']);
 let val = ref(props.item);
 
+let loadImg = ref(false)
+function loadImage(){
+  loadImg.value = true
+}
+
 </script>
 <template>
   <a :href="val.link" target="_blank" class="release">
-    <img class="release__img shadow" :src="val.cover" :alt="val.title" @load="loadImage" />
+    <img class="release__img shadow" :src="loadImg ? val.cover : 'src/assets/image/sk.webp'" @load="loadImage" :alt="val.title" />
     <div class="release__info">
       <h2 class="release__title">
         {{ val.title }}
@@ -28,10 +33,12 @@ let val = ref(props.item);
 <style lang="scss">
 .release {
   position: relative;
+  aspect-ratio: 1/1;
 
   .release__img {
     width: 100%;
     aspect-ratio: 1/1;
+    object-fit: cover;
     transition: opacity 2s ease;
   }
 

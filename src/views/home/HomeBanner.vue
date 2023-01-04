@@ -1,4 +1,5 @@
 <script>
+
 export default {
   mounted() {
     this.bannerSlider()
@@ -116,6 +117,9 @@ export default {
   grid-area: banner;
   @extend %container-center;
   width: 100%;
+
+  @extend %fadeIn;
+  
 }
 
 .slider {
@@ -137,6 +141,7 @@ export default {
         height: 570px;
         // aspect-ratio: 16/8;
         object-fit: cover;
+        background-color: $cBlack;
       }
 
       .slider__box-info {
@@ -154,9 +159,7 @@ export default {
         z-index: 1;
         width: 100%;
         padding: 2rem 3rem;
-        background: rgb(0, 0, 0);
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0) 100%);
-
         .slider__category {
           grid-area: category;
 
