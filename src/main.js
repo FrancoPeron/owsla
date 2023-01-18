@@ -1,5 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+import { createPinia } from 'pinia'
 
 import "./firebase/firebase.config.js"
 
@@ -50,4 +51,4 @@ const router = createRouter({
 
 import { FragmentPlugin } from 'fragment-for-vue/vue3'
 // import LazyTube from "vue-lazytube";
-createApp(App).use(router).use(FragmentPlugin).mount('#app')
+createApp(App).use(createPinia()).use(router).use(FragmentPlugin).mount('#app')

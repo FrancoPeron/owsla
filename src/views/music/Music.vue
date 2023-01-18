@@ -8,7 +8,6 @@ import { collection, query, limit, orderBy} from 'firebase/firestore'
 import ItemsList from '@/components/ItemsList.vue'
 import MusicItem from '@/views/music/MusicItem.vue'
 
-
 /* || Data || ----------------------------------------*/
 const dataInfo = {
     colectionRef: query(collection(db, 'music'), orderBy('date', 'desc'), limit(13)),

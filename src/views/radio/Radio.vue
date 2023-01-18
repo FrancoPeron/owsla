@@ -1,5 +1,18 @@
-<script>
-export default {}
+<script setup>
+// Data Base
+import { db } from '@/firebase/firebase.config'
+import { collection, query, limit, orderBy} from 'firebase/firestore'
+
+// Componenet
+import ItemsList from '@/components/ItemsList.vue'
+import RadioItem from '@/views/radio/RadioItem.vue'
+
+/* || Data || ----------------------------------------*/
+const dataInfo = {
+  colectionRef: query(collection(db, 'radio'), orderBy('date', 'desc'), limit(8)),
+  limitItems: 8,
+};
+
 </script>
 
 <template>
@@ -11,13 +24,12 @@ export default {}
         <div class="main-radio__info">
           <h1 class="main-radio__title">OWSLA RADIO</h1>
           <p class="main-radio__subtitle">
-            Listen to our program on beat 1 and mixcloud, enjoy our releases and our special guests. <br />
-            "good people, good time."
+            Listen and enjoy our program on beat 1, with special guests and new releases <br />
           </p>
           <hr class="main-radio__line" />
-          <div class="d-flex flex-wrap gap-4">
+          <div class="main-radio__btnBox">
+            <button></button>
             <a class="main-radio__btn" href="https://music.apple.com/us/room/1080035340" target="_blank">On Apple Music</a>
-            <a class="main-radio__btn" href="https://www.mixcloud.com/PAUL_DI/playlists/owsla-radio/" target="_blank">On Mixcloud</a>
           </div>
         </div>
         <div class="main-radio__info-img">
@@ -28,11 +40,17 @@ export default {}
       <span class="line-grey"></span>
     </section>
 
-    <section for="target" class="main-radio__list">
-      <div id="reproductor" class="player offcanvas offcanvas-bottom" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" aria-labelledby="reproductor">
-        <button type="button" class="player__btn btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        <div modal="target" class="content"></div>
-      </div>
+    <section class="main-radio__list">
+      <Suspense>
+        <template #default>
+          <ItemsList v-slot="val" :info="dataInfo">
+            <RadioItem :item="val.item" />
+          </ItemsList>
+        </template>
+        <template #fallback>
+          <span v-for="(val, index) in 13" :key="index" class="sk-release skeleton"></span>
+        </template>
+      </Suspense>
     </section>
   </div>
 </template>
@@ -73,8 +91,8 @@ $radio-grid: minmax(240px, 1fr);
       position: relative;
       display: flex;
       flex-direction: column;
-      background-color: rgba(0, 0, 0, 0.8);
-      backdrop-filter: blur(3rem);
+      background-color: rgba(20, 20, 20, 0.842);
+      backdrop-filter: blur(8px);
       width: 100%;
 
       .main-radio__info {
@@ -84,15 +102,16 @@ $radio-grid: minmax(240px, 1fr);
         padding: 3rem;
 
         .main-radio__title {
-          
+          @include font(fh1, w700, MonumentE, lsWidest);
+          font-size: clamp(2rem, 5vw, 3rem);
           color: transparent;
           -webkit-text-stroke: 1.5px #ffffff;
           text-align: start;
-          margin-bottom: 2rem;
+          margin-bottom: .8rem;
         }
 
         .main-radio__subtitle {
-          
+          @include font(fhl2, w500, MonumentE, lsWider);
           line-height: 1.6;
           text-align: start;
           color: $cWhite;
@@ -106,10 +125,12 @@ $radio-grid: minmax(240px, 1fr);
           opacity: 1;
           margin: 3rem 0;
         }
-
-        // .main-radio__btn {
-          
-        // }
+        .main-radio__btnBox{
+          @include flex();
+          .main-radio__btn {
+            @include btn(cW,bgT,bW);
+          }
+        } 
       }
 
       .main-radio__info-img {
@@ -131,10 +152,11 @@ $radio-grid: minmax(240px, 1fr);
   }
 
   .main-radio__list {
+    @extend %container-center;
     display: grid;
     grid-template-columns: repeat(auto-fit, $radio-grid);
-    gap: 1rem;
-    @extend %container-center;
+    gap: 2rem;
+    margin-bottom: 4rem;
 
     .main-radio__item {
       position: relative;
@@ -185,22 +207,6 @@ $radio-grid: minmax(240px, 1fr);
   background: linear-gradient(to left, #f3f3f3 14.286%, #d5d5d5 14.286% 28.57%, #aeaeae 28.57% 42.85%, #797979 42.85% 57.142%, #616161 57.142% 71.428%, #373737 71.428% 85.714%, #1c1c1c 85.714% 100%);
 }
 
-.player {
-  right: 0;
-  left: 0;
-  max-height: 180px;
-
-  .player__btn {
-    position: absolute;
-    right: 0;
-    top: -29px;
-    background-color: #fcfcfc;
-    border: 3px solid #d7d7d7;
-    border-bottom: 3px solid #fcfcfc;
-    opacity: 1;
-  }
-}
-
 @media screen and (min-width: 768px) {
   .main-radio {
     .main-radio__banner {
@@ -208,7 +214,7 @@ $radio-grid: minmax(240px, 1fr);
         flex-direction: row;
 
         .main-radio__info {
-          width: 48%;
+          width: 60%;
         }
 
         .main-radio__info-img {
@@ -216,7 +222,7 @@ $radio-grid: minmax(240px, 1fr);
           right: 0;
           overflow: hidden;
           height: 100%;
-          width: 52%;
+          width: 44%;
           opacity: 1;
 
           img {
@@ -229,6 +235,17 @@ $radio-grid: minmax(240px, 1fr);
         }
       }
     }
+  }
+}
+
+.sk-release {
+  position: relative;
+  aspect-ratio: 1/1;
+  width: 100%;
+  
+  &:nth-child(1) {
+    grid-column: 1/-1;
+    grid-row: span 1/-1;
   }
 }
 </style>

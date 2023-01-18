@@ -1,9 +1,5 @@
-<script>
-export default {
-  mounted() {},
+<script setup>
 
-  methods: {},
-}
 </script>
 
 <template>

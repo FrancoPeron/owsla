@@ -45,7 +45,7 @@ const infinitScroll = (colectionRef)=>{
 /* || LifeCyle || ----------------------------------------*/
 
 onMounted(() => {
-  console.log('MsuicList Mounted')
+  console.log('List Mounted')
 });
 
 /* || Code || ----------------------------------------*/

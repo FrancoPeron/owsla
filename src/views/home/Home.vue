@@ -16,6 +16,7 @@ export default {
     HomeOwslaGoods: defineAsyncComponent(() => import('@/views/home/HomeOwslaGoods.vue')),
     HomeRadio: defineAsyncComponent(() => import('@/views/home/HomeRadio.vue')),
     HomeSuscribe: defineAsyncComponent(() => import('@/views/home/HomeSuscribe.vue')),
+    Player: defineAsyncComponent(() => import('@/component/Player.vue')),
   },
 
   mounted() {
@@ -32,13 +33,13 @@ export default {
 <template>
   <div class="main-index">
     <span class="main-index__background"></span>
-      <HomeBanner/>
-      <HomeNewMusic />
-      <HomeArtists v-if="scrollPos > 1000" />
-      <HomeOwslaGoods v-if="scrollPos > 2000" />
-      <HomeRadio v-if="scrollPos > 3000" />
-      <HomeSuscribe v-if="scrollPos > 4000" />
-    </div>
+    <HomeBanner />
+    <HomeNewMusic />
+    <HomeArtists v-if="scrollPos > 1000" />
+    <HomeOwslaGoods v-if="scrollPos > 2000" />
+    <HomeRadio v-if="scrollPos > 3000" />
+    <HomeSuscribe v-if="scrollPos > 4000" />    
+  </div>
 </template>
 
 <style lang="scss" scoped>

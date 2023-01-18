@@ -38,12 +38,13 @@ export default {
 }
 </script>
 
-<!-- <YoutubeVue3 :videoid="'roRUx-9fFaI'" /> -->
 <template>
   <div class="main-video">
     <span class="main-video__background"></span>
     <section for="target" class="main-video__list">
       
+      <YoutubeVue3 :videoid="'roRUx-9fFaI'" />
+      <iframe src="https://www.youtube.com/embed/roRUx-9fFaI" width="560" height="315" title="A YouTube video" frameborder="0" allowfullscreen></iframe>
     </section>
   </div>
 </template>
