@@ -9,6 +9,7 @@ import "./firebase/firebase.config.js"
 import { createRouter, createWebHashHistory , createWebHistory} from 'vue-router'
 
 import Owsla from '@/views/Owsla.vue'
+import Music from '@/views/music/Music.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -22,7 +23,8 @@ const router = createRouter({
           path: '/', name: 'Home', component: () => import('@/views/home/Home.vue')
         },
         {
-          path: '/music', name: 'Music', component: () => import('@/views/music/Music.vue')
+          // path: '/music', name: 'Music', component: () => import('@/views/music/Music.vue')
+          path: '/music', name: 'Music', component: Music,
         },
         {
           path: '/artists', name: 'Artists', component: () => import('@/views/artists/Artists.vue')
@@ -37,7 +39,7 @@ const router = createRouter({
           path: '/nest', name: 'Nest',component: () => import('@/views/nest/Nest.vue')
         },
         {
-          path: '/Contact', name: 'Contact', cocomponent: () => import('@/views/contact/Contact.vue')
+          path: '/Contact', name: 'Contact', component: () => import('@/views/contact/Contact.vue')
         },
       ],
     },

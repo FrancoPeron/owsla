@@ -2218,7 +2218,6 @@ const artists = [
 
 ]
 
-
 const videos = 
 [
   {
