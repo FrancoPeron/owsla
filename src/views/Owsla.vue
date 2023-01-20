@@ -1,21 +1,21 @@
 <script>
   import Header from '@/components/Header.vue'
   import Footer from '@/components/Footer.vue'
-  import Player from '@/components/Player.vue'
+  // import Player from '@/components/Player.vue'
 
 export default {
   name: 'Home',
   components: {
     Header,
     Footer,
-    Player
+    // Player
   },
 }
 </script>
 
 <template>
     <Header />
-    <Player />
+    <!-- <Player /> -->
     <router-view/>
     <Footer />
 

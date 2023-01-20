@@ -35,10 +35,10 @@ export default {
     <span class="main-index__background"></span>
     <HomeBanner />
     <HomeNewMusic />
-    <HomeArtists v-if="scrollPos > 1000" />
-    <HomeOwslaGoods v-if="scrollPos > 2000" />
-    <HomeRadio v-if="scrollPos > 3000" />
-    <HomeSuscribe v-if="scrollPos > 4000" />    
+    <HomeArtists />
+    <HomeOwslaGoods v-if="scrollPos > 1000" />
+    <HomeRadio v-if="scrollPos > 2000" />
+    <HomeSuscribe v-if="scrollPos > 3000" />    
   </div>
 </template>
 

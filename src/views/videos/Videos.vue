@@ -1,50 +1,38 @@
-<script>
-import { YoutubeVue3 } from 'youtube-vue3'
+<script setup>
+import {YoutubeVue3} from 'youtube-vue3'
 
-export default {
-  name: 'App',
-  data() {
-    return {
-      temp: { video_id: '3P1CnWI62Ik', listType: 'search', list: '', loop: 0 },
-      play: { video_id: '3P1CnWI62Ik', listType: 'search', list: '', loop: 0 },
-    }
-  },
-  components: {
-    YoutubeVue3,
-  },
-  methods: {
-    applyConfig() {
-      this.play = Object.assign(this.play, this.temp)
-    },
-    playCurrentVideo() {
-      this.$refs.player.playVideo()
-    },
-    stopCurrentVideo() {
-      this.$refs.player.stopVideo()
-    },
-    pauseCurrentVideo() {
-      this.$refs.player.pauseVideo()
-    },
-    onEnded() {
-      console.log('## OnEnded')
-    },
-    onPaused() {
-      console.log('## OnPaused')
-    },
-    onPlayed() {
-      console.log('## OnPlayed')
-    },
-  },
-}
+// Data Base
+import { db } from '@/firebase/firebase.config'
+import { collection, query, limit, orderBy} from 'firebase/firestore'
+
+// Componenet
+import ItemsList from '@/components/ItemsList.vue'
+
+/* || Data || ----------------------------------------*/
+const dataInfo = {
+  colectionRef: query(collection(db, 'videos'), orderBy('date', 'desc'), limit(8)),
+  limitItems: 8,
+};
+
+
 </script>
 
 <template>
   <div class="main-video">
     <span class="main-video__background"></span>
-    <section for="target" class="main-video__list">
-      
-      <YoutubeVue3 :videoid="'roRUx-9fFaI'" />
-      <iframe src="https://www.youtube.com/embed/roRUx-9fFaI" width="560" height="315" title="A YouTube video" frameborder="0" allowfullscreen></iframe>
+    <section class="main-video__list">
+
+      <Suspense>
+        <template #default>
+          <ItemsList v-slot="val" :info="dataInfo">
+            <!-- <iframe class="video" :src="`https://www.youtube.com/embed/${val.item.code}`" title="A YouTube video" frameborder="0" allowfullscreen></iframe> -->
+            <YoutubeVue3 class="video" ref="youtube" :videoid="val.item.code" />
+          </ItemsList>
+        </template>
+        <template #fallback>
+          <span v-for="(val, index) in 13" :key="index" class="sk-release skeleton"></span>
+        </template>
+      </Suspense>
     </section>
   </div>
 </template>
@@ -103,6 +91,11 @@ $video-grid: minmax(48%, 1fr);
     display: grid;
     grid-template-columns: repeat(auto-fit, $video-grid);
     gap: 2rem;
+  }
+
+  .video{
+    aspect-ratio: 16/9;
+    width: 100%;
   }
 }
 
