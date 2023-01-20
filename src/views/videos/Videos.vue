@@ -10,8 +10,8 @@ import ItemsList from '@/components/ItemsList.vue'
 
 /* || Data || ----------------------------------------*/
 const dataInfo = {
-  colectionRef: query(collection(db, 'videos'), orderBy('date', 'desc'), limit(8)),
-  limitItems: 8,
+  colectionRef: query(collection(db, 'videos'), orderBy('date', 'desc'), limit(6)),
+  limitItems: 4,
 };
 
 

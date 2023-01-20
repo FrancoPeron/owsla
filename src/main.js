@@ -6,40 +6,46 @@ import "./firebase/firebase.config.js"
 
 // ========== Router ========== //
 
-import { createRouter, createWebHashHistory , createWebHistory} from 'vue-router'
+import { createRouter, createWebHistory} from 'vue-router'
 
 import Owsla from '@/views/Owsla.vue'
+import Home from '@/views/home/Home.vue'
 import Music from '@/views/music/Music.vue'
+import Artists from '@/views/artists/Artists.vue'
+import Videos from '@/views/videos/Videos.vue'
+import Radio from '@/views/radio/Radio.vue'
+import Contact from '@/views/contact/Contact.vue'
 
 const router = createRouter({
   history: createWebHistory(),
-  // history: createWebHashHistory(),
   routes: [
-
     {
       path: '/', component: Owsla,
       children: [
         {
           path: '/', name: 'Home', component: () => import('@/views/home/Home.vue')
+          // path: '/', name: 'Home', Home,
         },
         {
           // path: '/music', name: 'Music', component: () => import('@/views/music/Music.vue')
           path: '/music', name: 'Music', component: Music,
         },
         {
-          path: '/artists', name: 'Artists', component: () => import('@/views/artists/Artists.vue')
+          // path: '/artists', name: 'Artists', component: () => import('@/views/artists/Artists.vue')
+          path: '/artists', name: 'Artists', component: Artists,
         },
         {
-          path: '/videos', name: 'Videos', component: () => import('@/views/videos/Videos.vue')
+          // path: '/videos', name: 'Videos', component: () => import('@/views/videos/Videos.vue')
+          path: '/videos', name: 'Videos', component: Videos,
         },
         {
-          path: '/radio', name: 'Radio', component: () => import('@/views/radio/Radio.vue')
+          // path: '/radio', name: 'Radio', component: () => import('@/views/radio/Radio.vue')
+          path: '/radio', name: 'Radio', component: Radio,
         },
+
         {
-          path: '/nest', name: 'Nest',component: () => import('@/views/nest/Nest.vue')
-        },
-        {
-          path: '/Contact', name: 'Contact', component: () => import('@/views/contact/Contact.vue')
+          // path: '/Contact', name: 'Contact', component: () => import('@/views/contact/Contact.vue')
+          path: '/contact', name: 'Contact', component: Contact,
         },
       ],
     },
