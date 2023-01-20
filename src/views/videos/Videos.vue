@@ -26,7 +26,7 @@ const dataInfo = {
         <template #default>
           <ItemsList v-slot="val" :info="dataInfo">
             <!-- <iframe class="video" :src="`https://www.youtube.com/embed/${val.item.code}`" title="A YouTube video" frameborder="0" allowfullscreen></iframe> -->
-            <YoutubeVue3 class="video" ref="youtube" :videoid="val.item.code" />
+            <YoutubeVue3 class="video" ref="youtube" :videoid="val.item.code" :autoplay="0" />
           </ItemsList>
         </template>
         <template #fallback>

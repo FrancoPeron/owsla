@@ -47,8 +47,7 @@ const router = createRouter({
   ]
 })
 
-// ========== Router ========== //
+// ========== APP ========== //
 
 import { FragmentPlugin } from 'fragment-for-vue/vue3'
-// import LazyTube from "vue-lazytube";
-createApp(App).use(createPinia()).use(router).use(FragmentPlugin).mount('#app')
+createApp(App).use(router).use(createPinia()).use(FragmentPlugin).mount('#app')
