@@ -1,5 +1,5 @@
 <script> 
-  import Player from '@/components/Player.vue'
+  // import Player from '@/components/Player.vue'
   // import { defineAsyncComponent , ref } from 'vue'
 
   // Data Base
@@ -22,7 +22,7 @@
       };
     },
     components: {
-      Player,
+      // Player,
     },
     mounted() {
       this.getUrl()
