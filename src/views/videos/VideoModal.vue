@@ -5,30 +5,18 @@ import { ref, computed, watch } from 'vue'
 import { YoutubeVue3 } from 'youtube-vue3'
 
 /* || Data || ----------------------------------------*/
-const emit = defineEmits(['closeModal2']);
+const emit = defineEmits(['closeM']);
+const props = defineProps(['modalCode'])
+let val = ref(props.modalCode);
+watch(props, () => val.value = props.modalCode);
 
-const props = defineProps(['code2'])
-let val = ref(props.code2);
-
-watch(props, () => val.value = props.code2)
-
-
-
-// computed(() => console.log(props.code2))
-
-// const normalizedSize = computed(() => {return `${props.code2}`});
-
-// console.log(normalizedSize.value)
 </script>
+
 <template>
-  <div class="video-modal"  @click="emit('closeModal2')">
+  <div class="video-modal" @click="emit('closeM')">
     <!-- <iframe class="video" :src="`https://www.youtube.com/embed/${val.item.code}`" title="A YouTube video" frameborder="0" allowfullscreen></iframe> -->
     <YoutubeVue3 class="video-modal__player" ref="youtube" :videoid="val" :autoplay="0" />
-
   </div>
-  <!-- <button @click="emit('closeModal2')">fgsdfgsdfgdrgfsddfasdfasd</button> -->
-
-
 </template>
 
 <style lang="scss">

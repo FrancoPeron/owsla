@@ -20,11 +20,11 @@ const dataInfo = {
 };
 
 
-let codeaux = ref("");
+let videoCode = ref("");
 let showModal = ref(false);
 
 function openModal(val){
-  codeaux.value = val;
+  videoCode.value = val;
   showModal.value = true
 }
 
@@ -49,7 +49,7 @@ function closeModal(){
         </template>
       </Suspense>
       
-      <VideoModal :code2="codeaux" @closeModal2="closeModal" v-if="showModal" />
+      <VideoModal :modalCode="videoCode" @closeM="closeModal" v-if="showModal" />
     </section>
 
 

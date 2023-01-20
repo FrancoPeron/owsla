@@ -51,7 +51,7 @@ const sk = 'https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/
     transform: translate(-50%, -50%);
 
     transition: all ease-in-out 0.5s;
-    opacity: 0;
+    opacity: .2;
   }
 
   &::after {
@@ -71,7 +71,7 @@ const sk = 'https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/
 
     z-index: 2;
     filter: invert(1);
-    opacity: 0;
+    opacity: .5;
   }
 
   &:hover {
