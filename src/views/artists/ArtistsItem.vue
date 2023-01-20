@@ -1,12 +1,13 @@
 <script setup>
+
 //Vue
 import { ref } from 'vue'
 
 /* || Data || ----------------------------------------*/
-
 const props = defineProps(['item'])
 let val = ref(props.item);
 
+//loadImg
 let loadImg = ref(false)
 function loadImage(){
   loadImg.value = true
@@ -15,9 +16,10 @@ function loadImage(){
 const sk = "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/background%2Fsk.webp?alt=media&token=6fa58649-938a-447c-9c5f-3d554c4726c0";
 
 </script>
+
 <template>
-  <div class="artist d-flex flex-column position-relative overflow-hidden m-0 w-100">
-    <img class="artist__img w-100" data-bs-toggle="modal" :src="loadImg ? val.img : sk" @load="loadImage" :alt="val.artist" />
+  <div class="artist">
+    <img class="artist__img" data-bs-toggle="modal" :src="loadImg ? val.img : sk" @load="loadImage" :alt="val.artist" />
     <p class="artist__name">{{ val.artist }}</p>
   </div>
 </template>

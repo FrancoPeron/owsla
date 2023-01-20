@@ -1,4 +1,5 @@
 <script setup>
+
 // Data Base
 import { db } from '@/firebase/firebase.config'
 import { collection, query, limit, orderBy } from 'firebase/firestore'
@@ -12,6 +13,7 @@ const dataInfo = {
   colectionRef: query(collection(db, 'artists'), orderBy('date', 'desc'), limit(8)),
   limitItems: 8,
 };
+
 </script>
 
 <template>
@@ -35,9 +37,7 @@ const dataInfo = {
   </div>
 </template>
 
-<style lang="scss">
-
-$artists-grid: minmax(240px, 1fr);
+<style lang="scss" scoped>
 
 .main-artists {
   .main-artists__background {
@@ -72,14 +72,10 @@ $artists-grid: minmax(240px, 1fr);
     }
   }
 
+  $artists-grid: minmax(240px, 1fr);
   .main-artists__list {
     @extend %container-center;
-    background: $cWhite;
-    padding: 2rem;
-    display: grid;
     grid-template-columns: repeat(auto-fit, $artists-grid);
-    gap: 2rem;
-    margin-bottom: 4rem;
   }
 }
 

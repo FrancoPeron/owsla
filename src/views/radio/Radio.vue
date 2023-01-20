@@ -239,14 +239,4 @@ $radio-grid: minmax(240px, 1fr);
   }
 }
 
-.sk-release {
-  position: relative;
-  aspect-ratio: 1/1;
-  width: 100%;
-  
-  &:nth-child(1) {
-    grid-column: 1/-1;
-    grid-row: span 1/-1;
-  }
-}
 </style>

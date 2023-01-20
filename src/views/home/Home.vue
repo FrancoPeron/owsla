@@ -16,13 +16,11 @@ export default {
     HomeOwslaGoods: defineAsyncComponent(() => import('@/views/home/HomeOwslaGoods.vue')),
     HomeRadio: defineAsyncComponent(() => import('@/views/home/HomeRadio.vue')),
     HomeSuscribe: defineAsyncComponent(() => import('@/views/home/HomeSuscribe.vue')),
-    // Player: defineAsyncComponent(() => import('@/component/Player.vue')),
   },
 
   mounted() {
     window.addEventListener('scroll', () => {
       this.scrollPos = scrollY + window.innerHeight
-      // console.log(this.scrollPos)
     })
   },
 

@@ -34,12 +34,7 @@ const dataInfo = {
   </div>
 </template>
 
-<style lang="scss">
-
-
-/* ------------------------------ Music ------------------------------ */
-
-$music-grid: minmax(240px, 1fr);
+<style lang="scss" scoped>
 
 .main-music {
 
@@ -70,14 +65,10 @@ $music-grid: minmax(240px, 1fr);
     }
   }
 
+  $music-grid: minmax(240px, 1fr);
   .main-music__list {
     @extend %container-center;
-    background: $cWhite;
-    padding: 2rem;
-    display: grid;
     grid-template-columns: repeat(auto-fit, $music-grid);
-    gap: 2rem;
-    margin-bottom: 4rem;
   }
 }
 
@@ -101,13 +92,3 @@ $music-grid: minmax(240px, 1fr);
   }
 }
 </style>
-
-<!-- .fade-enter-active,
-.fade-leave-active {
-  transition: opacity 2s ease;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-} -->

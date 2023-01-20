@@ -4,20 +4,21 @@
 import { ref } from 'vue'
 
 /* || Data || ----------------------------------------*/
-
 const props = defineProps(['item']);
 let val = ref(props.item);
 
-const sk = "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/background%2Fsk.webp?alt=media&token=6fa58649-938a-447c-9c5f-3d554c4726c0";
-
+//loadImg
 let loadImg = ref(false)
 function loadImage(){
   loadImg.value = true
 }
 
+const sk = "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/background%2Fsk.webp?alt=media&token=6fa58649-938a-447c-9c5f-3d554c4726c0";
+
 </script>
+
 <template>
-  <a :href="val.link" target="_blank" class="release">
+  <a class="release" :href="val.link" target="_blank">
     <img class="release__img shadow" :src="loadImg ? val.cover : sk" @load="loadImage" :alt="val.title" />
     <div class="release__info">
       <h2 class="release__title">
@@ -30,7 +31,7 @@ function loadImage(){
       </h3>
     </div>
   </a>
-</template> -->
+</template>
 
 <style lang="scss">
 .release {

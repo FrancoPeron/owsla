@@ -160,18 +160,3 @@ main {
     filter: hue-rotate(360deg); } 
 }
 
-
-/* ------------------------------------------------------------------- */
-
-.main-music,
-.main-artists,
-.main-radio,
-.main-video,
-.main-merch,
-.main-about,
-.main-contact{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-

@@ -2223,736 +2223,883 @@ const videos =
   {
       "title": "Skrillex, Justin Bieber & Don Toliver - Don't Go (Official Music Video)",
       "date": "8/20/2021",
+      "img": "https://img.youtube.com/vi/cds_rfHsJ3Y/sddefault.jpg",
       "code": "cds_rfHsJ3Y"
   },
   {
       "title": "Skrillex, Starrah & Four Tet - Butterflies (Official Music Video)",
       "date": "6/24/2021",
+      "img": "https://img.youtube.com/vi/zliasEkWx0M/sddefault.jpg",
       "code": "zliasEkWx0M"
   },
   {
       "title": "Skrillex, Swae Lee & Siiickbrain - Too Bizarre (Official Music Video)",
       "date": "5/13/2021",
+      "img": "https://img.youtube.com/vi/v67VwpKXYZ0/sddefault.jpg",
       "code": "v67VwpKXYZ0"
   },
   {
       "title": "Salvatore Ganacci - Boycycle (feat. Sébastien Tellier) (Official Music Video)",
       "date": "2/14/2020",
+      "img": "https://img.youtube.com/vi/UZEFNHod_DU/sddefault.jpg",
       "code": "UZEFNHod_DU"
   },
   {
       "title": "TroyBoi -  Do You? (Official Music Video)",
       "date": "8/27/2019",
+      "img": "https://img.youtube.com/vi/ku3JbhWUwsg/sddefault.jpg",
       "code": "ku3JbhWUwsg"
   },
   {
       "title": "Skrillex - Mumbai Power (feat. Beam) [Tour Video]",
       "date": "7/19/2019",
+      "img": "https://img.youtube.com/vi/AcB5XhRG0Pg/sddefault.jpg",
       "code": "AcB5XhRG0Pg"
   },
   {
       "title": "TroyBoi - PAPI CHULO (Official Music Video)",
       "date": "7/11/2019",
+      "img": "https://img.youtube.com/vi/L6Vebbpk2xw/sddefault.jpg",
       "code": "L6Vebbpk2xw"
   },
   {
       "title": "Salvatore Ganacci - Horse (Official Music Video)",
       "date": "4/17/2019",
+      "img": "https://img.youtube.com/vi/NkRkuI0ZgX0/sddefault.jpg",
       "code": "NkRkuI0ZgX0"
   },
   {
       "title": "josh pan & Dylan Brady - My Own Behavior (Official Music Video)",
       "date": "3/28/2019",
+      "img": "https://img.youtube.com/vi/5j8yU4F48dc/sddefault.jpg",
       "code": "5j8yU4F48dc"
   },
   {
       "title": "josh pan & Dylan Brady - My Own Behavior (Official Music Video)",
       "date": "3/14/2019",
+      "img": "https://img.youtube.com/vi/cDuHZiW01ns/sddefault.jpg",
       "code": "cDuHZiW01ns"
   },
   {
       "title": "josh pan & Dylan Brady - The Whistle (Official Music Video)",
       "date": "3/14/2019",
+      "img": "https://img.youtube.com/vi/BCAOfajRE54/sddefault.jpg",
       "code": "BCAOfajRE54"
   },
   {
       "title": "josh pan & Dylan Brady - Many Moons (Official Music Video)",
       "date": "3/14/2019",
+      "img": "https://img.youtube.com/vi/iwFloeS4ptA/sddefault.jpg",
       "code": "iwFloeS4ptA"
   },
   {
       "title": "josh pan & Dylan Brady - Supersonic (Official Music Video)",
       "date": "3/14/2019",
+      "img": "https://img.youtube.com/vi/PaXv64PUAgY/sddefault.jpg",
       "code": "PaXv64PUAgY"
   },
   {
       "title": "josh pan & Dylan Brady - Revolution (Official Music Video)",
       "date": "3/14/2019",
+      "img": "https://img.youtube.com/vi/SZaaWDyc_RE/sddefault.jpg",
       "code": "SZaaWDyc_RE"
   },
   {
       "title": "josh pan & Dylan Brady - Devil By My Side (Official Music Video)",
       "date": "3/14/2019",
+      "img": "https://img.youtube.com/vi/mnIfk52UDl0/sddefault.jpg",
       "code": "mnIfk52UDl0"
   },
   {
       "title": "josh pan & Dylan Brady - Save The World (feat. Lewis Grant) (Official Music Video)",
       "date": "3/14/2019",
+      "img": "https://img.youtube.com/vi/JFZcjT1IaTY/sddefault.jpg",
       "code": "JFZcjT1IaTY"
   },
   {
       "title": "josh pan & Dylan Brady - Brain (feat. Lewis Grant) (Official Music Video)",
       "date": "3/14/2019",
+      "img": "https://img.youtube.com/vi/7Y_NdsPvI_0/sddefault.jpg",
       "code": "7Y_NdsPvI_0"
   },
   {
       "title": "josh pan & Dylan Brady - Past Lives (Official Music Video)",
       "date": "3/14/2019",
+      "img": "https://img.youtube.com/vi/wOMN-fXTI1c/sddefault.jpg",
       "code": "wOMN-fXTI1c"
   },
   {
       "title": "josh pan & Dylan Brady - Wheels (Official Music Video)",
       "date": "2/28/2019",
+      "img": "https://img.youtube.com/vi/roRUx-9fFaI/sddefault.jpg",
       "code": "roRUx-9fFaI"
   },
   {
       "title": "josh pan - Undefeated (Official Music Video)",
       "date": "2/7/2019",
+      "img": "https://img.youtube.com/vi/vkIDyK6syeA/sddefault.jpg",
       "code": "vkIDyK6syeA"
   },
   {
       "title": "Hikaru Utada & Skrillex - Face My Fears (Official Music Video)",
       "date": "1/31/2019",
+      "img": "https://img.youtube.com/vi/Kvnwnf9UftA/sddefault.jpg",
       "code": "Kvnwnf9UftA"
   },
   {
       "title": "Elohim - Buckets (Official Music Video)",
       "date": "1/31/2019",
+      "img": "https://img.youtube.com/vi/NnGn0Pw8IuU/sddefault.jpg",
       "code": "NnGn0Pw8IuU"
   },
   {
       "title": "josh pan - take your time (Official Music Video)",
       "date": "12/7/2018",
+      "img": "https://img.youtube.com/vi/eu0KPuhos_Y/sddefault.jpg",
       "code": "eu0KPuhos_Y"
   },
   {
       "title": "josh pan - Mask (with AWAY) (Official Music Video)",
       "date": "11/21/2018",
+      "img": "https://img.youtube.com/vi/Vk5WA2MfSlA/sddefault.jpg",
       "code": "Vk5WA2MfSlA"
   },
   {
       "title": "Elohim - Connect (Official Music Video)",
       "date": "11/8/2018",
+      "img": "https://img.youtube.com/vi/EfLFuanDOzo/sddefault.jpg",
       "code": "EfLFuanDOzo"
   },
   {
       "title": "OddKidOut - MIND/$ (Official Music Video)",
       "date": "7/11/2018",
+      "img": "https://img.youtube.com/vi/sv0_Jsk3l2I/sddefault.jpg",
       "code": "sv0_Jsk3l2I"
   },
   {
       "title": "OddKidOut - Napa Street (ft. Wesley Curtis) (Official Music Video)",
       "date": "6/27/2018",
+      "img": "https://img.youtube.com/vi/azTddJLi8vE/sddefault.jpg",
       "code": "azTddJLi8vE"
   },
   {
       "title": "OddKidOut - The Getaway (Official Music Video)",
       "date": "6/13/2018",
+      "img": "https://img.youtube.com/vi/pHZZ1sIwkKI/sddefault.jpg",
       "code": "pHZZ1sIwkKI"
   },
   {
       "title": "Tennyson - Uh Oh! (Live Band + String Quartet)",
       "date": "6/6/2018",
+      "img": "https://img.youtube.com/vi/Bx5rKjiGouQ/sddefault.jpg",
       "code": "Bx5rKjiGouQ"
   },
   {
       "title": "OddKidOut - 6 Years (Official Music Video)",
       "date": "5/30/2018",
+      "img": "https://img.youtube.com/vi/8sXze8cDCmM/sddefault.jpg",
       "code": "8sXze8cDCmM"
   },
   {
       "title": "Tennyson - Cry Bird (Official Music Video)",
       "date": "3/7/2018",
+      "img": "https://img.youtube.com/vi/C0RXx59wfvI/sddefault.jpg",
       "code": "C0RXx59wfvI"
   },
   {
       "title": "Snails & Space Laces - Break It Down (feat. Sam King) (Official Music Video)",
       "date": "1/9/2018",
+      "img": "https://img.youtube.com/vi/P8irn0H1J3k/sddefault.jpg",
       "code": "P8irn0H1J3k"
   },
   {
       "title": "Hundred Waters - Wave To Anchor (Official Music Video)",
       "date": "12/14/2017",
+      "img": "https://img.youtube.com/vi/MMUZEMoBi4w/sddefault.jpg",
       "code": "MMUZEMoBi4w"
   },
   {
       "title": "Hundred Waters - Firelight (Official Music Video)",
       "date": "10/19/2017",
+      "img": "https://img.youtube.com/vi/vlbKmiBuOog/sddefault.jpg",
       "code": "vlbKmiBuOog"
   },
   {
       "title": "Hundred Waters - Fingers (Official Music Video)",
       "date": "8/14/2017",
+      "img": "https://img.youtube.com/vi/o1v7mGD14lo/sddefault.jpg",
       "code": "o1v7mGD14lo"
   },
   {
       "title": "Skrillex & Poo Bear - Would You Ever (Official Music Video)",
       "date": "7/26/2017",
+      "img": "https://img.youtube.com/vi/r-SurvChGFk/sddefault.jpg",
       "code": "r-SurvChGFk"
   },
   {
       "title": "Hundred Waters - Everywhere (Live In-Studio)",
       "date": "7/20/2017",
+      "img": "https://img.youtube.com/vi/lgKHWVcmD8Y/sddefault.jpg",
       "code": "lgKHWVcmD8Y"
   },
   {
       "title": "AC Slater - Dealer (feat.Tchami & Rome Fortune) (Official Music Video)",
       "date": "7/11/2017",
+      "img": "https://img.youtube.com/vi/J-9k6EIUlzQ/sddefault.jpg",
       "code": "J-9k6EIUlzQ"
   },
   {
       "title": "josh pan - give it to ya (feat. ABRA) [Virtual Simulation]",
       "date": "7/6/2017",
+      "img": "https://img.youtube.com/vi/pGqQFz4zxs8/sddefault.jpg",
       "code": "pGqQFz4zxs8"
   },
   {
       "title": "Hundred Waters - Currency (Live at FORM Arcosanti 2017)",
       "date": "6/16/2017",
+      "img": "https://img.youtube.com/vi/CaFCk3Qcr2E/sddefault.jpg",
       "code": "CaFCk3Qcr2E"
   },
   {
       "title": "josh pan and X&G - nowhere (Official Music Video)",
       "date": "6/8/2017",
+      "img": "https://img.youtube.com/vi/KF0wl7KJg1M/sddefault.jpg",
       "code": "KF0wl7KJg1M"
   },
   {
       "title": "JOYRYDE - NEW BREED (feat. Darnell Williams) [Official Music Video]",
       "date": "5/15/2017",
+      "img": "https://img.youtube.com/vi/fgKKZJPhmfQ/sddefault.jpg",
       "code": "fgKKZJPhmfQ"
   },
   {
       "title": "Snails & Botnek - Waffle House (Official Music Video)",
       "date": "5/9/2017",
+      "img": "https://img.youtube.com/vi/TO7xC2nEEWU/sddefault.jpg",
       "code": "TO7xC2nEEWU"
   },
   {
       "title": "BASECAMP - The Hunter (Official Music Video)",
       "date": "4/6/2017",
+      "img": "https://img.youtube.com/vi/DIjdpQu_lX4/sddefault.jpg",
       "code": "DIjdpQu_lX4"
   },
   {
       "title": "Chris Lake - I Want You (Official Music Video)",
       "date": "3/22/2017",
+      "img": "https://img.youtube.com/vi/lFREEtKRGr0/sddefault.jpg",
       "code": "lFREEtKRGr0"
   },
   {
       "title": "Vindata - Right Now (feat. Njomza and Alex & Alex) (Official Music Video)",
       "date": "2/22/2017",
+      "img": "https://img.youtube.com/vi/ijL-ISAARxc/sddefault.jpg",
       "code": "ijL-ISAARxc"
   },
   {
       "title": "JOYRYDE - HOT DRUM [Official Audio]",
       "date": "11/16/2016",
+      "img": "https://img.youtube.com/vi/8bCkadgRskA/sddefault.jpg",
       "code": "8bCkadgRskA"
   },
   {
       "title": "Yogi - Blow You Up (feat. AlunaGeorge & Less Is Moore) (Official Music Video)",
       "date": "11/11/2016",
+      "img": "https://img.youtube.com/vi/SYtxdNeGaBY/sddefault.jpg",
       "code": "SYtxdNeGaBY"
   },
   {
       "title": "Marshmello - Ritual (feat. Wrabel) (Official Music Video)",
       "date": "11/3/2016",
+      "img": "https://img.youtube.com/vi/VEou0QBeHlk/sddefault.jpg",
       "code": "VEou0QBeHlk"
   },
   {
       "title": "Skrillex & Wiwek - Killa ft. Elliphant (Official Music Video)",
       "date": "10/21/2016",
+      "img": "https://img.youtube.com/vi/ph9OpHxkjI4/sddefault.jpg",
       "code": "ph9OpHxkjI4"
   },
   {
       "title": "Aryay - Never Gonna Leave (Official Music Video)",
       "date": "9/29/2016",
+      "img": "https://img.youtube.com/vi/qCLzFMEL5cs/sddefault.jpg",
       "code": "qCLzFMEL5cs"
   },
   {
       "title": "josh pan & X&G - Platinum (Official Music Video)",
       "date": "9/22/2016",
+      "img": "https://img.youtube.com/vi/8R5nG4LRVbE/sddefault.jpg",
       "code": "8R5nG4LRVbE"
   },
   {
       "title": "Five Years of OWSLA",
       "date": "9/21/2016",
+      "img": "https://img.youtube.com/vi/FMhI-Dx-3do/sddefault.jpg",
       "code": "FMhI-Dx-3do"
   },
   {
       "title": "Anna Lunoe - Radioactive (Official Music Video)",
       "date": "9/15/2016",
+      "img": "https://img.youtube.com/vi/Dg8tsMrzcP0/sddefault.jpg",
       "code": "Dg8tsMrzcP0"
   },
   {
       "title": "BASECAMP - In Stone (Official Music Video)",
       "date": "9/8/2016",
+      "img": "https://img.youtube.com/vi/fH9Ft4q2aPA/sddefault.jpg",
       "code": "fH9Ft4q2aPA"
   },
   {
       "title": "DJ Sliink - Run Ricky Run x Higher (Official Music Video)",
       "date": "8/23/2016",
+      "img": "https://img.youtube.com/vi/EafP9GWlmAg/sddefault.jpg",
       "code": "EafP9GWlmAg"
   },
   {
       "title": "Wiwek & Skrillex - Still In The Cage (Short Film)",
       "date": "8/18/2016",
+      "img": "https://img.youtube.com/vi/pjGNpT7CAeQ/sddefault.jpg",
       "code": "pjGNpT7CAeQ"
   },
   {
       "title": "Skrillex & Rick Ross - Purple Lamborghini (Official Music Video)",
       "date": "8/5/2016",
+      "img": "https://img.youtube.com/vi/ZkqyIoYAXV8/sddefault.jpg",
       "code": "ZkqyIoYAXV8"
   },
   {
       "title": "Heartsrevolution - Kishi Kaisei (Official Music Video)",
       "date": "7/28/2016",
+      "img": "https://img.youtube.com/vi/pSWAeSQ9hyk/sddefault.jpg",
       "code": "pSWAeSQ9hyk"
   },
   {
       "title": "Skrillex - Lost Footage (Official Music Video)",
       "date": "7/7/2016",
+      "img": "https://img.youtube.com/vi/ziVSiaZZVvI/sddefault.jpg",
       "code": "ziVSiaZZVvI"
   },
   {
       "title": "What So Not x George Maple - Buried (feat. Rome Fortune) (Official Music Video)",
       "date": "6/23/2016",
+      "img": "https://img.youtube.com/vi/yqNIuGSGQ34/sddefault.jpg",
       "code": "yqNIuGSGQ34"
   },
   {
       "title": "Getter - Forget It (feat. Oliver Tree) (Official Music Video)",
       "date": "6/21/2016",
+      "img": "https://img.youtube.com/vi/vgIBr2FpGss/sddefault.jpg",
       "code": "vgIBr2FpGss"
   },
   {
       "title": "AC Slater - Bass Inside (Official Music Video)",
       "date": "6/13/2016",
+      "img": "https://img.youtube.com/vi/6XJkPtxqWM8/sddefault.jpg",
       "code": "6XJkPtxqWM8"
   },
   {
       "title": "BASECAMP - esc (Official Music Video)",
       "date": "5/31/2016",
+      "img": "https://img.youtube.com/vi/juI1VuY0CKI/sddefault.jpg",
       "code": "juI1VuY0CKI"
   },
   {
       "title": "Mija & Vindata - Better (Official Music Video)",
       "date": "5/18/2016",
+      "img": "https://img.youtube.com/vi/CUDEzcTsrNo/sddefault.jpg",
       "code": "CUDEzcTsrNo"
   },
   {
       "title": "Kill The Noise & Feed Me - I Do Coke (Official Music Video)",
       "date": "4/6/2016",
+      "img": "https://img.youtube.com/vi/oSPT27XyY1U/sddefault.jpg",
       "code": "oSPT27XyY1U"
   },
   {
       "title": "Vindata - Getting Away (feat. Mack) [Official Music Video]",
       "date": "3/31/2016",
+      "img": "https://img.youtube.com/vi/DlWMe3UUwW0/sddefault.jpg",
       "code": "DlWMe3UUwW0"
   },
   {
       "title": "Hundred Waters - “Show Me Love” (Skrillex Remix) ft. Chance The Rapper, Moses Sumney, Robin Hannibal (Official Music Video)",
       "date": "3/22/2016",
+      "img": "https://img.youtube.com/vi/J5bAVKzrBzI/sddefault.jpg",
       "code": "J5bAVKzrBzI"
   },
   {
       "title": "Getter - Rip N Dip (Official Music Video)",
       "date": "3/8/2016",
+      "img": "https://img.youtube.com/vi/JjJ90jhS84A/sddefault.jpg",
       "code": "JjJ90jhS84A"
   },
   {
       "title": "GTA - Red Lips feat. Sam Bruno (Skrillex Remix) (Official Music Video)",
       "date": "3/5/2016",
+      "img": "https://img.youtube.com/vi/qI1ondD4FGU/sddefault.jpg",
       "code": "qI1ondD4FGU"
   },
   {
       "title": "Skrillex & Diplo - \"Mind\" feat. Kai (Official Music Video)",
       "date": "2/27/2016",
+      "img": "https://img.youtube.com/vi/fDrTbLXHKu8/sddefault.jpg",
       "code": "fDrTbLXHKu8"
   },
   {
       "title": "Vindata - Can't Say No (feat. Chuck Ellis) [Official Music Video]",
       "date": "2/16/2016",
+      "img": "https://img.youtube.com/vi/D2DbaBDnPc0/sddefault.jpg",
       "code": "D2DbaBDnPc0"
   },
   {
       "title": "Point Point - Life In Grey (The Short Film)",
       "date": "1/20/2016",
+      "img": "https://img.youtube.com/vi/6bGZYjU7YG8/sddefault.jpg",
       "code": "6bGZYjU7YG8"
   },
   {
       "title": "Bixel Boys & Poupon - Ain't Your Girl (Official Music Video)",
       "date": "1/19/2016",
+      "img": "https://img.youtube.com/vi/MB7F6CkiJFM/sddefault.jpg",
       "code": "MB7F6CkiJFM"
   },
   {
       "title": "Valentino Khan - Deep Down Low (Official Music Video)",
       "date": "1/18/2016",
+      "img": "https://img.youtube.com/vi/1wl5BbUg05M/sddefault.jpg",
       "code": "1wl5BbUg05M"
   },
   {
       "title": "Alex Metric - Drum Machine (feat. The New Sins) (Official Music Video)",
       "date": "1/15/2016",
+      "img": "https://img.youtube.com/vi/-5DYDyPvk28/sddefault.jpg",
       "code": "-5DYDyPvk28"
   },
   {
       "title": "Torro Torro - Make A Move (Official Music Video)",
       "date": "1/7/2016",
+      "img": "https://img.youtube.com/vi/D6ekmY2PHdE/sddefault.jpg",
       "code": "D6ekmY2PHdE"
   },
   {
       "title": "Skrillex - Stranger (Skrillex Remix w/ Tennyson & White Sea) (Official Music Video)",
       "date": "12/25/2015",
+      "img": "https://img.youtube.com/vi/0ljS_XWAA7E/sddefault.jpg",
       "code": "0ljS_XWAA7E"
   },
   {
       "title": "Phonat - Fire (feat. Jolie and the Key) (Official Music Video)",
       "date": "12/2/2015",
+      "img": "https://img.youtube.com/vi/3WNXlMhqyA8/sddefault.jpg",
       "code": "3WNXlMhqyA8"
   },
   {
       "title": "Kill the Noise - Kill It 4 The Kids (feat. AWOLNATION & R.City) (Official Music Video)",
       "date": "11/11/2015",
+      "img": "https://img.youtube.com/vi/imrDkegrY1o/sddefault.jpg",
       "code": "imrDkegrY1o"
   },
   {
       "title": "Vindata - Own Life (feat. Anderson .Paak) (Official Music Video)",
       "date": "11/5/2015",
+      "img": "https://img.youtube.com/vi/4PqcaA5iLsY/sddefault.jpg",
       "code": "4PqcaA5iLsY"
   },
   {
       "title": "Skrillex & Diplo - To Ü ft AlunaGeorge (Official Music Video)",
       "date": "10/26/2015",
+      "img": "https://img.youtube.com/vi/9NwZdxiLvGo/sddefault.jpg",
       "code": "9NwZdxiLvGo"
   },
   {
       "title": "BASECAMP - Watch My Back (Official Music Video)",
       "date": "9/22/2015",
+      "img": "https://img.youtube.com/vi/3HX6WFQWu90/sddefault.jpg",
       "code": "3HX6WFQWu90"
   },
   {
       "title": "Getter - Head Splitter (Official Music Video)",
       "date": "9/2/2015",
+      "img": "https://img.youtube.com/vi/2YllipGl2Is/sddefault.jpg",
       "code": "2YllipGl2Is"
   },
   {
       "title": "AC Slater - U Got 2 (Official Music Video)",
       "date": "8/25/2015",
+      "img": "https://img.youtube.com/vi/PRqRTtyKPMg/sddefault.jpg",
       "code": "PRqRTtyKPMg"
   },
   {
       "title": "Carmada - On Fire (feat. Maribelle) (Official Music Video)",
       "date": "8/13/2015",
+      "img": "https://img.youtube.com/vi/ubDDKRDbwzs/sddefault.jpg",
       "code": "ubDDKRDbwzs"
   },
   {
       "title": "Yogi & Skrillex - Burial (feat. Pusha T, Moody Good, TrollPhace) (Official Music Video)",
       "date": "7/6/2015",
+      "img": "https://img.youtube.com/vi/UQ13nr6urIo/sddefault.jpg",
       "code": "UQ13nr6urIo"
   },
   {
       "title": "Ghastly & Mija - Crank it (feat. Lil Jon) (Official Music Video)",
       "date": "4/21/2015",
+      "img": "https://img.youtube.com/vi/zwULXvvSKVI/sddefault.jpg",
       "code": "zwULXvvSKVI"
   },
   {
       "title": "MUST DIE! - Imprint (feat. Tkay Maidza) (Official Music Video)",
       "date": "4/8/2015",
+      "img": "https://img.youtube.com/vi/t5myCbGB1BY/sddefault.jpg",
       "code": "t5myCbGB1BY"
   },
   {
       "title": "Hundred Waters - Innocent (Official Music Video)",
       "date": "2/12/2015",
+      "img": "https://img.youtube.com/vi/Lo8KqBkjImY/sddefault.jpg",
       "code": "Lo8KqBkjImY"
   },
   {
       "title": "Skrillex x FLEUR&MANU – Doompy Poomp (Official Music Video)",
       "date": "2/4/2015",
+      "img": "https://img.youtube.com/vi/0owbEh54SjY/sddefault.jpg",
       "code": "0owbEh54SjY"
   },
   {
       "title": "Hundred Waters - Show Me Love (Nicole Miglis Acoustic)",
       "date": "1/19/2015",
+      "img": "https://img.youtube.com/vi/zjVZobJXpqg/sddefault.jpg",
       "code": "zjVZobJXpqg"
   },
   {
       "title": "Jack Ü - Take Ü There feat. Kiesza (Official Music Video)",
       "date": "11/25/2014",
+      "img": "https://img.youtube.com/vi/C9slkeFXogU/sddefault.jpg",
       "code": "C9slkeFXogU"
   },
   {
       "title": "SKRILLEX - FUCK THAT (Official Music Video)",
       "date": "11/22/2014",
+      "img": "https://img.youtube.com/vi/Ka7wBGFSuSE/sddefault.jpg",
       "code": "Ka7wBGFSuSE"
   },
   {
       "title": "Carmada - Maybe (Official Music Video)",
       "date": "10/27/2014",
+      "img": "https://img.youtube.com/vi/4FTj0-m0L4w/sddefault.jpg",
       "code": "4FTj0-m0L4w"
   },
   {
       "title": "Valentino Khan - Make Some Noise (feat. DJ Kool) (Official Music Video)",
       "date": "10/21/2014",
+      "img": "https://img.youtube.com/vi/FG0Jd1-rKkA/sddefault.jpg",
       "code": "FG0Jd1-rKkA"
   },
   {
       "title": "Etnik - Unclassified (feat. Mykki Blanco) (Official Music Video)",
       "date": "10/20/2014",
+      "img": "https://img.youtube.com/vi/7_3oTx7X0Kk/sddefault.jpg",
       "code": "7_3oTx7X0Kk"
   },
   {
       "title": "Alex Metric (feat. Stefan Storm) - Heart Weighs A Ton (Official Music Video)",
       "date": "8/19/2014",
+      "img": "https://img.youtube.com/vi/quTz2FGWzrE/sddefault.jpg",
       "code": "quTz2FGWzrE"
   },
   {
       "title": "Skrillex & Alvin Risk - Try It Out (Official Music Video)",
       "date": "8/9/2014",
+      "img": "https://img.youtube.com/vi/ulHB2mNlovg/sddefault.jpg",
       "code": "ulHB2mNlovg"
   },
   {
       "title": "Phuneral Phuture",
       "date": "6/11/2014",
+      "img": "https://img.youtube.com/vi/xySKuXRLkms/sddefault.jpg",
       "code": "xySKuXRLkms"
   },
   {
       "title": "Hundred Waters - Murmurs (Official Music Video)",
       "date": "6/11/2014",
+      "img": "https://img.youtube.com/vi/vo-8Oa2t4Ro/sddefault.jpg",
       "code": "vo-8Oa2t4Ro"
   },
   {
       "title": "Skrillex - Ragga Bomb Ft. Ragga Twins (Official Music Video)",
       "date": "4/1/2014",
+      "img": "https://img.youtube.com/vi/8eJDTcDUQxQ/sddefault.jpg",
       "code": "8eJDTcDUQxQ"
   },
   {
       "title": "DOG BLOOD - CHELLA RIDE (Official Music Video)",
       "date": "3/5/2014",
+      "img": "https://img.youtube.com/vi/jvUd2y2vt74/sddefault.jpg",
       "code": "jvUd2y2vt74"
   },
   {
       "title": "Hundred Waters - Cavity (Official Video)",
       "date": "3/4/2014",
+      "img": "https://img.youtube.com/vi/3Ph13QzfQHU/sddefault.jpg",
       "code": "3Ph13QzfQHU"
   },
   {
       "title": "Jack Beats - \"Beatbox\" (Official Video)",
       "date": "3/3/2014",
+      "img": "https://img.youtube.com/vi/rKbzjLU3FpE/sddefault.jpg",
       "code": "rKbzjLU3FpE"
   },
   {
       "title": "Moody Good - Musicbx (feat. Eryn Allen Kane) (Official Music Video)",
       "date": "2/27/2014",
+      "img": "https://img.youtube.com/vi/_PO9-G_6Wgw/sddefault.jpg",
       "code": "_PO9-G_6Wgw"
   },
   {
       "title": "pennybirdrabbit - look for love (Official Music Video)",
       "date": "2/19/2014",
+      "img": "https://img.youtube.com/vi/PqWwgttndgI/sddefault.jpg",
       "code": "PqWwgttndgI"
   },
   {
       "title": "pennybirdrabbit - maybe (Official Music Video)",
       "date": "1/31/2014",
+      "img": "https://img.youtube.com/vi/puJX_LsT1Kc/sddefault.jpg",
       "code": "puJX_LsT1Kc"
   },
   {
       "title": "What So Not - Jaguar (Official Music Video)",
       "date": "12/23/2013",
+      "img": "https://img.youtube.com/vi/KB6ac_hRBik/sddefault.jpg",
       "code": "KB6ac_hRBik"
   },
   {
       "title": "Alesia - Andrea (Official Music Video)",
       "date": "11/29/2013",
+      "img": "https://img.youtube.com/vi/M0wWYKfl-Q8/sddefault.jpg",
       "code": "M0wWYKfl-Q8"
   },
   {
       "title": "Etnik - Neon Daze (Official Music Video)",
       "date": "11/1/2013",
+      "img": "https://img.youtube.com/vi/3xc6xZmUuak/sddefault.jpg",
       "code": "3xc6xZmUuak"
   },
   {
       "title": "KOAN Sound & Asa - Sanctuary (ft. Alicia Kiah) (Official Music Video)",
       "date": "10/11/2013",
+      "img": "https://img.youtube.com/vi/hEb0ZWVknCI/sddefault.jpg",
       "code": "hEb0ZWVknCI"
   },
   {
       "title": "SKRILLEX + ALVIN RISK - TRY IT OUT (NEON MIX)",
       "date": "10/10/2013",
+      "img": "https://img.youtube.com/vi/-iQRaZje0RA/sddefault.jpg",
       "code": "-iQRaZje0RA"
   },
   {
       "title": "Blood Diamonds - Barcode (feat. Dominic Lord) [Official Music Video]",
       "date": "9/13/2013",
+      "img": "https://img.youtube.com/vi/nIk0ztHU3yU/sddefault.jpg",
       "code": "nIk0ztHU3yU"
   },
   {
       "title": "I Am Legion [Noisia x Foreign Beggars] - Choosing For You (Official Music Video)",
       "date": "8/19/2013",
+      "img": "https://img.youtube.com/vi/199TISojIgw/sddefault.jpg",
       "code": "199TISojIgw"
   },
   {
       "title": "HEARTSREVOLUTION - $EX (Official Music Video)",
       "date": "8/1/2013",
+      "img": "https://img.youtube.com/vi/QH8toNNE7F0/sddefault.jpg",
       "code": "QH8toNNE7F0"
   },
   {
       "title": "David Heartbreak - Acid Youths (Official Music Video)",
       "date": "7/27/2013",
+      "img": "https://img.youtube.com/vi/XjN6cM2taIA/sddefault.jpg",
       "code": "XjN6cM2taIA"
   },
   {
       "title": "Phuture Doom - Burn The Knowledge (Official Music Video)",
       "date": "6/28/2013",
+      "img": "https://img.youtube.com/vi/sTjcPLWW2M0/sddefault.jpg",
       "code": "sTjcPLWW2M0"
   },
   {
       "title": "Destructo - \"Higher\" (Official Music Video)",
       "date": "6/25/2013",
+      "img": "https://img.youtube.com/vi/Gxvt6y_5TmI/sddefault.jpg",
       "code": "Gxvt6y_5TmI"
   },
   {
       "title": "Phonat - Ride The Prejudice (Official Music Video)",
       "date": "6/24/2013",
+      "img": "https://img.youtube.com/vi/xyZnIAU9yXw/sddefault.jpg",
       "code": "xyZnIAU9yXw"
   },
   {
       "title": "Alex Metric - Ilium (Official Music Video)",
       "date": "5/7/2013",
+      "img": "https://img.youtube.com/vi/AMQ89X5LYjg/sddefault.jpg",
       "code": "AMQ89X5LYjg"
   },
   {
       "title": "Birdy Nam Nam - Defiant Order (Official Music Video)",
       "date": "2/27/2013",
+      "img": "https://img.youtube.com/vi/YJLTn10E0OY/sddefault.jpg",
       "code": "YJLTn10E0OY"
   },
   {
       "title": "Kill The Noise - BLVCK MVGIC (Official Music Video)",
       "date": "2/6/2013",
+      "img": "https://img.youtube.com/vi/Q0WLFpIQ0o0/sddefault.jpg",
       "code": "Q0WLFpIQ0o0"
   },
   {
       "title": "Hundred Waters - \"Boreal\" (Official Music Video)",
       "date": "2/4/2013",
+      "img": "https://img.youtube.com/vi/zFpvMiPAarI/sddefault.jpg",
       "code": "zFpvMiPAarI"
   },
   {
       "title": "Skrillex - Summit (feat. Ellie Goulding) (Official Music Video)",
       "date": "1/2/2013",
+      "img": "https://img.youtube.com/vi/-e_3Cg9GZFU/sddefault.jpg",
       "code": "-e_3Cg9GZFU"
   },
   {
       "title": "Hundred Waters - Hydrodictyon (Official Music Video)",
       "date": "12/4/2012",
+      "img": "https://img.youtube.com/vi/mTTWXjXrK04/sddefault.jpg",
       "code": "mTTWXjXrK04"
   },
   {
       "title": "Alex Metric - Rave Weapon (Official Music Video)",
       "date": "12/3/2012",
+      "img": "https://img.youtube.com/vi/1n80Xvgb_7U/sddefault.jpg",
       "code": "1n80Xvgb_7U"
   },
   {
       "title": "Dog Blood - Next Order (Official Music Video)",
       "date": "11/28/2012",
+      "img": "https://img.youtube.com/vi/R6vwuS6oy8I/sddefault.jpg",
       "code": "R6vwuS6oy8I"
   },
   {
       "title": "KOAN Sound - 80's Fitness (Official Music Video)",
       "date": "11/8/2012",
+      "img": "https://img.youtube.com/vi/g5FFpYm-360/sddefault.jpg",
       "code": "g5FFpYm-360"
   },
   {
       "title": "Jack Beats - Somebody to Love ft. Jess Mills (Official Music Video)",
       "date": "11/7/2012",
+      "img": "https://img.youtube.com/vi/wq72aip6xu4/sddefault.jpg",
       "code": "wq72aip6xu4"
   },
   {
       "title": "Seven Lions - Days To Come (feat. Fiora) (Official Music Video)",
       "date": "10/18/2012",
+      "img": "https://img.youtube.com/vi/RjR7ynmFJxQ/sddefault.jpg",
       "code": "RjR7ynmFJxQ"
   },
   {
       "title": "Hundred Waters - Thistle (Official Music Video)",
       "date": "10/12/2012",
+      "img": "https://img.youtube.com/vi/qHwKIooysu8/sddefault.jpg",
       "code": "qHwKIooysu8"
   },
   {
       "title": "MONSTA - Holdin' On (Official Music Video)",
       "date": "10/12/2012",
+      "img": "https://img.youtube.com/vi/R_8lu3BIfZw/sddefault.jpg",
       "code": "R_8lu3BIfZw"
   },
   {
       "title": "Skrillex & Damian \"Jr. Gong\" Marley - Make It Bun Dem (Official Music Video)",
       "date": "9/6/2012",
+      "img": "https://img.youtube.com/vi/BGpzGu9Yp6Y/sddefault.jpg",
       "code": "BGpzGu9Yp6Y"
   },
   {
       "title": "Kill The Noise - Kill the Noise Pt. I (Official Music Video)",
       "date": "8/20/2012",
+      "img": "https://img.youtube.com/vi/jVfU1DY73Tk/sddefault.jpg",
       "code": "jVfU1DY73Tk"
   },
   {
       "title": "Birdy Nam Nam - Cadillac Dreams (feat. Teki Latex) (Official Music Video)",
       "date": "8/1/2012",
+      "img": "https://img.youtube.com/vi/n9WX0oIKnCg/sddefault.jpg",
       "code": "n9WX0oIKnCg"
   },
   {
       "title": "Birdy Nam Nam - \"Goin' In (Skrillex \"Goin' Hard\" Mix)\" (Official Music Video)",
       "date": "7/12/2012",
+      "img": "https://img.youtube.com/vi/sgU7XMUyAqY/sddefault.jpg",
       "code": "sgU7XMUyAqY"
   },
   {
       "title": "KOAN Sound - Funk Blaster (Official Music Video)",
       "date": "5/15/2012",
+      "img": "https://img.youtube.com/vi/mpokVJjCRfo/sddefault.jpg",
       "code": "mpokVJjCRfo"
   },
   {
       "title": "Zedd - Slam The Door (Official Music Video)",
       "date": "5/15/2012",
+      "img": "https://img.youtube.com/vi/CSFmxTJXEso/sddefault.jpg",
       "code": "CSFmxTJXEso"
   },
   {
       "title": "Foreign Beggars - Still Getting It (Official Music Video)",
       "date": "3/12/2012",
+      "img": "https://img.youtube.com/vi/ttrQIk_g9Kk/sddefault.jpg",
       "code": "ttrQIk_g9Kk"
   },
   {
       "title": "The M Machine - Glow (Official Music Video)",
       "date": "1/17/2012",
+      "img": "https://img.youtube.com/vi/qAjpYg902P0/sddefault.jpg",
       "code": "qAjpYg902P0"
   },
   {
       "title": "Skrillex - Ruffneck - FULL Flex (Official Music Video)",
       "date": "12/23/2011",
+      "img": "https://img.youtube.com/vi/_t2TzJOyops/sddefault.jpg",
       "code": "_t2TzJOyops"
   },
   {
       "title": "Sub Focus - Falling Down ft. Kenzie May (Official Music Video)",
       "date": "12/16/2011",
+      "img": "https://img.youtube.com/vi/mcWA7EZoWok/sddefault.jpg",
       "code": "mcWA7EZoWok"
   },
   {
       "title": "Skream - Anticipate ft. Sam Frank (Official Music Video)",
       "date": "11/4/2011",
+      "img": "https://img.youtube.com/vi/tgU0Nw6cZOI/sddefault.jpg",
       "code": "tgU0Nw6cZOI"
   },
   {
       "title": "Zedd - Shave It (Official Music Video)",
       "date": "11/1/2011",
+      "img": "https://img.youtube.com/vi/gtFA0Ba6u0E/sddefault.jpg",
       "code": "gtFA0Ba6u0E"
   },
   {
       "title": "Birdy Nam Nam - Goin' in (Official Music Video)",
       "date": "9/1/2011",
+      "img": "https://img.youtube.com/vi/44xUwId9AgM/sddefault.jpg",
       "code": "44xUwId9AgM"
   },
   {
       "title": "Birdy Nam Nam - The Parachute Ending (Official Music Video)",
       "date": "10/3/2009",
+      "img": "https://img.youtube.com/vi/3JJsq0GbpPg/sddefault.jpg",
       "code": "3JJsq0GbpPg"
   }
 ]
