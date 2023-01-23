@@ -1,4 +1,5 @@
 <script>
+
   export default {
     mounted() {
       
@@ -21,7 +22,6 @@
       <button class="suscribe__btn">Sign Up</button>
     </form>
   </section>
-  <span class="suscribe-background"></span>
   
 </template>
 

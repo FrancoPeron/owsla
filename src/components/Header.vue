@@ -30,6 +30,10 @@ export default {
       if(burger.checked){
         burger.click()
       }
+    },
+
+    scrollToTop() {
+      window.scrollTo(0,0);
     }
 
   },
@@ -57,7 +61,7 @@ export default {
     <nav class="nav">
       <ul class="nav__list">
         <li class="nav__item">
-          <router-link class="nav__link" to="/music">Music</router-link>
+          <router-link class="nav__link" to="/music" @click="scrollToTop">Music</router-link>
         </li>
         <li class="nav__item">
           <router-link class="nav__link" to="/artists">Artists</router-link>
@@ -68,9 +72,6 @@ export default {
         <li class="nav__item">
           <router-link class="nav__link" to="/radio">Radio</router-link>
         </li>
-        <!-- <li class="nav__item">
-          <router-link class="nav__link" to="/nest">NEST</router-link>
-        </li> -->
         <li class="nav__item">
           <a class="nav__link" href="https://owslagoods.netlify.app/">Merch</a>
         </li>

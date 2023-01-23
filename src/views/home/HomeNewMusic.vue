@@ -2,9 +2,8 @@
 // Data Base
 import { db } from '@/firebase/firebase.config'
 import { getDocs, addDoc, collection, query, limit, orderBy } from 'firebase/firestore'
-// import { Fragment } from 'vue-frag'
+
 export default {
-  // components: { Fragment },
   data() {
     return {
       musicList: [],
@@ -13,9 +12,8 @@ export default {
   },
   mounted() {
     for (let index = 0; index < 3; index++) {
-      this.musicList.push({cover:'src/assets/image/sk.webp'})
+      this.musicList.push({ cover: 'src/assets/image/sk.webp' })
     }
-
 
     getDocs(query(collection(db, 'music'), orderBy('date', 'desc'), limit(3)))
       .then((result) => {
@@ -27,15 +25,12 @@ export default {
         })
 
         this.musicList = resultDocs
-        console.log(this.musicList)
       })
       .catch((error) => console.log(error))
   },
 
   methods: {
-    loaded(){
-      this.loadedImg = true
-    }
+
   },
 }
 </script>
@@ -44,12 +39,12 @@ export default {
   <fragment>
     <section class="new-music">
       <h2 class="new-music__title">Latest Releases</h2>
-      <h3 class="new-music__subtitle">some of our latest releases from this year, feel and enjoy the music, listen more <router-link to="/music">here</router-link></h3>
+      <h3 class="new-music__subtitle">some of our latest releases from this year, feel and enjoy the music, listen more <router-link class="here" to="/music">here</router-link></h3>
       <div v-for="(val, index) in musicList" :key="index" class="new-music__album">
         <div class="new-music__text">
           <p>.{{ index + 1 }}</p>
-          <a :href="val.link" target="_blank"
-            >Listen Now
+          <a :href="val.link" target="_blank">
+            Listen Now
             <svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M1 14.25L8 7.74997L1 1.25" stroke="black" stroke-width="2" />
             </svg>
@@ -71,6 +66,7 @@ export default {
   grid-template-columns: repeat(6, 1fr);
   grid-column-gap: 8%;
   width: 100%;
+  margin-bottom: 2rem;
 
   @extend %fadeInDown;
 
@@ -91,7 +87,7 @@ export default {
 
     @include font(ft2, w500, MontS, lsWider);
     text-align: center;
-    line-height: 100%;
+    line-height: 150%;
 
     a:hover {
       color: $cBlack;
@@ -232,5 +228,4 @@ export default {
     }
   }
 }
-
 </style>

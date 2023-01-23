@@ -1,5 +1,6 @@
 <template>
   <footer class="footer">
+    <span class="footer__background"></span>  
     <nav class="nav nav--column">
       <a class="footer__link" to="/"> <img class="footer__img" src="@/assets/image/owslaLogo2.svg" alt="OWSLA Logo" /></a>
       <ul class="nav__list">
@@ -15,9 +16,6 @@
         <li class="nav__item">
           <router-link class="nav__link" to="/radio">Radio</router-link>
         </li>
-        <!-- <li class="nav__item">
-          <router-link class="nav__link" to="/nest">NEST</router-link>
-        </li> -->
         <li class="nav__item">
           <a class="nav__link" href="https://owslagoods.netlify.app/">Merch</a>
         </li>
@@ -102,11 +100,25 @@ export default {}
 
 <style lang="scss" scoped>
 .footer {
+  position: relative;
   grid-area: footer;
   @include flex(column);
   align-items: center;
   padding: 4rem 0 1.5rem;
-  background-color: $cBlack;
+  // background-color: $cBlack;
+
+  .footer__background{
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 800px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.99) 3%, rgba(255, 255, 255, 0.98) 5%, rgba(255, 255, 255, 0.96) 8%, rgba(255, 255, 255, 0.940505) 12%, rgba(255, 255, 255, 0.889857) 16%, rgba(255, 255, 255, 0) 36%, rgba(255, 255, 255, 0) 100%),url(https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/background%2Ffooter-img.webp?alt=media&token=f549d424-4c67-4ef1-8456-87ade34b24df);
+  }
 
   .nav {
     @include flex(column);

@@ -1,59 +1,88 @@
 <script>
 
 export default {
-  mounted() {
-    this.bannerSlider()
+
+  data() {
+    return {
+      videoList: [
+        {
+          video: 'src/assets/video/WarmWinters.webm',
+          link: 'https://www.youtube.com/watch?v=k4XX7TTeTvI',
+          category: 'Collection Clothing',
+          title: 'Warm Winters',
+          subtitle: 'OWSLA GOODS',
+        },
+        {
+          video: 'src/assets/video/BirdyNamNam-Goinin.mp4#t=15',
+          link: 'https://www.youtube.com/watch?v=3JJsq0GbpPg',
+          category: 'Music Video',
+          title: "Goin'in",
+          subtitle: 'Birdy Nam Nam',
+        },
+        {
+          video: 'src/assets/video/FriendlyFire.mp4#t=0',
+          link: 'https://www.youtube.com/watch?v=F6CNaD21gC0',
+          category: 'Music Video',
+          title: 'Frendly Fire',
+          subtitle: 'Skrillex',
+        }
+      ],
+      refreshInterval: undefined,
+      cont: 2,
+    }
   },
 
+  mounted() {
+    radio1.checked = true
+    linkVideo1.classList.add('active')
+
+    this.startSlider()
+  },
+
+  unmounted(){
+    this.stopSlider()
+  },
+
+
   methods: {
-    bannerSlider() {
-      var cont = 2
-      var anterior = 0
+
+    clearActive(){
       let links = document.getElementsByClassName('slider__link')
-      document.getElementById('radio1').checked = true
-
-      links[0].classList.add('active')
-
-      setInterval(loop, 15000)
-
-      function loop() {
-        links[anterior].classList.remove('active')
-        links[cont - 1].classList.remove('active2')
-        links[cont - 1].classList.add('active')
-
-        document.getElementById('radio' + cont).checked = true
-        anterior = cont - 1
-        cont++
-        if (cont > 3) {
-          cont = 1
-        }
-      }
-
-      document.getElementById('label-radio1').addEventListener('click', function () {
-        links[1].classList.remove('active')
-        links[2].classList.remove('active')
-        links[1].classList.remove('active2')
-        links[2].classList.remove('active2')
-        cont = 1
-        links[cont - 1].classList.add('active2')
-      })
-      document.getElementById('label-radio2').addEventListener('click', function () {
-        links[2].classList.remove('active')
-        links[0].classList.remove('active')
-        links[2].classList.remove('active2')
-        links[0].classList.remove('active2')
-        cont = 2
-        links[cont - 1].classList.add('active2')
-      })
-      document.getElementById('label-radio3').addEventListener('click', function () {
-        links[0].classList.remove('active')
-        links[1].classList.remove('active')
-        links[0].classList.remove('active2')
-        links[1].classList.remove('active2')
-        cont = 3
-        links[cont - 1].classList.add('active2')
-      })
+      Array.from(links).forEach(val => val.classList.remove('active'))
     },
+
+    btnVideoActive(e,index){
+      this.stopSlider()
+      this.cont = index
+      e.target.classList.add('active')
+      this.startSlider()
+    },
+
+    loopSlider() {
+
+      
+      let videoTarget = document.getElementById('radio' + this.cont)
+      let linkTarget = document.getElementById('linkVideo' + this.cont)
+      
+      this.clearActive()
+
+      videoTarget.checked = true
+      linkTarget.classList.add('active')
+
+      this.cont++
+      if (this.cont > 3) this.cont = 1
+    },
+
+    stopSlider(){
+      this.clearActive()
+      clearInterval(this.refreshInterval);
+    },
+
+    startSlider(){
+      this.refreshInterval = setInterval(this.loopSlider, 5000)
+    },
+
+
   },
 }
 </script>
@@ -62,50 +91,24 @@ export default {
   <section class="banner">
     <div class="slider">
       <div class="slider__videos">
-        <input type="radio" name="radio-btn" id="radio1" />
-        <input type="radio" name="radio-btn" id="radio2" />
-        <input type="radio" name="radio-btn" id="radio3" />
-
-        <div id="video1" class="slider__box-video">
-          <video class="slider__video" src="@/assets/video/WarmWinters.webm" muted loop autoplay></video>
-
-          <div class="slider__box-info">
-            <p class="slider__category">Collection Clothing</p>
-            <h2 class="slider__title">Warm Winters<br /></h2>
-            <p class="slider__subtitle">OWSLA GOODS</p>
-            <a class="slider__btn" href="https://www.youtube.com/watch?v=k4XX7TTeTvI" target="_blank">Watch Now</a>
+        
+        <div v-for="(val, index) in videoList" :key="index">
+          <input type="radio" name="radio-btn" :id="'radio'+ (index+1)"/>
+          <div :id="'video'+ (index+1)" class="slider__box-video">
+            <video class="slider__video" :src="val.video" muted loop autoplay></video>
+            <div class="slider__box-info">
+              <p class="slider__category">{{val.category}}</p>
+              <h2 class="slider__title">{{val.title}}<br /></h2>
+              <p class="slider__subtitle">{{val.subtitle}}</p>
+              <a class="slider__btn" :href="val.link" target="_blank">Watch Now</a>
+            </div>
           </div>
         </div>
 
-        <div id="video2" class="slider__box-video">
-          <video class="slider__video" src="@/assets/video/BirdyNamNam-Goinin.mp4#t=15" muted loop autoplay></video>
-
-          <div class="slider__box-info">
-            <p class="slider__category">Music Video</p>
-            <h2 class="slider__title">Goin'in<br /></h2>
-            <p class="slider__subtitle">Birdy Nam Nam</p>
-            <a class="slider__btn" href="https://www.youtube.com/watch?v=3JJsq0GbpPg" target="_blank">Watch Now</a>
-          </div>
-        </div>
-
-        <div id="video3" class="slider__box-video">
-          <video class="slider__video" src="@/assets/video/FriendlyFire.mp4#t=0" muted loop autoplay></video>
-
-          <div class="slider__box-info">
-            <p class="slider__category">Music Video</p>
-            <h2 class="slider__title">Frendly Fire<br /></h2>
-            <p class="slider__subtitle">Skrillex</p>
-            <a class="slider__btn" href="https://www.youtube.com/watch?v=F6CNaD21gC0" target="_blank">Watch Now</a>
-          </div>
-        </div>
-
-        <!-- <img class="slider__img" src="@/assets/image/slider3.jpg" alt=""> -->
       </div>
 
       <div class="slider__nav">
-        <label class="slider__link" id="label-radio1" for="radio1"></label>
-        <label class="slider__link" id="label-radio2" for="radio2"></label>
-        <label class="slider__link" id="label-radio3" for="radio3"></label>
+        <label class="slider__link" v-for="(val, index) in videoList.length" :key="index" :id="'linkVideo'+ (index+1)" :for="'radio'+ (index+1)" @click="btnVideoActive($event,index+1)"></label>
       </div>
     </div>
   </section>
@@ -114,12 +117,11 @@ export default {
 <style lang="scss" scoped>
 
 .banner {
-  grid-area: banner;
   @extend %container-center;
+  grid-area: banner;
   width: 100%;
 
   @extend %fadeIn;
-  
 }
 
 .slider {
@@ -259,20 +261,19 @@ export default {
     .slider__link.active::after {
       content: ' ';
       height: 140%;
-      width: 100%;
+      width: 101%;
       background-color: $cBlack;
       position: absolute;
       top: -2px;
       left: -2px;
-      animation: carousel-active-nav-item 15s linear;
+      animation: carousel-active-nav-item 5s linear;
     }
 
     .slider__link:not(:last-child) {
       margin-right: 24px;
     }
 
-    .slider__link:hover,
-    .active2 {
+    .slider__link:hover {
       background: $cBlack;
       width: 50%;
 
@@ -303,11 +304,5 @@ export default {
       'btn' !important;
     gap: 24px;
   }
-
-  .active2 {
-    width: 100%;
-  }
 }
 </style>
-
-//aregglar nav sincroniza y se acomoda mal

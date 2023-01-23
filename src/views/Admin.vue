@@ -7,7 +7,7 @@
   import { getDocs, addDoc, collection, query, limit, Timestamp } from "firebase/firestore"
   import {getStorage, ref, uploadString ,listAll, getDownloadURL} from "firebase/storage";
 
-  import videos from "@/assets/data.js";
+  import radio from "@/assets/data.js";
 
   
 
@@ -18,9 +18,10 @@
         urlsImgNew: [],
         nameImgNew: [],
         urlfirebase: "owslaradio",
-        data: videos
+        data: radio,
+        collection: 'radio',
       };
-    },
+    }, 
     components: {
       // Player,
     },
@@ -126,7 +127,7 @@
 
         btnSubirData.addEventListener("click", () => {
           this.data.map((item)=>{
-            addDoc(collection(db, 'videos'),{
+            addDoc(collection(db, this.collection),{
               ...item,
               date: Timestamp.fromDate(new Date(item.date)),
             })

@@ -9,20 +9,21 @@ export default {
 <template>
   <section class="merch">
     <h2 class="merch__title">Owsla Goods</h2>
-    <h3 class="merch__subtitle">some of our latest releases from this year, feel and enjoy the music, listen more <router-link to="/music">here</router-link></h3>
+    <h3 class="merch__subtitle">Take a look at our latest collections and discover your new style,
+<b>“40% discount on tops and accessories”</b></h3>
 
-    <div class="merch__imgBox">
+    <div class="merch__imgs">
       <div class="merch__img">
         <img src="https://firebasestorage.googleapis.com/v0/b/owslagoods-fbf3b.appspot.com/o/products%2Fburn-forever%2Fburn-forever_008.webp?alt=media&token=b0161680-fc76-4538-bb23-d428b592db80" alt="" />
         <p>'Neon Logo'</p>
       </div>
       <div class="merch__img">
-        <img src="https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fekali.webp?alt=media&token=b458e958-4c65-42ff-8969-4bcc0e227e92" alt="" />
-        <p>'Classic Logo'</p>
-      </div>
-      <div class="merch__img">
         <img src="https://firebasestorage.googleapis.com/v0/b/owslagoods-fbf3b.appspot.com/o/products%2Fanglo_017.webp?alt=media&token=7a824dd9-1b72-4bdd-9fab-a54854f16dac" alt="" />
         <p>'Anglo Script'</p>
+      </div>
+      <div class="merch__img">
+        <img src="https://firebasestorage.googleapis.com/v0/b/owslagoods-fbf3b.appspot.com/o/products%2Flukevicious-x-owsla%2Flukevicious-x-owsla_031.webp?alt=media&token=c62a1b18-051e-4f0b-b478-320b34ca09c7" alt="" />
+        <p>'Lukevicious'</p>
       </div>
       <div class="merch__img">
         <img src="https://firebasestorage.googleapis.com/v0/b/owslagoods-fbf3b.appspot.com/o/products%2Fartist_046%203.png?alt=media&token=7b350a3d-c573-476d-8078-d9026b8f0413" alt="" />
@@ -58,15 +59,15 @@ export default {
   }
 
   .merch__subtitle {
-    max-width: 850px;
-    margin-bottom: 32px;
+    max-width: 860px;
+    margin-bottom: 2rem;
 
     @include font(ft2, w500, MontS, lsWider);
     text-align: center;
-    line-height: 100%;
+    line-height: 150%;
 
   }
-  .merch__imgBox {
+  .merch__imgs {
     display: grid;
     grid-template-areas:
       'img1'
@@ -77,6 +78,7 @@ export default {
     grid-column-gap: 12%;
     grid-row-gap: 64px;
     max-width: 60%;
+    margin-top: 2rem;
 
     @include respond(xs) {
       grid-template-areas:
@@ -131,61 +133,60 @@ export default {
         padding: 0 1rem;
         padding-top: .4rem
       }
-    }
 
+      &:nth-child(1) {
+        grid-area: img1;
+        
 
-    .merch__img:nth-child(1) {
-      grid-area: img1;
-      
-
-      p{
-        bottom: 64px;
-      }
-
-      p{
-        @include respond(md) {
-          bottom: 96px;
-
-        }
-      }
-    }
-    .merch__img:nth-child(2) {
-      grid-area: img2;
-      margin-top: 32px;
-
-      p{
-        @include respond(md) {
+        p{
           bottom: 64px;
         }
+
+        p{
+          @include respond(md) {
+            bottom: 96px;
+
+          }
+        }
+      }
+      &:nth-child(2) {
+        grid-area: img2;
+        margin-top: 32px;
+        
+
+        p{
+          @include respond(md) {
+            bottom: 64px;
+          }
+        }
+      }
+      &:nth-child(3) {
+        grid-area: img3;
+        margin-top: 64px;
+
+        display: none;
+
+        @include respond(md) {
+          display: block;
+        }
+
+      }
+      &:nth-child(4) {
+        grid-area: img4;
+        width: min(100%,408px);
+        justify-self: center;
+        
+        img {
+          aspect-ratio: 51/31;
+        }
+
+        p{
+          width: fit-content;
+          bottom: none;
+          top: 32px;
+        }
       }
     }
-    .merch__img:nth-child(3) {
-      grid-area: img3;
-      margin-top: 64px;
-
-      display: none;
-
-      @include respond(md) {
-        display: block;
-      }
-
-    }
-    .merch__img:nth-child(4) {
-      grid-area: img4;
-      width: min(100%,408px);
-      justify-self: center;
-      
-      img {
-        aspect-ratio: 51/31;
-      }
-
-      p{
-        width: fit-content;
-        bottom: none;
-        top: 32px;
-      }
-    }
-
     .merch__btn{
       grid-area: btn;
       justify-self: flex-end;
@@ -211,8 +212,8 @@ export default {
   background-size: cover;
   background-position: center;
   z-index: -1;
-  height: 500px;
-  margin-top: 300px;
+  height: 450px;
+  margin-top: 420px;
   margin-bottom: 3rem;
   background-repeat: no-repeat;
 }

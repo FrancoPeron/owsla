@@ -1,5 +1,5 @@
 <script>
-import { defineAsyncComponent, ref } from 'vue'
+import { defineAsyncComponent} from 'vue'
 
 export default {
   name: 'Home',
@@ -29,19 +29,19 @@ export default {
 </script>
 
 <template>
-  <div class="main-index">
-    <span class="main-index__background"></span>
+  <div class="main-home">
+    <span class="main-home__background"></span>
     <HomeBanner />
     <HomeNewMusic />
     <HomeArtists />
-    <HomeOwslaGoods v-if="scrollPos > 1000" />
-    <HomeRadio v-if="scrollPos > 2000" />
-    <HomeSuscribe v-if="scrollPos > 3000" />    
+    <HomeOwslaGoods v-if="scrollPos > 100" />
+    <HomeRadio v-if="scrollPos > 1500" />
+    <HomeSuscribe v-if="scrollPos > 2500" />  
   </div>
 </template>
 
 <style lang="scss" scoped>
-.main-index {
+.main-home {
   display: grid;
   grid-template-areas:
     'banner'
@@ -52,7 +52,7 @@ export default {
     'suscribe';
   grid-row-gap: 148px;
 
-  .main-index__background {
+  .main-home__background {
     @extend %backgrounds-pos;
     background: url(https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/background%2Fmain-index.webp?alt=media&token=35f6061a-5ae9-4208-9088-51ed5c1013c8);
     background-size: cover;

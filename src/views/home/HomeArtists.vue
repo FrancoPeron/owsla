@@ -27,7 +27,6 @@ export default {
         })
 
         this.artistsList = resultDocs
-        console.log(this.artistsList)
       })
       .catch((error) => console.log(error))
   },

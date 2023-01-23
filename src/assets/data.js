@@ -3107,191 +3107,184 @@ const videos =
 const radio = [
   {
       "title": "OWSLA Radio #1 @ Apple Beats 1",
-      "featuring": [
-          "Skrillex",
-          "OWSLA Crew"
-      ],
+      "featuring": "Skrillex & OWSLA Crew",
+      "subtitle": "Introducing OWSLA Radio",
+      "description": "Skrillex chats to tons of great guests.",
       "cover": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/owslaradio%2F1.webp?alt=media&token=95f2c081-5cc9-4de6-8388-86c0aa8b3a91,",
-      "link": "",
+      "link": "https://music.apple.com/us/station/introducing-owsla-radio/ra.1079232715",
       "date": "1/30/2016"
   },
   {
       "title": "OWSLA Radio #2 @ Apple Beats 1",
-      "featuring": [
-          "Skrillex"
-      ],
+      "featuring": "Skrillex & OWSLA Crew",
+      "subtitle": "Malibu Mansion",
+      "description": "Bass and EDM rebels chop it up.",
       "cover": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/owslaradio%2F2.webp?alt=media&token=bc400968-0c69-4931-b7b7-438d03bbd8d3,",
-      "link": "",
+      "link": "https://music.apple.com/us/station/malibu-mansion/ra.1082846243",
       "date": "2/13/2016"
   },
   {
       "title": "OWSLA Radio #3 @ Apple Beats 1",
-      "featuring": [
-          "Skrillex"
-      ],
+      "featuring": "Skrillex & OWSLA Crew",
+      "subtitle": "Jack Ü 1 Year Anniversary",
+      "description": "Here with Kai, Carmada, Diplo, and more.",
       "cover": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/owslaradio%2F3.webp?alt=media&token=b85e3cf9-ec38-42c9-9262-245b0717b13b,",
-      "link": "",
+      "link": "https://music.apple.com/us/station/jack-ü-1-year-anniversary/ra.1087160627",
       "date": "2/27/2016"
   },
   {
       "title": "OWSLA Radio #4 @ Apple Beats 1",
-      "featuring": [
-          "Skrillex"
-      ],
+      "featuring": "Skrillex & OWSLA Crew",
+      "subtitle": "Miami Yacht Party",
+      "description": "Sail with the likes of Tchami and Aazar.",
       "cover": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/owslaradio%2F4.webp?alt=media&token=0566917a-24f1-48c4-83b3-8d128f458969,",
-      "link": "",
+      "link": "https://music.apple.com/us/station/miami-yacht-party/ra.1091422293",
       "date": "3/12/2016"
   },
   {
       "title": "OWSLA Radio #5 @ Apple Beats 1",
-      "featuring": [
-          "Skrillex"
-      ],
+      "featuring": "Skrillex & OWSLA Crew",
+      "subtitle": "Brazil Rooftop Helipad",
+      "description": "An epic broadcast from São Paulo.",
       "cover": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/owslaradio%2F5.webp?alt=media&token=59b07558-90b2-42a1-8c3f-9691ebfb0641,",
-      "link": "",
+      "link": "https://music.apple.com/us/station/brazil-rooftop-helipad/ra.1095865089",
       "date": "3/27/2016"
   },
   {
       "title": "OWSLA Radio #6 @ Apple Beats 1",
-      "featuring": [
-          "Skrillex"
-      ],
+      "featuring": "Skrillex & OWSLA Crew",
+      "subtitle": "New Jersey's Finest",
+      "description": "Sonny hosts the crew in a Brooklyn loft.",
       "cover": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/owslaradio%2F6.webp?alt=media&token=962222b4-6a20-4294-a04c-a98db9d20333,",
-      "link": "",
+      "link": "https://music.apple.com/us/station/new-jerseys-finest/ra.1100480465",
       "date": "4/9/2016"
   },
   {
       "title": "OWSLA Radio #7 @ Apple Beats 1",
-      "featuring": [
-          "Skrillex"
-      ],
+      "featuring": "Skrillex & OWSLA Crew",
+      "subtitle": "Coachella House",
+      "description": "Festival fun at the after party.",
       "cover": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/owslaradio%2F7.webp?alt=media&token=31993130-c578-42c5-a14b-34afb582a054,",
-      "link": "",
+      "link": "https://music.apple.com/us/station/coachella-house/ra.1105597488",
       "date": "4/23/2016"
   },
   {
       "title": "OWSLA Radio #8 @ Apple Beats 1",
-      "featuring": [
-          "Skrillex"
-      ],
+      "featuring": "Skrillex & OWSLA Crew",
+      "subtitle": "NEST HQ Barbecue",
+      "description": "Light up the grill and blast the tunes.",
       "cover": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/owslaradio%2F8.webp?alt=media&token=23afb947-7fcd-484f-ab4c-d5ff02e76fd2,",
-      "link": "",
+      "link": "https://music.apple.com/us/station/nest-hq-barbecue/ra.1110544654",
       "date": "5/7/2016"
   },
   {
       "title": "OWSLA Radio #9 @ Apple Beats 1",
-      "featuring": [
-          "Skrillex"
-      ],
+      "featuring": "Skrillex & OWSLA Crew",
+      "subtitle": "FORM Arcosanti",
+      "description": "A live mix from deep in the desert.",
       "cover": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/owslaradio%2F9.webp?alt=media&token=3b7fe59b-ca19-42aa-aec1-24f657c5e4e2",
-      "link": "",
+      "link": "https://music.apple.com/us/station/form-arcosanti/ra.1114964050",
       "date": "5/21/2016"
   },
   {
       "title": "OWSLA Radio #10 @ Apple Beats 1",
-      "featuring": [
-          "Mija"
-      ],
+      "featuring": "Mija",
+      "subtitle": "Movement Detroit",
+      "description": "Guest DJ Mija shares her festival picks.",
       "cover": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/owslaradio%2F10.webp?alt=media&token=f4714be4-1303-48b6-b8f3-b9d365366b84,",
-      "link": "",
+      "link": "https://music.apple.com/us/station/movement-detroit/ra.1119368598",
       "date": "6/4/2016"
   },
   {
       "title": "OWSLA Radio #11 @ Apple Beats 1",
-      "featuring": [
-          "Skrillex"
-      ],
+      "featuring": "Skrillex & OWSLA Crew",
+      "subtitle": "LA Free-for-all",
+      "description": "Skrillex brings the party back home.",
       "cover": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/owslaradio%2F11.webp?alt=media&token=67b87057-9f28-4ce3-9344-baa7a15bc9f8,",
-      "link": "",
+      "link": "https://music.apple.com/us/station/la-free-for-all/ra.1124223775",
       "date": "6/18/2016"
   },
   {
       "title": "OWSLA Radio #12 @ Apple Beats 1",
-      "featuring": [
-          "Skrillex"
-      ],
+      "featuring": "Skrillex & OWSLA Crew",
+      "subtitle": "LA House Party",
+      "description": "Skrillex spins a party in LA.",
       "cover": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/owslaradio%2F12.webp?alt=media&token=d88ef406-733e-438c-a92b-74dcecc11e87,",
-      "link": "",
+      "link": "https://music.apple.com/us/station/la-house-party/ra.1128927191",
       "date": "7/2/2016"
   },
   {
       "title": "OWSLA Radio #13 @ Apple Beats 1",
-      "featuring": [
-          "Skrillex",
-          "Slushii"
-      ],
+      "featuring": "Skrillex & Slushii",
+      "subtitle": "Slushii Guest Mix",
+      "description": "A two-hour mix from the anonymous DJ.",
       "cover": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/owslaradio%2F13.webp?alt=media&token=bc9c217b-12b3-4776-9d2a-86dfa3866286,",
-      "link": "",
+      "link": "https://music.apple.com/us/station/slushii-guest-mix/ra.1133766303",
       "date": "7/16/2016"
   },
   {
       "title": "OWSLA Radio #14 @ Apple Beats 1",
-      "featuring": [
-          "Skrillex"
-      ],
+      "featuring": "Skrillex & OWSLA Crew",
+      "subtitle": "OWSLA Pop-Up",
+      "description": "DJ sets and new tracks from the LA crew.",
       "cover": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/owslaradio%2F14.webp?alt=media&token=14c2ac80-dd1e-4128-8b38-b0f8eb8f3048,",
-      "link": "",
+      "link": "https://music.apple.com/us/station/owsla-pop-up/ra.1138122826",
       "date": "7/30/2016"
   },
   {
       "title": "OWSLA Radio #15 @ Apple Beats 1",
-      "featuring": [
-          "Skrillex",
-          "Snails",
-          "Wiwek"
-      ],
+      "featuring": "Skrillex & Snails, Wiwek",
+      "subtitle": "Montreal Afterparty",
+      "description": "Feat. Skrillex, Wiwek, GTA, and more.",
       "cover": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/owslaradio%2F15.webp?alt=media&token=de96ebee-76ab-4132-91f7-850cac139168,",
-      "link": "",
+      "link": "https://music.apple.com/us/station/montreal-afterparty/ra.1142728580",
       "date": "8/13/2016"
   },
   {
       "title": "OWSLA Radio #16 @ Apple Beats 1",
-      "featuring": [
-          "Blaise James",
-          "Getter",
-          "Mija"
-      ],
+      "featuring": "Blaise James & Getter, Mija",
+      "subtitle": "Getter, Mija, and Blaise",
+      "description": "Visit OWSLA's LA pop-up.",
       "cover": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/owslaradio%2F16.webp?alt=media&token=055363ae-65e5-478c-a08d-ad2e9607cb8a,",
-      "link": "",
+      "link": "https://music.apple.com/us/station/getter-mija-and-blaise/ra.1146995377",
       "date": "8/27/2016"
   },
   {
       "title": "OWSLA Radio #17 @ Apple Beats 1",
-      "featuring": [
-          "Skrillex"
-      ],
+      "featuring": "Skrillex & OWSLA Crew",
+      "subtitle": "Half & Half",
+      "description": "At OWSLA's pop-up with Aryay, Softest Hard, and Getter.",
       "cover": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/owslaradio%2F17.webp?alt=media&token=8ef12129-1257-419c-8d2c-b6207685296b,",
-      "link": "",
+      "link": "https://music.apple.com/us/station/half-half/ra.1152090630",
       "date": "9/10/2016"
   },
   {
       "title": "OWSLA Radio #18 @ Apple Beats 1",
-      "featuring": [
-          "Skrillex"
-      ],
+      "featuring": "Skrillex & OWSLA Crew",
+      "subtitle": "Five-Year Anniversary",
+      "description": "Skrillex plays a mix of OWSLA releases.",
       "cover": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/owslaradio%2F18.webp?alt=media&token=b62200a7-ba64-40e3-b371-0789cfeb41d2,",
-      "link": "",
+      "link": "https://music.apple.com/us/station/five-year-anniversary/ra.1155992326",
       "date": "9/24/2016"
   },
   {
       "title": "OWSLA Radio #19 @ Apple Beats 1",
-      "featuring": [
-          "Noisia"
-      ],
+      "featuring": "Noisia",
+      "subtitle": "Guest Mix",
+      "description": "The Dutch electronic trio showcase tracks from their new",
       "cover": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/owslaradio%2F19.webp?alt=media&token=bfe5f7ff-8ed2-4649-861d-623c95a0fde9,",
-      "link": "",
+      "link": "https://music.apple.com/us/station/noisiλ-guest-mix/ra.1161907448",
       "date": "10/8/2016"
   },
   {
       "title": "OWSLA Radio #20 @ Apple Beats 1",
-      "featuring": [
-          "Chris Lake",
-          "Mija"
-      ],
+      "featuring": "Chris Lake & Mija",
+      "subtitle": "Amsterdam",
+      "description": "Head to Amsterdam with Mija, Chris Lake, and the OWSLA crew.",
       "cover": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/owslaradio%2F20.webp?alt=media&token=8cd0c584-dd14-40d2-8db6-2138fee852aa,",
-      "link": "",
+      "link": "https://music.apple.com/us/station/amsterdam/ra.1166749131",
       "date": "10/22/2016"
   }
 ]
 
-export default videos
+export default radio

@@ -1,14 +1,13 @@
 <script setup>
 //Vue
 import { ref } from 'vue'
-import { onMounted } from '@vue/runtime-core'
 import { useInfiniteScroll } from '@vueuse/core'
 
 // Data Base
 import { getData } from '@/firebase/firebase.config'
 import { query, limit, orderBy, startAfter } from 'firebase/firestore'
 
-/* || Data || ----------------------------------------*/
+/* || Props || ----------------------------------------*/
 
 const props = defineProps(['info']);
 
@@ -40,12 +39,6 @@ const infinitScroll = (colectionRef)=>{
     { distance: 500 }
   )
 }
-
-/* || LifeCyle || ----------------------------------------*/
-
-// onMounted(() => {
-//   console.log('List Mounted')
-// });
 
 /* || Code || ----------------------------------------*/
 
