@@ -244,7 +244,7 @@ export default {
   }
   @include respond(lg) {
     justify-content: space-between;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
 
   .nav__list {
@@ -282,13 +282,18 @@ export default {
           -webkit-text-stroke: 0.5px $cWhite;
         }
 
+        &:hover::after {
+          background-color: $cWhite;
+          width: 100%;
+        }
+
         &::after {
           content: '';
           position: absolute;
           bottom: 0;
           left: 0;
           width: 0;
-          height: 4px;
+          height: 3px;
           border-radius: 5px;
           transition: all 0.5s;
 
@@ -306,14 +311,12 @@ export default {
 }
 
 .nav__item:nth-child(1),
-.nav__item:nth-child(1).nav__item--active .nav__link::after,
-.nav__item:nth-child(1) .nav__link:hover::after {
+.nav__item:nth-child(1).nav__item--active .nav__link::after{
   background-color: $color1;
 }
 
 .nav__item:nth-child(2),
-.nav__item:nth-child(2).nav__item--active .nav__link::after,
-.nav__item:nth-child(2) .nav__link:hover::after {
+.nav__item:nth-child(2).nav__item--active .nav__link::after{
   background-color: $color2;
 }
 

@@ -37,8 +37,6 @@ export default {
 
         this.radioList = resultDocs
         radioImg1.classList.add('active')
-
-        console.log(this.radioList)
       })
       .catch((error) => console.log(error))
   },
@@ -65,13 +63,6 @@ export default {
     <h3 class="radio__subtitle">Listen to our radio show on beat 1, enjoy new releases and our special guests, listen more <router-link class="here" to="/radio">here</router-link></h3>
 
     <div class="radio__box">
-      <div class="radio__imgs-list">
-        <span style="width: 0.1%"><!--esto es por un bug que se produce en el hover--></span>
-        <div class="radio__img-box" :id="'radioImg' + (index + 1)" v-for="(val, index) in radioList" :key="index" @click="showEpisode($event, index)">
-          <img class="radio__img" :src="val.cover" :alt="val.title" />
-        </div>
-      </div>
-
       <div class="radio__episodes-info">
         <div class="radio__link">
           <p>0{{ activeEpisode + 1 }}.</p>
@@ -89,6 +80,12 @@ export default {
           <p>{{ radioList.at(activeEpisode).description }}</p>
         </div>
       </div>
+      <div class="radio__imgs-list">
+        <span><!--esto es por un bug que se produce en el hover--></span>
+        <div class="radio__img-box" :id="'radioImg' + (index + 1)" v-for="(val, index) in radioList" :key="index" @click="showEpisode($event, index)">
+          <img class="radio__img" :src="val.cover" :alt="val.title" />
+        </div>
+      </div>
     </div>
   </section>
   <span class="radio-background"></span>
@@ -99,6 +96,7 @@ export default {
   grid-area: radio;
   @extend %container-center;
   @include flex(column);
+  align-items: center;
   filter: drop-shadow(0px 0px 25px rgb(80 80 80 / 12%));
 
   .radio__title {
@@ -131,19 +129,23 @@ export default {
 
     height: fit-content;
     width: 100%;
-    margin-top: 6rem;
+    margin-top: 8rem;
+    padding: $padding-radio;
+    background-color: $cWhite;
+    margin-top: 114px;
 
-    &::before {
-      content: '';
-      position: absolute;
-      top: -$padding-radio;
-      left: -$padding-radio;
-      width: calc(100% + $padding-radio * 2);
-      height: calc(100% + $padding-radio * 2);
-      z-index: -1;
-      background-color: $cWhite;
-      clip-path: polygon(0% 0%, 100% 4%, 100% 96%, 0% 100%);
-    }
+
+    // &::before {
+    //   content: '';
+    //   position: absolute;
+    //   top: -$padding-radio;
+    //   left: -$padding-radio;
+    //   width: calc(100% + $padding-radio * 2);
+    //   height: calc(100% + $padding-radio * 2);
+    //   z-index: -1;
+    //   background-color: $cWhite;
+    //   // clip-path: polygon(0% 0%, 100% 4%, 100% 96%, 0% 100%);
+    // }
 
     @include respond(sm) {
       @include flex(row, wrap);
@@ -152,16 +154,26 @@ export default {
     .radio__imgs-list {
       position: relative;
 
-      @include flex(row-reverse);
+      @include flex(row);
       justify-content: space-between;
       gap: 2rem;
       width: 100%;
 
       @include respond(sm) {
-        width: calc(60% - 2rem);
+        width: calc(55% - 2rem);
+      }
+
+      span{
+        display: none;
+        width: 0.1%;
+        @include respond(md) {
+          display: block;
+        }
       }
   
       .radio__img-box {
+        display: flex;
+        height: min-content;
         width: inherit;
         transition: all ease-in-out 0.5s;
 
@@ -169,7 +181,6 @@ export default {
           width: 100%;
           height: 240px;
           object-fit: cover;
-
           cursor: pointer;
         }
 
@@ -185,21 +196,13 @@ export default {
         }
       }
 
-      // &:nth-child(5){
-      //     display: block;
-      //   }
+      #radioImg4{
+        display: none;
+        @include respond(md) {
+          display: flex
+        } 
+      }
 
-      //   @include respond(sm) {
-      //     &:nth-child(5){
-      //       display: none;
-      //     }
-      //   }
-  
-      //   @include respond(md) {
-      //     &:nth-child(5){
-      //       display: block;
-      //     }
-      //   }
     }
     .radio__episodes-info {
       @include flex(column);
@@ -208,7 +211,7 @@ export default {
       width: 100%;
 
       @include respond(sm) {
-        width: 40%;
+        width: 45%;
       }
       .radio__link {
         @include flex();
@@ -217,8 +220,7 @@ export default {
         gap: 32px;
         width: 100%;
 
-        a,
-        p {
+        a,p {
           @include flex();
           align-items: center;
           gap: 8px;
@@ -274,11 +276,11 @@ export default {
   background-size: cover;
   background-position: right;
 
-  clip-path: polygon(0% 4%, 100% 0%, 100% 100%, 0% 96%);
-  margin: 210px 0 0 0;
+  // clip-path: polygon(0% 4%, 100% 0%, 100% 100%, 0% 96%);
+  margin: 240px 0 0 0;
   z-index: -1;
-  width: 60%;
-  height: 420px;
+  width: 100%;
+  height: 484px;
   background-repeat: no-repeat;
 }
 

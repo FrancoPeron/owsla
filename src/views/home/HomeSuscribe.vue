@@ -1,14 +1,5 @@
 <script>
 
-  export default {
-    mounted() {
-      
-    },
-    
-    methods: {
-      
-    }
-  }
 </script>
 
 <template>
@@ -31,14 +22,9 @@
   .suscribe {
     grid-area: suscribe;
     @extend %container-center;
-
-
     @include flex(column);
     align-items: center;
-
-    width: 100%;
-    height: 440px;
-    padding: 100px 0;
+    margin: 2rem 0 10rem;
 
     .suscribe__title {
       @include font(fh1, w500, MonumentE, lsWidest);
