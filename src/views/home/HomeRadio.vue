@@ -134,19 +134,6 @@ export default {
     background-color: $cWhite;
     margin-top: 114px;
 
-
-    // &::before {
-    //   content: '';
-    //   position: absolute;
-    //   top: -$padding-radio;
-    //   left: -$padding-radio;
-    //   width: calc(100% + $padding-radio * 2);
-    //   height: calc(100% + $padding-radio * 2);
-    //   z-index: -1;
-    //   background-color: $cWhite;
-    //   // clip-path: polygon(0% 0%, 100% 4%, 100% 96%, 0% 100%);
-    // }
-
     @include respond(sm) {
       @include flex(row, wrap);
     }
@@ -275,8 +262,6 @@ export default {
   background-image: url(https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/background%2Fhome-radio.webp?alt=media&token=782f8e94-87bf-405d-8e01-ceb9fb5807a8);
   background-size: cover;
   background-position: right;
-
-  // clip-path: polygon(0% 4%, 100% 0%, 100% 100%, 0% 96%);
   margin: 240px 0 0 0;
   z-index: -1;
   width: 100%;

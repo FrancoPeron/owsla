@@ -34,12 +34,12 @@ export default {
     <HomeBanner />
     <HomeNewMusic />
     <HomeArtists />
-    <HomeOwslaGoods v-if="scrollPos > 100" />
-    <HomeRadio v-if="scrollPos > 1500" />
-    <HomeSuscribe v-if="scrollPos > 2500" />  
+    <HomeOwslaGoods />
+    <HomeRadio />
+    <HomeSuscribe />  
   </div>
 </template>
-
+<!-- v-if="scrollPos > 2500" -->
 <style lang="scss" scoped>
 .main-home {
   display: grid;

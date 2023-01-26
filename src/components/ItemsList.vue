@@ -36,7 +36,7 @@ const infinitScroll = (colectionRef)=>{
         await getNewData(colectionRef)
       }
     },
-    { distance: 500 }
+    { distance: 1000 }
   )
 }
 

@@ -1,20 +1,21 @@
 <script>
-export default {};
+export default {}
 </script>
 
 <template>
-  <main class="main-contact">
+  <div class="main-contact">
     <span class="main-contact__background"></span>
-    <!-- <h1 class="main-contact__title">Contact</h1> -->
-    <!-- varios form ya que son formularios con distintos objetivos -->
 
-    <section class="contact">
-      <div class="contact__box">
-        <img
-          class="contact__img"
-          src=""
-          alt="owslacrew"
-        />
+    <section class="main-contact__box">
+      <div class="contact">
+        <img class="contact__img" src="https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/background%2Fowslacrew.webp?alt=media&token=890c51b2-fe1d-452f-aab3-70fa74e92b21" alt="owslacrew" />
+        <form class="contact__suscribe" action="">
+          <label class="contact__suscribe-title" for="subscribe">SUBSCRIBE</label>
+          <div class="contact__suscribe-box">
+            <input class="contact__suscribe-email" placeholder="Email Address" type="email" name="subscribe" id="" />
+            <button class="contact__suscribe-btn">Sign Up</button>
+          </div>
+        </form>
         <form class="contact__demo" action="">
           <label class="contact__demo-title" for="file">SEND DEMO</label>
           <div class="contact__demo-box">
@@ -22,228 +23,148 @@ export default {};
             <button class="contact__demo-btn">Send</button>
           </div>
         </form>
-        <form class="contact__suscribe" action="">
-          <label class="contact__suscribe-title" for="subscribe"
-            >SUBSCRIBE</label
-          >
-          <div class="contact__suscribe-box">
-            <input
-              class="contact__suscribe-email"
-              type="email"
-              name="subscribe"
-              id=""
-            />
-            <button class="contact__suscribe-btn">Sign Up</button>
-          </div>
-        </form>
-
         <form class="contact__description" action="">
-          <label class="contact__description-title" for="description"
-            >WRITE US</label
-          >
+          <label class="contact__description-title" for="description">WRITE US</label>
           <div class="contact__description-box">
-            <textarea
-              class="contact__description-textarea"
-              name="description"
-              id=""
-              cols="30"
-              rows="10"
-            ></textarea>
+            <textarea class="contact__description-textarea" name="description" id="" cols="30" rows="10"></textarea>
             <button class="contact__description-btn">Send</button>
           </div>
         </form>
       </div>
     </section>
-  </main>
+  </div>
 </template>
 
 <style lang="scss">
-/* ------------------------------ Contact ------------------------------ */
+.main-contact {
+  .main-contact__background {
+    @extend %backgrounds-pos;
+    height: 150%;
+    background: url(https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/background%2Fmain-index.webp?alt=media&token=35f6061a-5ae9-4208-9088-51ed5c1013c8);
+    background-size: cover;
+    background-position: center;
+    animation: move 160s infinite;
+    // filter: hue-rotate(225deg);
 
-.main-contact__background {
-  @extend %backgrounds-pos;
-  height: 100%;
-  background: url();
-  background-size: cover;
-  background-position: center;
-  animation: move 160s infinite;
-  filter: hue-rotate(225deg);
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(black, transparent);
+    }
+  }
 
-  &::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(black, transparent);
+  .main-contact__box {
+    @extend %container-center;
   }
 }
 
-// .main-contact {
-//   .main-contact__title {
-//     font-weight: 500;
-//     color: $cWhite;
+.contact__suscribe-title,
+.contact__demo-title,
+.contact__description-title {
+  @include font(ft2, w500, MonumentE, lsWidest);
+  color: $cWhite;
+  text-align: center;
+  margin-bottom: 1rem;
+}
 
-//     text-align: center;
-//     margin-bottom: 2rem;
-//     margin-top: 3rem;
-//     text-transform: uppercase;
-//     white-space: nowrap;
+.contact__suscribe-btn,
+.contact__demo-btn,
+.contact__description-btn{
+  @include btn(cB, bgW, bW);
+  width: 100%;
+  border-left: solid 2px $cWhite;
+  border-top: 0px;
 
-//     &::before {
-//       content: "-";
-      
-//       color: $cWhite;
-//       margin-right: 3rem;
-//     }
+  @include respond(sm) {
+    width: fit-content;
+    border-left: 0px;
+    border-top: solid 2px $cWhite;
+  }
+}
 
-//     &::after {
-//       content: "-";
-    
-//       color: $cWhite;
-//       margin-left: 3rem;
-//     }
-//   }
-// }
+.contact {
+  display: grid;
+  grid-template-areas:
+    'suscribe'
+    'demo'
+    'description';
+  grid-template-columns: 1fr;
+  margin-bottom: 4rem;
 
-// .contact_form {
-//   grid-column: span 2;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   width: 100%;
+  @include respond(md) {
+    border: solid 2px white;
+    backdrop-filter: blur(4px);
 
-//   @include respond(md) {
-//     grid-column: span 1;
-//   }
-// }
+    grid-template-areas:
+      'img suscribe'
+      'img demo'
+      'img description';
+    grid-template-columns: 1fr 1.5fr;
+  }
 
-// .contact_title {
- 
-//   color: $cWhite;
-//   margin: 2rem;
-// }
+  .contact__img {
+    display: none;
+    grid-area: img;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-right: solid 2px $cWhite;
 
-// .contact {
-//   @extend %container-center;
+    @include respond(md) {
+      display: flex;
+    }
+  }
 
-//   .contact__box {
-//     display: grid;
-//     grid-template-areas:
-//       "suscribe"
-//       "demo"
-//       "description";
+  .contact__suscribe {
+    grid-area: suscribe;
+    @include flex(column);
+    align-items: center;
+    padding: 2.5rem 3rem;
 
-//     @include respond(md) {
-//       border: solid 2px white;
-//       backdrop-filter: blur(4px);
+    .contact__suscribe-box {
+      @extend %formulario__form;
 
-//       grid-template-areas:
-//         "img suscribe"
-//         "img demo"
-//         "img description";
-//     }
+      .contact__suscribe-email {
+        @include formulario__input(cW);
+      }
+    }
+  }
 
-//     .contact__img {
-//       display: none;
-//       grid-area: img;
-//       height: 100%;
-//       width: 100%;
-//       object-fit: cover;
-//       border-right: solid 2px white;
+  .contact__demo {
+    grid-area: demo;
+    @include flex(column);
+    align-items: center;
+    padding: 2.5rem 3rem;
 
-//       @include respond(md) {
-//         display: flex;
-//       }
-//     }
+    .contact__demo-box {
+      @extend %formulario__form;
 
-//     .contact__suscribe {
-//       grid-area: suscribe;
-//       @extend .contact_form;
+      .contact__demo-file {
+        @include formulario__input(cW, file);
+      }
+    }
+  }
 
-//       @include respond(md) {
-//         padding: 2rem 3rem;
-//       }
+  .contact__description {
+    grid-area: description;
+    @include flex(column);
+    align-items: center;
+    padding: 2.5rem 3rem;
 
-//       .contact__suscribe-title {
-//         @extend .contact_title;
-//       }
+    .contact__description-box {
+      @include flex(column);
+      width: 100%;
 
-//       .contact__suscribe-box {
-//         @extend %formulario__form;
+      .contact__description-textarea {
+        @include formulario__input(cW, textarea);
+      }
 
-//         .contact__suscribe-email {
-//           @extend .formulario__input;
-//         }
-
-//         .contact__suscribe-btn {
-//           @extend .formulario__btn;
-//           @include respond(sm) {
-//             border-left: 0;
-//             margin: 0;
-//           }
-//         }
-//       }
-//     }
-
-//     .contact__demo {
-//       grid-area: demo;
-//       @extend .contact_form;
-
-//       @include respond(md) {
-//         padding: 2rem 3rem;
-//       }
-
-//       .contact__demo-title {
-//         @extend .contact_title;
-//       }
-
-//       .contact__demo-box {
-//         @extend %formulario__form;
-
-//         .contact__demo-file {
-//           @extend .formulario__input-file;
-//         }
-
-//         .contact__demo-btn {
-//           @extend .formulario__btn;
-//           @include respond(sm) {
-//             border-left: 0;
-//             margin: 0;
-//           }
-//         }
-//       }
-//     }
-
-//     .contact__description {
-//       grid-area: description;
-//       margin-bottom: 1rem;
-//       @extend .contact_form;
-
-//       @include respond(md) {
-//         padding: 2rem 3rem;
-//       }
-
-//       .contact__description-title {
-//         @extend .contact_title;
-//       }
-
-//       .contact__description-box {
-        
-//         flex-direction: column;
-
-//         .contact__description-textarea {
-          
-//         }
-
-//         .contact__description-btn {
-          
-//           @include respond(sm) {
-//             border-top: 0;
-//             margin: 0;
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
+      .contact__description-btn{
+        width: 100%;
+      }
+    }
+  }
+}
 </style>

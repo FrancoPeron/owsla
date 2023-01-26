@@ -18,17 +18,16 @@ function loadImage(){
 
 </script>
 <template>
-  <button class="releaseShow">
+  <a :href="val.link" target="_blanck" class="releaseShow">
     <img class="releaseShow__img shadow" :src="loadImg ? val.cover : sk" @load="loadImage" :alt="val.title" />
     <div class="releaseShow__info">
       <h2 class="releaseShow__title">
+        <p>{{val.featuring}}</p>
+        <br>
         {{ val.title }}
-        <br>
-        <br>
-        <p v-for="feat in val.featuring">{{feat}}</p>
       </h2>
     </div>
-  </button>
+  </a>
 </template> -->
 
 <style lang="scss">

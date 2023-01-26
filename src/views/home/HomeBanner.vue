@@ -79,7 +79,7 @@ export default {
     },
 
     startSlider(){
-      this.refreshInterval = setInterval(this.loopSlider, 5000)
+      this.refreshInterval = setInterval(this.loopSlider, 16000)
     },
 
 
@@ -266,7 +266,7 @@ export default {
       position: absolute;
       top: -2px;
       left: -2px;
-      animation: carousel-active-nav-item 5s linear;
+      animation: carousel-active-nav-item 16s linear;
     }
 
     .slider__link:not(:last-child) {

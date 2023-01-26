@@ -2,7 +2,7 @@
 
 // Data Base
 import { db } from '@/firebase/firebase.config'
-import { collection, query, limit, orderBy} from 'firebase/firestore'
+import { collection, query, limit, orderBy } from 'firebase/firestore'
 
 // Componenet
 import ItemsList from '@/components/ItemsList.vue'
@@ -24,9 +24,7 @@ const dataInfo = {
       <div class="main-radio__precentation">
         <div class="main-radio__info">
           <h1 class="main-radio__title">OWSLA RADIO</h1>
-          <p class="main-radio__subtitle">
-            Listen and enjoy our program on beat 1, with special guests and new releases <br />
-          </p>
+          <p class="main-radio__subtitle">Listen and enjoy our program on beat 1, with special guests and new releases <br /></p>
           <hr class="main-radio__line" />
           <div class="main-radio__btnBox">
             <button></button>
@@ -34,7 +32,7 @@ const dataInfo = {
           </div>
         </div>
         <div class="main-radio__info-img">
-          <img src="@/assets/image/owsla-radio.webp" alt="" />
+          <img src="https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/background%2Fowsla-radio.webp?alt=media&token=a6984a90-7821-4b9c-8541-2076975e96e8" alt="" />
         </div>
       </div>
 
@@ -108,7 +106,7 @@ $radio-grid: minmax(240px, 1fr);
           color: transparent;
           -webkit-text-stroke: 1.5px #ffffff;
           text-align: start;
-          margin-bottom: .8rem;
+          margin-bottom: 0.8rem;
         }
 
         .main-radio__subtitle {
@@ -126,12 +124,12 @@ $radio-grid: minmax(240px, 1fr);
           opacity: 1;
           margin: 3rem 0;
         }
-        .main-radio__btnBox{
+        .main-radio__btnBox {
           @include flex();
           .main-radio__btn {
-            @include btn(cW,bgT,bW);
+            @include btn(cW, bgT, bW);
           }
-        } 
+        }
       }
 
       .main-radio__info-img {
@@ -182,13 +180,11 @@ $radio-grid: minmax(240px, 1fr);
         padding: 1rem;
 
         .main-radio__subtitle {
-          
           color: $cWhite;
           margin-bottom: 1rem;
         }
 
         .main-radio__description {
-          
           color: $cWhite;
         }
       }
@@ -238,5 +234,4 @@ $radio-grid: minmax(240px, 1fr);
     }
   }
 }
-
 </style>

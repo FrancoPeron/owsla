@@ -45,7 +45,7 @@ const dataInfo = {
     background: url(https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/background%2Fmain-artists.webp?alt=media&token=ab1cccfa-d469-4700-962d-87e774f9dc4a);
     background-size: cover;
     background-position: center;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+    // clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
     height: 600px;
     animation: move 160s infinite;
 

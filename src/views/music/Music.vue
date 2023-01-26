@@ -2,7 +2,7 @@
 
 // Data Base
 import { db } from '@/firebase/firebase.config'
-import { collection, query, limit, orderBy} from 'firebase/firestore'
+import { collection, query, limit, orderBy } from 'firebase/firestore'
 
 // Componenet
 import ItemsList from '@/components/ItemsList.vue'
@@ -10,8 +10,8 @@ import MusicItem from '@/views/music/MusicItem.vue'
 
 /* || Data || ----------------------------------------*/
 const dataInfo = {
-    colectionRef: query(collection(db, 'music'), orderBy('date', 'desc'), limit(13)),
-    limitItems: 16,
+  colectionRef: query(collection(db, 'music'), orderBy('date', 'desc'), limit(13)),
+  limitItems: 16,
 };
 
 </script>
@@ -19,7 +19,7 @@ const dataInfo = {
 <template>
   <div class="main-music">
     <span class="main-music__background"></span>
-    <section class="main-music__list ">
+    <section class="main-music__list">
       <Suspense>
         <template #default>
           <ItemsList v-slot="val" :info="dataInfo">
@@ -35,9 +35,7 @@ const dataInfo = {
 </template>
 
 <style lang="scss" scoped>
-
 .main-music {
-
   .main-music__background {
     @extend %backgrounds-pos;
     background: url(https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/background%2Fmain-music.webp?alt=media&token=ca5751aa-6cbe-4fd3-9e9e-4df998f55147);
@@ -76,7 +74,7 @@ const dataInfo = {
   position: relative;
   aspect-ratio: 1/1;
   width: 100%;
-  
+
   &:nth-child(1) {
     grid-column: 1/-1;
     grid-row: span 1/-1;

@@ -1,6 +1,5 @@
 <script setup>
 
-
 //Vue
 import { ref } from 'vue'
 
@@ -18,7 +17,6 @@ const dataInfo = {
   colectionRef: query(collection(db, 'videos'), orderBy('date', 'desc'), limit(6)),
   limitItems: 4,
 };
-
 
 let videoCode = ref("");
 let showModal = ref(false);
@@ -48,10 +46,8 @@ function closeModal(){
           <span v-for="(val, index) in 13" :key="index" class="sk-video skeleton"></span>
         </template>
       </Suspense>
-      
       <VideoModal :modalCode="videoCode" @closeM="closeModal" v-if="showModal" />
     </section>
-
 
   </div>
 </template>

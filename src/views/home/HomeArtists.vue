@@ -1,4 +1,5 @@
 <script>
+
 // Data Base
 import { db } from '@/firebase/firebase.config'
 import { getDocs, addDoc, collection, query, limit, orderBy } from 'firebase/firestore'
@@ -12,9 +13,8 @@ export default {
     }
   },
   mounted() {
-
     for (let index = 0; index < this.cantData; index++) {
-      this.artistsList.push({img:'src/assets/image/sk.webp'})
+      this.artistsList.push({ img: 'src/assets/image/sk.webp' })
     }
     //obtener datos
     getDocs(query(collection(db, 'artists'), orderBy('date', 'desc'), limit(this.cantData)))
@@ -66,7 +66,6 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-
 .our-artists {
   grid-area: artists;
   @extend %container-center;
@@ -89,7 +88,7 @@ export default {
       'title listart';
   }
   @include respond(lg) {
-  margin-left: 0rem;
+    margin-left: 0rem;
   }
   .our-artists__title {
     grid-area: title;
@@ -191,5 +190,4 @@ export default {
   width: 45%;
   height: 100%;
 }
-
 </style>

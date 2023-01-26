@@ -28,10 +28,6 @@ export default {
       })
       .catch((error) => console.log(error))
   },
-
-  methods: {
-
-  },
 }
 </script>
 

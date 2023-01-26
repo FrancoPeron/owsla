@@ -9,8 +9,6 @@
 
   import radio from "@/assets/data.js";
 
-  
-
   export default {
     data() {
       return {

@@ -2,7 +2,7 @@
 
 //Vue
 import { ref, computed, watch } from 'vue'
-import { YoutubeVue3 } from 'youtube-vue3'
+// import { YoutubeVue3 } from 'youtube-vue3'
 
 /* || Data || ----------------------------------------*/
 const emit = defineEmits(['closeM']);
@@ -14,8 +14,8 @@ watch(props, () => val.value = props.modalCode);
 
 <template>
   <div class="video-modal" @click="emit('closeM')">
-    <!-- <iframe class="video" :src="`https://www.youtube.com/embed/${val.item.code}`" title="A YouTube video" frameborder="0" allowfullscreen></iframe> -->
-    <YoutubeVue3 class="video-modal__player" ref="youtube" :videoid="val" :autoplay="0" />
+    <iframe class="video-modal__player" :src="`https://www.youtube.com/embed/${val}`" title="A YouTube video" frameborder="0" allowfullscreen></iframe>
+    <!-- <YoutubeVue3 class="video-modal__player" ref="youtube" :videoid="val" :autoplay="0" /> -->
   </div>
 </template>
 
