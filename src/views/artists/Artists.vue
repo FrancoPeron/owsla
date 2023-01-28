@@ -1,5 +1,4 @@
 <script setup>
-
 // Data Base
 import { db } from '@/firebase/firebase.config'
 import { collection, query, limit, orderBy } from 'firebase/firestore'
@@ -13,7 +12,6 @@ const dataInfo = {
   colectionRef: query(collection(db, 'artists'), orderBy('date', 'desc'), limit(8)),
   limitItems: 8,
 };
-
 </script>
 
 <template>
@@ -38,7 +36,6 @@ const dataInfo = {
 </template>
 
 <style lang="scss" scoped>
-
 .main-artists {
   .main-artists__background {
     @extend %backgrounds-pos;
