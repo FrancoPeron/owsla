@@ -18,10 +18,10 @@ const sk = "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/
 </script>
 
 <template>
-  <div class="artist">
+  <a :href="val.links" target="_blank" class="artist">
     <img class="artist__img" data-bs-toggle="modal" :src="loadImg ? val.img : sk" @load="loadImage" :alt="val.artist" />
     <p class="artist__name">{{ val.artist }}</p>
-  </div>
+  </a>
 </template>
 
 <style lang="scss">

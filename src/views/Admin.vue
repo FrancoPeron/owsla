@@ -7,7 +7,7 @@
   import { getDocs, addDoc, collection, query, limit, Timestamp } from "firebase/firestore"
   import {getStorage, ref, uploadString ,listAll, getDownloadURL} from "firebase/storage";
 
-  import radio from "@/assets/data.js";
+  import artists from "@/assets/data.js";
 
   export default {
     data() {
@@ -15,9 +15,9 @@
         urlsImgOld: [],
         urlsImgNew: [],
         nameImgNew: [],
-        urlfirebase: "owslaradio",
-        data: radio,
-        collection: 'radio',
+        urlfirebase: "owslaradio", //get img url
+        data: artists,
+        collection: 'artists',
       };
     }, 
     components: {

@@ -1168,1054 +1168,401 @@ const owsla2020 = []
 
 const artists = [
   {
-    artist: "AC Slater",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fac-slater.webp?alt=media&token=ed96db28-fe29-4236-99d7-d2a970b7a61e",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-  {
-    artist: "Alesia",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Falesia.webp?alt=media&token=0196c481-f386-4b94-9336-b675726a029a",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-  {
-    artist: "Alex Metric",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Falex-metric.webp?alt=media&token=123628b6-fd91-4686-9db8-972aa56f0075",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-  {
-    artist: "Alvin Risk",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Falvin-risk.webp?alt=media&token=a319442f-ecee-4dfc-ae2a-82600ea5567e",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-  {
-    artist: "Anna Lunoe",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fanna-lunoe.webp?alt=media&token=b9cc01e4-3739-4a26-912f-494b332710ec",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-  {
-    artist: "Aryay",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Faryay.webp?alt=media&token=a4403229-0522-433e-a59e-e0bec39470cf",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-
-
-  {
-    artist: "Barely Alive",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fbarely-alive.webp?alt=media&token=98906b77-a95a-469f-8c4d-f22e346a2e35",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-  {
-    artist: "Bart B More",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fbart-b-more.webp?alt=media&token=35271181-fd83-4d5f-9d1d-65873bea72d3",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-  {
-    artist: "Basecamp",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fbasecamp.webp?alt=media&token=be87728c-d537-4957-a7b6-103cbbc65e51",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-  {
-    artist: "Birdy Nam Nam",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fbirdy-nam-nam.webp?alt=media&token=69b0b549-6998-4fdc-91fa-4be3ac007681",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-  {
-    artist: "Blood Diamonds",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fblood-diamonds.webp?alt=media&token=681f955e-cf2a-4bc2-aa8b-dac70770a6e3",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },  
-
-
-  {
-    artist: "Carmada",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fcarmada.webp?alt=media&token=225448b3-5823-43bb-ae9d-c3216a9732f3",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-  {
-    artist: "Chris Lake",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fchris-lake.webp?alt=media&token=1b004c7a-7c5c-4095-9507-f067238adae3",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-  {
-    artist: "Crookers",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fcrookers.webp?alt=media&token=9e8b4db1-fded-4e4c-8f5e-07fd392e92d5",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-
-
-  {
-    artist: "David Heartbreak",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fdavid-heartbreak.webp?alt=media&token=0ab3c4cb-41b9-4162-bec5-4422e440edec",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-  {
-    artist: "Destructo",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fdestructo.webp?alt=media&token=14ba5811-4c07-4a4a-9e45-6aebc3e93db7",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-  {
-    artist: "Dillon Francis",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fdillon-francis.webp?alt=media&token=21f7326a-beb9-4855-acf2-5fc1955dfb96",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-  {
-    artist: "Dj Sliink",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fdj-sliink.webp?alt=media&token=8066f449-53ee-4ced-b6bb-34c41347e06f",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-  {
-    artist: "Dog Blood",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fdog-blood.webp?alt=media&token=f5d7462d-9c46-4a6f-8743-45f1a5847f97",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-
-
-  {
-    artist: "Elohim",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fekali.webp?alt=media&token=b458e958-4c65-42ff-8969-4bcc0e227e92",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-  {
-    artist: "Etnik",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Felohim.webp?alt=media&token=1d023c8b-60f3-4553-8d28-cd9cfda632f9",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-  {
-    artist: "Ekali",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fetnik.webp?alt=media&token=67c2966d-dc99-4686-9d70-e12e7108b52e",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-
-
-  {
-    artist: "Figure",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Ffigure.webp?alt=media&token=aa4bee50-6a3a-44d9-abcb-11b1b51e0ddd",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-
-
-  {
-    artist: "Getter",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fgetter.webp?alt=media&token=b79fe411-1f29-4876-add7-f453fa1dd0a1",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-  {
-    artist: "Ghastly",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fghastly.webp?alt=media&token=d9be4ff2-5f28-448d-87e6-2d3fb5833a34",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-  
-
-  {
-    artist: "HeartsRevolution",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fheartsrevolution.webp?alt=media&token=a30aecb2-a1d6-42a7-a95e-43eced5d46ce",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-  {
-    artist: "Hundred Waters",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fhundred-waters.webp?alt=media&token=22faa347-c046-4799-b95d-2060cf0a58e9",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-
-
-  {
-    artist: "I Am Legion",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fi-am-legion.webp?alt=media&token=d17f9a0b-0b83-489c-9197-9e7dc7d0bbd8",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-
-
-  {
-    artist: "Jack Beats",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fjack-beats.webp?alt=media&token=51a7c974-6764-4881-967e-9e5f09be9eb2",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-
-  {
-    artist: "Jack Ü",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fjack-u.webp?alt=media&token=8454b4fa-1430-43b3-b0ce-50bc784a4b88",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-  {
-    artist: "Josh Pan",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fjosh-pan.webp?alt=media&token=6ed1e57c-3534-4556-b3b6-1982537b3a27",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-  {
-    artist: "Joyryde",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fjoyryde.webp?alt=media&token=91449e2c-1ea5-4046-b728-6d3588c3f733",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-
-  
-
-  {
-    artist: "Kill Paris",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fkill-paris.webp?alt=media&token=38a5ba92-56c7-4803-b876-37baabe387e6",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-  {
-    artist: "Kill The Noise",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fkill-the-noise.webp?alt=media&token=77431125-61d6-4725-b141-78ab7593fa73",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-  {
-    artist: "Koan Sound",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fkoansound.webp?alt=media&token=f15d9595-d5d7-49c4-bdd6-f78e6a117a23",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-
-  {
-    artist: "Mark Johns",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fmark-johns.webp?alt=media&token=7005222b-9716-49d4-be2d-1bb5c36bf814",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-  {
-    artist: "Marshmello",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fmarshmello.webp?alt=media&token=a7586331-e7a5-4a0c-9b54-60e5680216d0",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-  {
-    artist: "Mija",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fmija.webp?alt=media&token=0fc1d121-fd91-4189-9a16-5b332c9893a6",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-  {
-    artist: "Monsta",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fmonsta.webp?alt=media&token=8ee0b3be-875f-40b1-be6e-90f721cf3f9c",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-  {
-    artist: "Must Die!",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fmust-die!.webp?alt=media&token=61897da4-672d-4187-896a-091a0a0b3a15",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-
-
-  {
-    artist: "Nick Thayer",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fnick-thayer.webp?alt=media&token=6331abbc-59aa-4a1f-803c-8da39a8d6c29",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-
-
-  {
-    artist: "OddKidOut",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Foddkidout.webp?alt=media&token=c621bbe1-e282-42a0-824e-5dfeb741f82a",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-
-
-  {
-    artist: "Pennybirdrabbit",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fpennybirdrabbit.webp?alt=media&token=ba0deddb-5bca-4063-8579-e26b95c90ec4",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-  {
-    artist: "Phonat",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fphonat.webp?alt=media&token=32544f27-89dd-4f01-806a-b66f3547bc1b",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-  {
-    artist: "Phuture Doom",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fphuture-doom.webp?alt=media&token=94090e59-665b-4cf7-b7d1-9e74183bfb5f",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-  {
-    artist: "Point Point",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fpoint-point.webp?alt=media&token=d70f9e4f-bda8-495a-9716-a9e9196c78ef",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-  {
-    artist: "Porter Robinson",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fporter-robinson.webp?alt=media&token=a2364031-b80d-42b2-b9a8-ab162eff65b5",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-  
-
-  {
-    artist: "Rusko",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Frusko.webp?alt=media&token=58e0f09e-34fe-4428-b47b-47c47cc0db0d",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-
-
-  {
-    artist: "Salvatore Ganacci",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fsalvatore-ganacci.webp?alt=media&token=2045e91c-62a8-4667-ad9b-517ff41972f4",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-  {
-    artist: "Seven Lions",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fseven-lions.webp?alt=media&token=ff104d49-5195-4f98-8609-f86de2b58981",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-  {
-    artist: "Skream",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fskream.webp?alt=media&token=e3c92a90-5903-49fa-b7ae-229abfec9752",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-  {
-    artist: "Skrillex",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fskrillex.webp?alt=media&token=5fd6b59e-20bf-468a-ad8e-3e4d67100a9f",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-  {
-    artist: "Snails",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fsnails.webp?alt=media&token=d08613a4-50c7-4492-9a9d-9e86c82ffe51",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-  {
-    artist: "Star Slinger",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fstar-slinger.webp?alt=media&token=6b8336d0-11a0-43fc-949b-a0d227592736",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-  {
-    artist: "Sub Focus",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fsub-focus.webp?alt=media&token=589d5a9b-a718-4e26-a039-f8d3f42a754f",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-
-
-  {
-    artist: "Tc",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Ftc.webp?alt=media&token=91ee15fc-0a4e-4072-9c54-aeca8e961d7b",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-  {
-    artist: "Teddy Killerz",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fteddy-killerz.webp?alt=media&token=761bd134-1af2-4459-86a9-8f692a4b615c",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-  {
-    artist: "Tennyson",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Ftennyson.webp?alt=media&token=30bc2cf8-d149-43cd-8788-04d1d2c3d81d",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-  {
-    artist: "The M Machine",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fthe-m-machine.webp?alt=media&token=a4ed053a-4905-4468-9eb7-46751ca31441",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-  {
-    artist: "Troyboi",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Ftroyboi.webp?alt=media&token=14a85fc7-ea26-4fc4-9d9a-e0c0d052599b",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-  
-
-  {
-    artist: "Vindata",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fvalentino-khan.webp?alt=media&token=f74228ee-71df-4574-96cd-ab108435b2e4",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-  {
-    artist: "Valentino Khan",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fvindata.webp?alt=media&token=f525403f-866d-4f1f-8113-5e79819cf8ec",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-
-
-  {
-    artist: "What So Not",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fwhat-so-not.webp?alt=media&token=dfd52b65-730d-49eb-b510-20750f5ea645",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-  {
-    artist: "Wiwek",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fwiwek.webp?alt=media&token=0d7da8ce-f6d0-4e03-8b8d-df42ffc52df5",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-  {
-    artist: "Wuki",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fwuki.webp?alt=media&token=4f4a23c7-523f-4860-9632-8d161a04af1e",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-
-
-  {
-    artist: "Yogi",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fyogi.webp?alt=media&token=818a4fed-45b4-4d12-955e-8e181de39578",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-
-
-  {
-    artist: "Zedd",
-    img: "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fzedd.webp?alt=media&token=78da08c8-8bb9-4ce4-837c-0bcd056da45a",
-    links: {
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      soundcloud: "",
-      youtube: "",
-      spotify: "",
-
-    },
-    date: "1/22/2013",
-
-  },
-
+      "artist": "AC Slater",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fac-slater.webp?alt=media&token=ed96db28-fe29-4236-99d7-d2a970b7a61e",
+      "links": "https://music.youtube.com/channel/UCAzvQYecfOEeHOWFVzPSCOQ",
+      "date": "9/24/2013"
+  },
+  {
+      "artist": "Alesia",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Falesia.webp?alt=media&token=0196c481-f386-4b94-9336-b675726a029a",
+      "links": "https://music.youtube.com/channel/UC8Y3bnsdpLFKRyIq1giyM5A",
+      "date": "9/25/2013"
+  },
+  {
+      "artist": "Alex Metric",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Falex-metric.webp?alt=media&token=123628b6-fd91-4686-9db8-972aa56f0075",
+      "links": "https://music.youtube.com/channel/UCVdedmpgUMGCKSFhEXmcOhw",
+      "date": "9/26/2013"
+  },
+  {
+      "artist": "Alvin Risk",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Falvin-risk.webp?alt=media&token=a319442f-ecee-4dfc-ae2a-82600ea5567e",
+      "links": "https://music.youtube.com/channel/UCqlEz_jxQUZHLRea-FJrQgQ",
+      "date": "9/27/2013"
+  },
+  {
+      "artist": "Anna Lunoe",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fanna-lunoe.webp?alt=media&token=b9cc01e4-3739-4a26-912f-494b332710ec",
+      "links": "https://music.youtube.com/channel/UCQ6T6ewsFZ5IWsU-5zt21Nw",
+      "date": "9/28/2013"
+  },
+  {
+      "artist": "Aryay",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Faryay.webp?alt=media&token=a4403229-0522-433e-a59e-e0bec39470cf",
+      "links": "https://music.youtube.com/channel/UC-1xEIbJBZ6DvrSHFAI1xmQ",
+      "date": "9/29/2013"
+  },
+  {
+      "artist": "Barely Alive",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fbarely-alive.webp?alt=media&token=98906b77-a95a-469f-8c4d-f22e346a2e35",
+      "links": "https://music.youtube.com/channel/UCa0Qet1jCEeMzPHrsmdw8TQ",
+      "date": "9/30/2013"
+  },
+  {
+      "artist": "Bart B More",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fbart-b-more.webp?alt=media&token=35271181-fd83-4d5f-9d1d-65873bea72d3",
+      "links": "https://music.youtube.com/channel/UCEUU8u7K_RnjASXvnnprBQA",
+      "date": "10/1/2013"
+  },
+  {
+      "artist": "Basecamp",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fbasecamp.webp?alt=media&token=be87728c-d537-4957-a7b6-103cbbc65e51",
+      "links": "https://music.youtube.com/channel/UCeq-jyDJKH4wqqeAidk1V_w",
+      "date": "10/2/2013"
+  },
+  {
+      "artist": "Birdy Nam Nam",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fbirdy-nam-nam.webp?alt=media&token=69b0b549-6998-4fdc-91fa-4be3ac007681",
+      "links": "https://music.youtube.com/channel/UCzEsdw7ylD2uKRsq5cG8jRQ",
+      "date": "10/3/2013"
+  },
+  {
+      "artist": "Blood Diamonds",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fblood-diamonds.webp?alt=media&token=681f955e-cf2a-4bc2-aa8b-dac70770a6e3",
+      "links": "https://music.youtube.com/channel/UCRVrNlJAZT7AjmuQ6rfFLsg",
+      "date": "10/4/2013"
+  },
+  {
+      "artist": "Carmada",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fcarmada.webp?alt=media&token=225448b3-5823-43bb-ae9d-c3216a9732f3",
+      "links": "https://music.youtube.com/channel/UCc0WC-N36ku0xbwcA7Fljkw",
+      "date": "10/5/2013"
+  },
+  {
+      "artist": "Chris Lake",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fchris-lake.webp?alt=media&token=1b004c7a-7c5c-4095-9507-f067238adae3",
+      "links": "https://music.youtube.com/channel/UCzGyYV9dVe0jB960FrlAR8g",
+      "date": "10/6/2013"
+  },
+  {
+      "artist": "Crookers",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fcrookers.webp?alt=media&token=9e8b4db1-fded-4e4c-8f5e-07fd392e92d5",
+      "links": "https://music.youtube.com/channel/UCSy20dB0-q7wSIgbbiRpVgw",
+      "date": "10/7/2013"
+  },
+  {
+      "artist": "David Heartbreak",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fdavid-heartbreak.webp?alt=media&token=0ab3c4cb-41b9-4162-bec5-4422e440edec",
+      "links": "https://music.youtube.com/channel/UC-vxkQKvNDGCY2J1uuKGHBg",
+      "date": "10/8/2013"
+  },
+  {
+      "artist": "Destructo",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fdestructo.webp?alt=media&token=14ba5811-4c07-4a4a-9e45-6aebc3e93db7",
+      "links": "https://music.youtube.com/channel/UCNXualpo8TqvEqizx_4abZQ",
+      "date": "10/9/2013"
+  },
+  {
+      "artist": "Dillon Francis",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fdillon-francis.webp?alt=media&token=21f7326a-beb9-4855-acf2-5fc1955dfb96",
+      "links": "https://music.youtube.com/channel/UCKm78y6KGUHBtvne8iWyHvg",
+      "date": "10/10/2013"
+  },
+  {
+      "artist": "Dj Sliink",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fdj-sliink.webp?alt=media&token=8066f449-53ee-4ced-b6bb-34c41347e06f",
+      "links": "https://music.youtube.com/channel/UCpz9-VtShwYe6uJycbESmRQ",
+      "date": "10/11/2013"
+  },
+  {
+      "artist": "Dog Blood",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fdog-blood.webp?alt=media&token=f5d7462d-9c46-4a6f-8743-45f1a5847f97",
+      "links": "https://music.youtube.com/channel/UCe7h-Nm6FII0dkBaTuxL8UQ",
+      "date": "10/12/2013"
+  },
+  {
+      "artist": "Elohim",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fekali.webp?alt=media&token=b458e958-4c65-42ff-8969-4bcc0e227e92",
+      "links": "https://music.youtube.com/channel/UCowvxgIoJFs85wXFd1F0zJQ",
+      "date": "10/13/2013"
+  },
+  {
+      "artist": "Etnik",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Felohim.webp?alt=media&token=1d023c8b-60f3-4553-8d28-cd9cfda632f9",
+      "links": "https://music.youtube.com/channel/UCmsq5yobo9YGvpx1yzEud8A",
+      "date": "10/14/2013"
+  },
+  {
+      "artist": "Ekali",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fetnik.webp?alt=media&token=67c2966d-dc99-4686-9d70-e12e7108b52e",
+      "links": "https://music.youtube.com/channel/UCApcoMFNlQO_jDoM1L_ahSA",
+      "date": "10/15/2013"
+  },
+  {
+      "artist": "Figure",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Ffigure.webp?alt=media&token=aa4bee50-6a3a-44d9-abcb-11b1b51e0ddd",
+      "links": "https://music.youtube.com/channel/UCZ2YnfGQYAGmu0iuiv6NFRA",
+      "date": "10/16/2013"
+  },
+  {
+      "artist": "Getter",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fgetter.webp?alt=media&token=b79fe411-1f29-4876-add7-f453fa1dd0a1",
+      "links": "https://music.youtube.com/channel/UCbnxG73UYGdX5Lf1h_KV3gg",
+      "date": "10/17/2013"
+  },
+  {
+      "artist": "Ghastly",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fghastly.webp?alt=media&token=d9be4ff2-5f28-448d-87e6-2d3fb5833a34",
+      "links": "https://music.youtube.com/channel/UCkgmERDFnvCPqcHGSsF6qzg",
+      "date": "10/18/2013"
+  },
+  {
+      "artist": "HeartsRevolution",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fheartsrevolution.webp?alt=media&token=a30aecb2-a1d6-42a7-a95e-43eced5d46ce",
+      "links": "https://music.youtube.com/channel/UCjhdhigETwzRUuDcQW1Lhkw",
+      "date": "10/19/2013"
+  },
+  {
+      "artist": "Hundred Waters",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fhundred-waters.webp?alt=media&token=22faa347-c046-4799-b95d-2060cf0a58e9",
+      "links": "https://music.youtube.com/channel/UCpuKw9locgpwHXsE_sPJjaw",
+      "date": "10/20/2013"
+  },
+  {
+      "artist": "I Am Legion",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fi-am-legion.webp?alt=media&token=d17f9a0b-0b83-489c-9197-9e7dc7d0bbd8",
+      "links": "https://music.youtube.com/channel/UCodJAFJvF8E2arQ4oIi82PA",
+      "date": "10/21/2013"
+  },
+  {
+      "artist": "Jack Beats",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fjack-beats.webp?alt=media&token=51a7c974-6764-4881-967e-9e5f09be9eb2",
+      "links": "https://music.youtube.com/channel/UCgwjxfGMIPwjZFkdo3NeFhQ",
+      "date": "10/22/2013"
+  },
+  {
+      "artist": "Jack Ü",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fjack-u.webp?alt=media&token=8454b4fa-1430-43b3-b0ce-50bc784a4b88",
+      "links": "https://music.youtube.com/channel/UCUdWCvEitovExLOcGP11pHg",
+      "date": "10/23/2013"
+  },
+  {
+      "artist": "Josh Pan",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fjosh-pan.webp?alt=media&token=6ed1e57c-3534-4556-b3b6-1982537b3a27",
+      "links": "https://music.youtube.com/channel/UC_JFBJ1nNbSL5NmJ_PJ6Kjw",
+      "date": "10/24/2013"
+  },
+  {
+      "artist": "Joyryde",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fjoyryde.webp?alt=media&token=91449e2c-1ea5-4046-b728-6d3588c3f733",
+      "links": "https://music.youtube.com/channel/UCpvVbEy_jPKhkqBiFjWXf_Q",
+      "date": "10/25/2013"
+  },
+  {
+      "artist": "Kill Paris",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fkill-paris.webp?alt=media&token=38a5ba92-56c7-4803-b876-37baabe387e6",
+      "links": "https://music.youtube.com/channel/UCRV_-5zO9sSmEGwVrUZqU9A",
+      "date": "10/26/2013"
+  },
+  {
+      "artist": "Kill The Noise",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fkill-the-noise.webp?alt=media&token=77431125-61d6-4725-b141-78ab7593fa73",
+      "links": "https://music.youtube.com/channel/UCqHk9yyHZ8gXyxaipitsIQg",
+      "date": "10/27/2013"
+  },
+  {
+      "artist": "Koan Sound",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fkoansound.webp?alt=media&token=f15d9595-d5d7-49c4-bdd6-f78e6a117a23",
+      "links": "https://music.youtube.com/channel/UCtnvOw13zAauA9BZxnFUCCA",
+      "date": "10/28/2013"
+  },
+  {
+      "artist": "Mark Johns",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fmark-johns.webp?alt=media&token=7005222b-9716-49d4-be2d-1bb5c36bf814",
+      "links": "https://music.youtube.com/channel/UC7VPJbs89EJaXFAzjBRy7jA",
+      "date": "10/29/2013"
+  },
+  {
+      "artist": "Marshmello",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fmarshmello.webp?alt=media&token=a7586331-e7a5-4a0c-9b54-60e5680216d0",
+      "links": "https://music.youtube.com/channel/UCrxpwXq8wCTskOQq5d_KoqQ",
+      "date": "10/30/2013"
+  },
+  {
+      "artist": "Mija",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fmija.webp?alt=media&token=0fc1d121-fd91-4189-9a16-5b332c9893a6",
+      "links": "https://music.youtube.com/channel/UCCS4TE2LzfgjRjob179CxMA",
+      "date": "10/31/2013"
+  },
+  {
+      "artist": "Monsta",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fmonsta.webp?alt=media&token=8ee0b3be-875f-40b1-be6e-90f721cf3f9c",
+      "links": "https://music.youtube.com/channel/UCOg9TvBtpHth_tO4cUMrnzQ",
+      "date": "11/1/2013"
+  },
+  {
+      "artist": "Must Die!",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fmust-die!.webp?alt=media&token=61897da4-672d-4187-896a-091a0a0b3a15",
+      "links": "https://music.youtube.com/channel/UC9xuhwP6bTC5PKwdHFtXBBw",
+      "date": "11/2/2013"
+  },
+  {
+      "artist": "Nick Thayer",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fnick-thayer.webp?alt=media&token=6331abbc-59aa-4a1f-803c-8da39a8d6c29",
+      "links": "https://music.youtube.com/channel/UCTKVr5X3W0zkgQUrXHcnocg",
+      "date": "11/3/2013"
+  },
+  {
+      "artist": "OddKidOut",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Foddkidout.webp?alt=media&token=c621bbe1-e282-42a0-824e-5dfeb741f82a",
+      "links": "https://music.youtube.com/channel/UClK4jagXqOj2dMODU7qTPiw",
+      "date": "11/4/2013"
+  },
+  {
+      "artist": "Pennybirdrabbit",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fpennybirdrabbit.webp?alt=media&token=ba0deddb-5bca-4063-8579-e26b95c90ec4",
+      "links": "https://music.youtube.com/channel/UCxHPAZdKLdA5_bbmDjPUxaw",
+      "date": "11/5/2013"
+  },
+  {
+      "artist": "Phonat",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fphonat.webp?alt=media&token=32544f27-89dd-4f01-806a-b66f3547bc1b",
+      "links": "https://music.youtube.com/channel/UC-E_fElrtIH0aERdRspc6Vg",
+      "date": "11/6/2013"
+  },
+  {
+      "artist": "Phuture Doom",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fphuture-doom.webp?alt=media&token=94090e59-665b-4cf7-b7d1-9e74183bfb5f",
+      "links": "https://music.youtube.com/channel/UC9iFQCThml0GuILMdXql5GQ",
+      "date": "11/7/2013"
+  },
+  {
+      "artist": "Point Point",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fpoint-point.webp?alt=media&token=d70f9e4f-bda8-495a-9716-a9e9196c78ef",
+      "links": "https://music.youtube.com/channel/UCJwldGsFn3E7EQd_oxNr1lA",
+      "date": "11/8/2013"
+  },
+  {
+      "artist": "Porter Robinson",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fporter-robinson.webp?alt=media&token=a2364031-b80d-42b2-b9a8-ab162eff65b5",
+      "links": "https://music.youtube.com/channel/UCUt2uP6O_UBJp4aBx5KjQjA",
+      "date": "11/9/2013"
+  },
+  {
+      "artist": "Rusko",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Frusko.webp?alt=media&token=58e0f09e-34fe-4428-b47b-47c47cc0db0d",
+      "links": "https://music.youtube.com/channel/UCrvA4qX6BUQxdG9uDPifxEA",
+      "date": "11/10/2013"
+  },
+  {
+      "artist": "Salvatore Ganacci",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fsalvatore-ganacci.webp?alt=media&token=2045e91c-62a8-4667-ad9b-517ff41972f4",
+      "links": "https://music.youtube.com/channel/UCgS5mGElzt2UvcWAZhxd7Jg",
+      "date": "11/11/2013"
+  },
+  {
+      "artist": "Seven Lions",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fseven-lions.webp?alt=media&token=ff104d49-5195-4f98-8609-f86de2b58981",
+      "links": "https://music.youtube.com/channel/UCYd2yzYRx7b9FYnBSlbnknA",
+      "date": "11/12/2013"
+  },
+  {
+      "artist": "Skream",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fskream.webp?alt=media&token=e3c92a90-5903-49fa-b7ae-229abfec9752",
+      "links": "https://music.youtube.com/channel/UCo3ohMrhOjpE9xLId-TlXxQ",
+      "date": "11/13/2013"
+  },
+  {
+      "artist": "Skrillex",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fskrillex.webp?alt=media&token=5fd6b59e-20bf-468a-ad8e-3e4d67100a9f",
+      "links": "https://music.youtube.com/channel/UCibXKvuw5PoJVmyZJ4qhDIw",
+      "date": "11/14/2013"
+  },
+  {
+      "artist": "Snails",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fsnails.webp?alt=media&token=d08613a4-50c7-4492-9a9d-9e86c82ffe51",
+      "links": "https://music.youtube.com/channel/UCxrIoMEWPChPUJWnSVKR3-Q",
+      "date": "11/15/2013"
+  },
+  {
+      "artist": "Star Slinger",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fstar-slinger.webp?alt=media&token=6b8336d0-11a0-43fc-949b-a0d227592736",
+      "links": "https://music.youtube.com/channel/UCqMesM2j_VWt0tqZmX2NkEA",
+      "date": "11/16/2013"
+  },
+  {
+      "artist": "Sub Focus",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fsub-focus.webp?alt=media&token=589d5a9b-a718-4e26-a039-f8d3f42a754f",
+      "links": "https://music.youtube.com/channel/UC5voZL17OfUOvy8EcCGHZog",
+      "date": "11/17/2013"
+  },
+  {
+      "artist": "Tc",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Ftc.webp?alt=media&token=91ee15fc-0a4e-4072-9c54-aeca8e961d7b",
+      "links": "https://music.youtube.com/channel/UC4V5THIx9JhcCgO7QKZlQ3A",
+      "date": "11/18/2013"
+  },
+  {
+      "artist": "Teddy Killerz",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fteddy-killerz.webp?alt=media&token=761bd134-1af2-4459-86a9-8f692a4b615c",
+      "links": "https://music.youtube.com/channel/UCYUOGpre7J1Gr78H2xZfHbg",
+      "date": "11/19/2013"
+  },
+  {
+      "artist": "Tennyson",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Ftennyson.webp?alt=media&token=30bc2cf8-d149-43cd-8788-04d1d2c3d81d",
+      "links": "https://music.youtube.com/channel/UCQ2_kTDMFlrRy8vCQWQHRvA",
+      "date": "11/20/2013"
+  },
+  {
+      "artist": "The M Machine",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fthe-m-machine.webp?alt=media&token=a4ed053a-4905-4468-9eb7-46751ca31441",
+      "links": "https://music.youtube.com/channel/UC5oQymzb3SusAAFccKlUR_Q",
+      "date": "11/21/2013"
+  },
+  {
+      "artist": "Troyboi",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Ftroyboi.webp?alt=media&token=14a85fc7-ea26-4fc4-9d9a-e0c0d052599b",
+      "links": "https://music.youtube.com/channel/UCvEKwcnBGwsDDLnftenNM1A",
+      "date": "11/22/2013"
+  },
+  {
+      "artist": "Vindata",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fvalentino-khan.webp?alt=media&token=f74228ee-71df-4574-96cd-ab108435b2e4",
+      "links": "https://music.youtube.com/channel/UCuBZ6xdVw4YIoU0XA4VcRyQ",
+      "date": "11/23/2013"
+  },
+  {
+      "artist": "Valentino Khan",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fvindata.webp?alt=media&token=f525403f-866d-4f1f-8113-5e79819cf8ec",
+      "links": "https://music.youtube.com/channel/UCFm_NGMAYD05IPv5Rf7DhQA",
+      "date": "11/24/2013"
+  },
+  {
+      "artist": "What So Not",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fwhat-so-not.webp?alt=media&token=dfd52b65-730d-49eb-b510-20750f5ea645",
+      "links": "https://music.youtube.com/channel/UCCsaNVXPQAq1xF724Agb8tg",
+      "date": "11/25/2013"
+  },
+  {
+      "artist": "Wiwek",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fwiwek.webp?alt=media&token=0d7da8ce-f6d0-4e03-8b8d-df42ffc52df5",
+      "links": "https://music.youtube.com/channel/UCJn3_pqKX0E8m7qROaimw8g",
+      "date": "11/26/2013"
+  },
+  {
+      "artist": "Wuki",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fwuki.webp?alt=media&token=4f4a23c7-523f-4860-9632-8d161a04af1e",
+      "links": "https://music.youtube.com/channel/UCz2f6P0dckd4gpTmEJ2kOkg",
+      "date": "11/27/2013"
+  },
+  {
+      "artist": "Yogi",
+      "img": "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/artists%2Fyogi.webp?alt=media&token=818a4fed-45b4-4d12-955e-8e181de39578",
+      "links": "https://music.youtube.com/channel/UC2Nuswyz41SO84ca7FOzOdQ",
+      "date": "11/28/2013"
+  }
 ]
 
 const videos = 
@@ -3287,4 +2634,4 @@ const radio = [
   }
 ]
 
-export default radio
+export default artists

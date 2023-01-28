@@ -34,9 +34,6 @@ export default {
   methods: {
     nextArtist() {
       artistsList.scroll({ left: artistsList.scrollLeft + artistsList.offsetWidth, behavior: 'smooth' }) /*Obtiene la posicion del scroll de la seccion y le suma el ancho de la tarjeta para ir a la siguiente*/
-      console.log(this.scrollLeftAux) //Muestra en consola la posicion del scroll
-      console.log(artistsList.scrollLeft) //Muestra en consola la posicion del scroll
-      console.log(artistsList.scrollWidth - artistsList.offsetWidth)
       if (artistsList.scrollLeft >= artistsList.scrollWidth - artistsList.offsetWidth - 1) {
         artistsList.scroll({ left: 0, behavior: 'smooth' })
       }
