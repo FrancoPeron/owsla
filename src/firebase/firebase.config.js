@@ -11,17 +11,18 @@ import { getStorage } from "firebase/storage";
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyDV4nl1i4nuqFUQJKOS-i8gG4xZ40YY4XE",
-  authDomain: "owsla-8020a.firebaseapp.com",
-  databaseURL: "https://owsla-8020a-default-rtdb.firebaseio.com",
-  projectId: "owsla-8020a",
-  storageBucket: "owsla-8020a.appspot.com",
-  messagingSenderId: "64367481599",
-  appId: "1:64367481599:web:6f1b479f8eabf0eba4f2ca",
-  measurementId: "G-PQ72V6PM3D"
-};
 
+console.log(import.meta.env.VITE_FIREBASE_API_KEY)
+const firebaseConfig = {
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  databaseURL: import.meta.env.VITE_FIREBASE_DATABASE_URL,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
+};
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);

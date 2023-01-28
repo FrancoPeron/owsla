@@ -1,7 +1,5 @@
 <script>
-
 export default {
-
   data() {
     return {
       videoList: [
@@ -16,7 +14,7 @@ export default {
           video: 'https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/videos%2FSkrillex%20%26%20Bladee%20-%20Real%20Spring%20(Official%20Music%20Video).webm?alt=media&token=1c6cb15e-3c0c-4276-8cb3-479c15c43ea2',
           link: 'https://www.youtube.com/watch?v=0i4gZ9IE2CI',
           category: 'Music Video',
-          title: "Real Spring",
+          title: 'Real Spring',
           subtitle: 'Skrillex & Bladee',
         },
         {
@@ -25,7 +23,7 @@ export default {
           category: 'Music Video',
           title: 'Frendly Fire',
           subtitle: 'Skrillex',
-        }
+        },
       ],
       refreshInterval: undefined,
       cont: 2,
@@ -39,19 +37,17 @@ export default {
     this.startSlider()
   },
 
-  unmounted(){
+  unmounted() {
     this.stopSlider()
   },
 
-
   methods: {
-
-    clearActive(){
+    clearActive() {
       let links = document.getElementsByClassName('slider__link')
-      Array.from(links).forEach(val => val.classList.remove('active'))
+      Array.from(links).forEach((val) => val.classList.remove('active'))
     },
 
-    btnVideoActive(e,index){
+    btnVideoActive(e, index) {
       this.stopSlider()
       this.cont = index
       e.target.classList.add('active')
@@ -59,11 +55,9 @@ export default {
     },
 
     loopSlider() {
-
-      
       let videoTarget = document.getElementById('radio' + this.cont)
       let linkTarget = document.getElementById('linkVideo' + this.cont)
-      
+
       this.clearActive()
 
       videoTarget.checked = true
@@ -73,16 +67,14 @@ export default {
       if (this.cont > 3) this.cont = 1
     },
 
-    stopSlider(){
+    stopSlider() {
       this.clearActive()
-      clearInterval(this.refreshInterval);
+      clearInterval(this.refreshInterval)
     },
 
-    startSlider(){
+    startSlider() {
       this.refreshInterval = setInterval(this.loopSlider, 16000)
     },
-
-
   },
 }
 </script>
@@ -91,31 +83,28 @@ export default {
   <section class="banner">
     <div class="slider">
       <div class="slider__videos">
-        
         <div v-for="(val, index) in videoList" :key="index">
-          <input type="radio" name="radio-btn" :id="'radio'+ (index+1)"/>
-          <div :id="'video'+ (index+1)" class="slider__box-video">
+          <input type="radio" name="radio-btn" :id="'radio' + (index + 1)" />
+          <div :id="'video' + (index + 1)" class="slider__box-video">
             <video class="slider__video" :src="val.video" muted loop autoplay></video>
             <div class="slider__box-info">
-              <p class="slider__category">{{val.category}}</p>
-              <h2 class="slider__title">{{val.title}}<br /></h2>
-              <p class="slider__subtitle">{{val.subtitle}}</p>
+              <p class="slider__category">{{ val.category }}</p>
+              <h2 class="slider__title">{{ val.title }}<br /></h2>
+              <p class="slider__subtitle">{{ val.subtitle }}</p>
               <a class="slider__btn" :href="val.link" target="_blank">Watch Now</a>
             </div>
           </div>
         </div>
-
       </div>
 
       <div class="slider__nav">
-        <label class="slider__link" v-for="(val, index) in videoList.length" :key="index" :id="'linkVideo'+ (index+1)" :for="'radio'+ (index+1)" @click="btnVideoActive($event,index+1)"></label>
+        <label class="slider__link" v-for="(val, index) in videoList.length" :key="index" :id="'linkVideo' + (index + 1)" :for="'radio' + (index + 1)" @click="btnVideoActive($event, index + 1)"></label>
       </div>
     </div>
   </section>
 </template>
 
 <style lang="scss" scoped>
-
 .banner {
   @extend %container-center;
   grid-area: banner;
@@ -194,7 +183,7 @@ export default {
         .slider__btn {
           grid-area: btn;
           align-self: flex-end;
-          @include btn(cW,bgT,bW);
+          @include btn(cW, bgT, bW);
         }
       }
     }
