@@ -6,21 +6,21 @@ export default {
     return {
       videoList: [
         {
-          video: 'src/assets/video/WarmWinters.webm',
+          video: 'https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/videos%2FWarm%20Winters%20%5BOWSLA%20GOODS%20Lookbook%20Video%5D.webm?alt=media&token=4ebf701f-481a-4e21-a9e6-51fa2b5e366c',
           link: 'https://www.youtube.com/watch?v=k4XX7TTeTvI',
           category: 'Collection Clothing',
           title: 'Warm Winters',
           subtitle: 'OWSLA GOODS',
         },
         {
-          video: 'src/assets/video/BirdyNamNam-Goinin.mp4#t=15',
-          link: 'https://www.youtube.com/watch?v=3JJsq0GbpPg',
+          video: 'https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/videos%2FSkrillex%20%26%20Bladee%20-%20Real%20Spring%20(Official%20Music%20Video).webm?alt=media&token=1c6cb15e-3c0c-4276-8cb3-479c15c43ea2',
+          link: 'https://www.youtube.com/watch?v=0i4gZ9IE2CI',
           category: 'Music Video',
-          title: "Goin'in",
-          subtitle: 'Birdy Nam Nam',
+          title: "Real Spring",
+          subtitle: 'Skrillex & Bladee',
         },
         {
-          video: 'src/assets/video/FriendlyFire.mp4#t=0',
+          video: 'https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/videos%2FFriendly%20Fire.webm?alt=media&token=a1dc47a6-0b43-436c-8941-6c195509c863',
           link: 'https://www.youtube.com/watch?v=F6CNaD21gC0',
           category: 'Music Video',
           title: 'Frendly Fire',
