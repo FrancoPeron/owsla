@@ -2,6 +2,8 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import { createPinia } from 'pinia'
 
+import './style.css'
+
 import "./firebase/firebase.config.js"
 
 // ========== Router ========== //
@@ -23,8 +25,8 @@ const router = createRouter({
       path: '/', component: Owsla,
       children: [
         {
-          path: '/', name: 'Home', component: () => import('@/views/home/Home.vue')
-          // path: '/', name: 'Home', Home,
+          // path: '/', name: 'Home', component: () => import('@/views/home/Home.vue')
+          path: '/', name: 'Home', Home,
         },
         {
           // path: '/music', name: 'Music', component: () => import('@/views/music/Music.vue')
