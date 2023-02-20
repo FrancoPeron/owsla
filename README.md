@@ -2,41 +2,38 @@
 
 <h1 align="center">• OWSLA •</h1>
 
-<h3 align="center">
+<h2 align="center">
 
   [www.owslahq.netlify.app](https://owslahq.netlify.app)
-</h3>
+</h2>
 
 ![Product Name Screen Shot]()
 <br>
 
 ## About The Project
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+Este projecto nacio de mi fanatismo por OWSLA (sello discografico) y la nesesidad de un projecto frontend para un curso de coderhouse. Incialmente se iso en vanilla Javasrcipt pero lo mude a vue para practicar dicho framwork
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
-
+La pagina oficial de OWSLA es: [www.owsla.com](www.owsla.com)
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+For this page use the following tools and frameworks/libraries:
 
 [![Figma][Figma.js]][Figma-url]
 [![Adobe-Ilustrator][Adobe-Ilustrator.js]][Adobe-Ilustrator-url]
 [![Adobe-Photoshop][Adobe-Photoshop.js]][Adobe-Photoshop-url]
 
 [![Vite][Vite.js]][Vite-url]
+[![Sass][Sass]][Sass-url]
 [![Vue][Vue.js]][Vue-url]
 [![Firebase][Firebase.js]][Firebase-url]
 [![Netlify][Netlify.js]][Netlify-url]
-[![Sass][Sass]][Sass-url]
 
 <p align="right"><a href="#readme-top">Back to top</a></p>
 
 ## Installation
+<br>
 
 1. ´Clone the repo´
    ```sh
@@ -54,9 +51,7 @@ This section should list any major frameworks/libraries used to bootstrap your p
    <p align="right"><a href="#readme-top">Back to top</a></p>
 
 ## Contact
-
-fdsfrrtdhdfghdrthdfgjdfghdrthfghdfh
-
+---
 
 [![LinkedIn][Linkedin.js]][Linkedin-url]
 [![Dribbble][Dribbble.js]][Dribbble-url]
