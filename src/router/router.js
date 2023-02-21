@@ -5,12 +5,12 @@ import { createRouter, createWebHistory} from 'vue-router'
 import Owsla from '@/layout/Owsla.vue'
 import Admin from '@/layout/Admin.vue'
 
-// import Home from '@/views/home/Home.vue'
-import Music from '@/views/music/Music.vue'
-import Artists from '@/views/artists/Artists.vue'
-import Videos from '@/views/videos/Videos.vue'
-import Radio from '@/views/radio/Radio.vue'
-import Contact from '@/views/contact/Contact.vue'
+// import Home from '@/views/HomeView.vue'
+import Music from '@/views/MusicView.vue'
+import Artists from '@/views/ArtistsView.vue'
+import Videos from '@/views/VideosView.vue'
+import Radio from '@/views/RadioView.vue'
+import Contact from '@/views/ContactView.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -19,7 +19,7 @@ const router = createRouter({
       path: '/', component: Owsla,
       children: [
         {
-          path: '/', name: 'Home', component: () => import('@/views/home/Home.vue')
+          path: '/', name: 'Home', component: () => import('@/views/HomeView.vue')
           // path: '/', name: 'Home', Home,
         },
         {

@@ -8,9 +8,9 @@ import { db } from '@/firebase/firebase.config'
 import { collection, query, limit, orderBy} from 'firebase/firestore'
 
 // Componenet
-import ItemsList from '@/components/ItemsList.vue'
-import VideosItem from '@/views/videos/VideosItem.vue'
-import VideoModal from '@/views/videos/VideoModal.vue'
+import ItemsList from '@/components/loops/ItemsList.vue'
+import VideosItem from '@/components/molecules/VideosItem.vue'
+import VideoModal from '@/components/molecules/VideoModal.vue'
 
 /* || Data || ----------------------------------------*/
 const dataInfo = {

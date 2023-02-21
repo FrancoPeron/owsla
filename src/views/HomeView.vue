@@ -10,12 +10,12 @@ export default {
   },
 
   components: {
-    HomeBanner: defineAsyncComponent(() => import('@/views/home/HomeBanner.vue')),
-    HomeNewMusic: defineAsyncComponent(() => import('@/views/home/HomeNewMusic.vue')),
-    HomeArtists: defineAsyncComponent(() => import('@/views/home/HomeArtists.vue')),
-    HomeOwslaGoods: defineAsyncComponent(() => import('@/views/home/HomeOwslaGoods.vue')),
-    HomeRadio: defineAsyncComponent(() => import('@/views/home/HomeRadio.vue')),
-    HomeSuscribe: defineAsyncComponent(() => import('@/views/home/HomeSuscribe.vue')),
+    HomeBanner: defineAsyncComponent(() => import('@/components/organisms/homeComponents/HomeBanner.vue')),
+    HomeNewMusic: defineAsyncComponent(() => import('@/components/organisms/homeComponents/HomeNewMusic.vue')),
+    HomeArtists: defineAsyncComponent(() => import('@/components/organisms/homeComponents/HomeArtists.vue')),
+    HomeOwslaGoods: defineAsyncComponent(() => import('@/components/organisms/homeComponents/HomeOwslaGoods.vue')),
+    HomeRadio: defineAsyncComponent(() => import('@/components/organisms/homeComponents/HomeRadio.vue')),
+    HomeSuscribe: defineAsyncComponent(() => import('@/components/organisms/homeComponents/HomeSuscribe.vue')),
   },
 
   mounted() {
@@ -29,7 +29,7 @@ export default {
 </script>
 
 <template>
-  <div class="main-home">
+  <main class="main-home">
     <span class="main-home__background"></span>
     <HomeBanner />
     <HomeNewMusic />
@@ -37,7 +37,7 @@ export default {
     <HomeOwslaGoods />
     <HomeRadio />
     <HomeSuscribe />  
-  </div>
+  </main>
 </template>
 <!-- v-if="scrollPos > 2500" -->
 <style lang="scss" scoped>

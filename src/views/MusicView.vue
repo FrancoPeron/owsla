@@ -5,8 +5,8 @@ import { db } from '@/firebase/firebase.config'
 import { collection, query, limit, orderBy } from 'firebase/firestore'
 
 // Componenet
-import ItemsList from '@/components/ItemsList.vue'
-import MusicItem from '@/views/music/MusicItem.vue'
+import ItemsList from '@/components/loops/ItemsList.vue'
+import MusicItem from '@/components/molecules/MusicItem.vue'
 
 /* || Data || ----------------------------------------*/
 const dataInfo = {

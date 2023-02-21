@@ -1,6 +1,6 @@
 <script>
 // Componenet
-import Nav from '@/components/Nav.vue'
+import Nav from './Nav.vue'
 
 export default {
   data() {
