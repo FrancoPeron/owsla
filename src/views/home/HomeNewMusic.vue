@@ -32,7 +32,6 @@ export default {
 </script>
 
 <template>
-  <fragment>
     <section class="new-music">
       <h2 class="new-music__title">Latest Releases</h2>
       <h3 class="new-music__subtitle">some of our latest releases from this year, feel and enjoy the music, listen more <router-link class="here" to="/music">here</router-link></h3>
@@ -50,7 +49,6 @@ export default {
       </div>
     </section>
     <span class="new-music-background"></span>
-  </fragment>
 </template>
 
 <style lang="scss" scoped>
