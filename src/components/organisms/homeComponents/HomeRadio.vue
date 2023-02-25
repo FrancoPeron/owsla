@@ -238,6 +238,7 @@ export default {
         grid-area: info;
         border-left: solid 2px #000000;
         padding-left: 1rem;
+        white-space: wrap;
 
         @include flex(column);
         text-transform: capitalize;
@@ -248,7 +249,7 @@ export default {
         }
         :nth-child(2) {
           @include font(fhl2, w500, MontS, lsWider);
-          width: 300px;
+          max-width: 300px;
         }
       }
     }
