@@ -50,7 +50,7 @@ export default {
     'merch'
     'radio'
     'suscribe';
-  grid-row-gap: 148px;
+  grid-row-gap: 132px;
 
   .main-home__background {
     @extend %backgrounds-pos;

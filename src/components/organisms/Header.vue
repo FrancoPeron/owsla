@@ -50,7 +50,10 @@ export default {
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin-bottom: 2rem;
+  margin-bottom: .5rem;
+  @include respond(md) {
+    margin-bottom: 2rem;
+    }
 
   .header__logo {
     @include flex();

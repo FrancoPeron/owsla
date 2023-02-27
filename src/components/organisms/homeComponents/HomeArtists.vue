@@ -2,7 +2,7 @@
 
 // Data Base
 import { db } from '@/firebase/firebase.config'
-import { getDocs, addDoc, collection, query, limit, orderBy } from 'firebase/firestore'
+import { getDocs, collection, query, limit, orderBy } from 'firebase/firestore'
 
 export default {
   data() {
