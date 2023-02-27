@@ -109,6 +109,7 @@ function burgerClose() {
 
   &.burger--active>.burger__btn:before {
     top: 0;
+    right: 0;
     width: 30px;
     transform: rotate(-45deg);
     transition: all 0.5s;
@@ -116,6 +117,7 @@ function burgerClose() {
 
   &.burger--active>.burger__btn:after {
     top: 0;
+    right: 0;
     width: 30px;
     transform: rotate(45deg);
     transition: all 0.5s;
