@@ -12,7 +12,7 @@ export default {
   },
   mounted() {
     for (let index = 0; index < 3; index++) {
-      this.musicList.push({ cover: 'src/assets/image/sk.webp' })
+      this.musicList.push({ cover: 'src/assets/images/sk.webp' })
     }
 
     getDocs(query(collection(db, 'music'), orderBy('date', 'desc'), limit(3)))

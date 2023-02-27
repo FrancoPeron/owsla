@@ -35,8 +35,10 @@ export default {
 <template>
   <footer class="footer">
     <span id="footerBackground" class="footer__background"></span>
-    <router-link class="footer__link" to="/"> <img class="footer__img" src="@/assets/image/owslaLogo2.svg" alt="OWSLA Logo" /></router-link>
-    <Nav />
+    <router-link class="footer__link" to="/">
+      <img class="footer__img" src="@/assets/images/owslaLogoText.svg" alt="OWSLA Logo" />
+    </router-link>
+    <!-- <Nav /> -->
     <ul class="nav__solcial-media">
       <li class="nav__icon nav__icon--color">
         <a href="https://soundcloud.com/owslaofficial" target="_blank" rel="noopener noreferrer">
@@ -113,6 +115,7 @@ export default {
   @include flex(column);
   align-items: center;
   padding: 4rem 0 1.5rem;
+  width: 100%;
 
   .footer__background {
     position: absolute;
@@ -133,7 +136,11 @@ export default {
   }
 
   .footer__link{
-    margin-bottom: 2rem
+    margin-bottom: 2rem;
+    
+    .footer__img{
+      width: 200px;
+    }
   }
 
   .nav__solcial-media {
@@ -178,7 +185,7 @@ export default {
   }
 
   .footer__copyright {
-    @include font(fhl2, w500, MonumentE);
+    @include font(fb1, w500, MonumentE);
     color: $cWhite;
     margin-top: 2rem;
     margin-bottom: 1rem;

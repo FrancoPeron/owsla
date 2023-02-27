@@ -23,7 +23,7 @@ export default {
   mounted() {
 
     for (let index = 0; index < 4; index++) {
-      this.radioList.push({ cover: 'src/assets/image/sk.webp' })
+      this.radioList.push({ cover: 'src/assets/images/sk.webp' })
     }
 
     getDocs(query(collection(db, 'radio'), orderBy('date', 'asc'), limit(4)))

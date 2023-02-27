@@ -14,7 +14,7 @@ export default {
   },
   mounted() {
     for (let index = 0; index < this.cantData; index++) {
-      this.artistsList.push({ img: 'src/assets/image/sk.webp' })
+      this.artistsList.push({ img: 'src/assets/images/sk.webp' })
     }
     //obtener datos
     getDocs(query(collection(db, 'artists'), orderBy('date', 'desc'), limit(this.cantData)))

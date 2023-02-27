@@ -24,9 +24,11 @@
 /*---------------------------------------------------------------------------------------*/
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   background-color: #ffffff;
-  min-width: 400px;
+  min-width: 320px;
   height: 100vh;
 }
 
@@ -108,7 +110,7 @@ body {
   position: relative;
   height: 100%;
   object-fit: cover;
-  background: url(@/assets/image/sk.webp);
+  background: url(@/assets/images/sk.webp);
   overflow: hidden;
 }
 

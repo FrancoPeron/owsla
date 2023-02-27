@@ -58,7 +58,7 @@ const sk = 'https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/
     content: '';
     width: 30px;
     height: 30px;
-    background: url('src/assets/image/play.svg');
+    background: url('src/assets/images/play.svg');
     background-size: cover;
     margin-left: 0.2rem;
 

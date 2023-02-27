@@ -26,6 +26,7 @@ const sk = "https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/
 
 <style lang="scss">
 .artist {
+  @include flex(column);
   scroll-snap-align: start;
   position: relative;
 
