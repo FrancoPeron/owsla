@@ -191,7 +191,7 @@ export default {
     #video1 {
       .slider__category {
         &::before {
-          color: $color2;
+          color: #ff0;
         }
       }
     }
@@ -205,7 +205,7 @@ export default {
       margin-bottom: auto;
       .slider__category {
         &::before {
-          color: $color5;
+          color: #f0f;
         }
       }
     }

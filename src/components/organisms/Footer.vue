@@ -173,7 +173,7 @@ export default {
 
         &:hover {
           path {
-            fill: $color1;
+            fill: $cWhite;
           }
 
           circle {
