@@ -7,7 +7,7 @@
   import { getDocs, addDoc, collection, query, limit, Timestamp } from "firebase/firestore"
   import {getStorage, ref, uploadString ,listAll, getDownloadURL} from "firebase/storage";
 
-  import artists from "@/assets/data.js";
+  import artists from "@/localFiles/data.js";
 
   export default {
     data() {
