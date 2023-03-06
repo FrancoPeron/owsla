@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@vueuse/core": "^9.9.0",
+    "algoliasearch": "^4.15.0",
     "firebase": "^9.14.0",
     "fragment-for-vue": "^1.0.1",
     "pinia": "^2.0.28",

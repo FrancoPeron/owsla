@@ -3,7 +3,7 @@
   // import { defineAsyncComponent , ref } from 'vue'
 
   // Data Base
-  import {db, storage} from '@/firebase/firebase.config'
+  import {db, storage} from '@/database/firebase.config'
   import { getDocs, addDoc, collection, query, limit, Timestamp } from "firebase/firestore"
   import {getStorage, ref, uploadString ,listAll, getDownloadURL} from "firebase/storage";
 

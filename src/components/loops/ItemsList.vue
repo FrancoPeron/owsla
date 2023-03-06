@@ -4,7 +4,7 @@ import { ref } from 'vue'
 import { useInfiniteScroll } from '@vueuse/core'
 
 // Data Base
-import { getData } from '@/firebase/firebase.config'
+import { getData } from '@/database/firebase.config'
 import { query, limit, startAfter } from 'firebase/firestore'
 
 /* || Props || ----------------------------------------*/

@@ -1,6 +1,6 @@
 <script>
 // Data Base
-import { db } from '@/firebase/firebase.config'
+import { db } from '@/database/firebase.config'
 import { getDocs, addDoc, collection, query, limit, orderBy } from 'firebase/firestore'
 
 export default {
