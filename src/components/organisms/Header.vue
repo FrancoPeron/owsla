@@ -76,7 +76,10 @@ export default {
     }
 
     .header__logo-link {
-      height: clamp(65px, 12vw, 80px);
+      width: clamp(48px, 12vw, 64px);
+      img{
+        width: inherit;
+      }
     }
 
   }
