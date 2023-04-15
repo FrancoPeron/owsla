@@ -39,7 +39,7 @@ export default {}
 .main-contact {
   .main-contact__background {
     @extend %backgrounds-pos;
-    height: 150%;
+    height: 110%;
     background: url(https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/background%2Fmain-index.webp?alt=media&token=35f6061a-5ae9-4208-9088-51ed5c1013c8);
     background-size: cover;
     background-position: center;

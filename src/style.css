@@ -30,6 +30,7 @@ body {
   background-color: #ffffff;
   min-width: 320px;
   height: 100vh;
+  overflow-x: hidden !important;
 }
 
 #app {

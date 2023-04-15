@@ -40,6 +40,7 @@
 
 .suscribe__form {
   @extend %formulario__form;
+  max-width: 700px;
 
   .suscribe__email {
     @include formulario__input(cB);

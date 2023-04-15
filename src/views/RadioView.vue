@@ -10,7 +10,7 @@ import RadioItem from '@/components/molecules/RadioItem.vue'
 
 /* || Data || ----------------------------------------*/
 const dataInfo = {
-  colectionRef: query(collection(db, 'radio'), orderBy('date', 'desc'), limit(8)),
+  colectionRef: query(collection(db, 'radio'), orderBy('date', 'desc'), limit(12)),
   limitItems: 8,
 };
 

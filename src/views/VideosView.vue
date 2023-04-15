@@ -14,8 +14,8 @@ import VideoModal from '@/components/molecules/VideoModal.vue'
 
 /* || Data || ----------------------------------------*/
 const dataInfo = {
-  colectionRef: query(collection(db, 'videos'), orderBy('date', 'desc'), limit(6)),
-  limitItems: 4,
+  colectionRef: query(collection(db, 'videos'), orderBy('date', 'desc'), limit(8)),
+  limitItems: 6,
 };
 
 let videoCode = ref("");
