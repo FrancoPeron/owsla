@@ -139,6 +139,7 @@ export default {
     position: relative;
     overflow-y: hidden;
     scroll-snap-type: x mandatory;
+    scrollbar-width: none;
 
     @include respond(sm) {
       overflow-x: auto;

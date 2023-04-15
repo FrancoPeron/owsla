@@ -18,6 +18,13 @@
   background: #555; }
 
 
+:root{
+  scrollbar-color: #000 #f1f1f1;
+  scrollbar-width: thin !important;
+}
+
+
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
