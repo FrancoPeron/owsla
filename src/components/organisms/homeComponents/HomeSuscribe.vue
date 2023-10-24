@@ -20,7 +20,7 @@
   margin: 2rem 0 10rem;
 
   .suscribe__title {
-    @include font(fh1, w500, MonumentE, lsWidest);
+    @include font(fh1, w500, MonumentE, lsWider);
     color: $cBlack;
 
     margin-bottom: 1rem;
@@ -29,10 +29,10 @@
   }
 
   .suscribe__subtitle {
-    @include font(fhl1, w500);
-    color: $cBlack;
+    margin: 0 32px 3rem 32px;
 
-    margin-bottom: 3rem;
+    @include font(ft2, w500, MontS, lsWider);
+    color: $cBlack;
     max-width: 800px;
     text-align: center;
   }
@@ -51,6 +51,7 @@
     width: 100%;
     border-left: solid 2px black;
     border-top: 0px;
+    height: 52px;
     
     @include respond(sm) {
       width: fit-content;

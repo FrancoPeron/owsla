@@ -89,8 +89,10 @@ export default {
             <video class="slider__video" :src="val.video" muted loop autoplay></video>
             <div class="slider__box-info">
               <p class="slider__category">{{ val.category }}</p>
-              <h2 class="slider__title">{{ val.title }}<br /></h2>
-              <p class="slider__subtitle">{{ val.subtitle }}</p>
+              <div>
+                <h2 class="slider__title">{{ val.title }}<br /></h2>
+                <p class="slider__subtitle">{{ val.subtitle }}</p>
+              </div>
               <a class="slider__btn" :href="val.link" target="_blank">Watch Now</a>
             </div>
           </div>
@@ -98,7 +100,8 @@ export default {
       </div>
 
       <div class="slider__nav">
-        <label class="slider__link" v-for="(val, index) in videoList.length" :key="index" :id="'linkVideo' + (index + 1)" :for="'radio' + (index + 1)" @click="btnVideoActive($event, index + 1)"></label>
+        <label class="slider__link" v-for="(val, index) in videoList.length" :key="index" :id="'linkVideo' + (index + 1)"
+          :for="'radio' + (index + 1)" @click="btnVideoActive($event, index + 1)"></label>
       </div>
     </div>
   </section>
@@ -115,6 +118,7 @@ export default {
 
 .slider {
   @include flex(column);
+
   .slider__videos {
     position: relative;
     /* animation: slide 20s ease infinite; */
@@ -129,7 +133,7 @@ export default {
 
       .slider__video {
         width: 100%;
-        height: 570px;
+        height: 540px;
         // aspect-ratio: 16/8;
         object-fit: cover;
         background-color: $cBlack;
@@ -151,10 +155,12 @@ export default {
         width: 100%;
         padding: 2rem 3rem;
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0) 100%);
+
         .slider__category {
           grid-area: category;
 
           @include font(fhl2, w500, MonumentE, lsWidest);
+          font-size: 18px;
           text-transform: uppercase;
           font-weight: 500;
           color: $cWhite;
@@ -165,17 +171,21 @@ export default {
             margin-right: 1rem;
           }
         }
+
         .slider__title {
           grid-area: title;
 
           @include font(fh1, w700, MonumentE);
+          font-size: 42px;
           text-transform: uppercase;
           color: $cWhite;
         }
+
         .slider__subtitle {
           grid-area: subtitle;
 
           @include font(ft1, w700, MonumentE, lsWidest);
+          font-size: 28px;
           color: transparent;
           -webkit-text-stroke: 1.2px $cWhite;
         }
@@ -203,6 +213,7 @@ export default {
       top: 0;
       margin-top: auto;
       margin-bottom: auto;
+
       .slider__category {
         &::before {
           color: #f0f;
@@ -210,9 +221,9 @@ export default {
       }
     }
 
-    #radio1:checked ~ #video1,
-    #radio2:checked ~ #video2,
-    #radio3:checked ~ #video3 {
+    #radio1:checked~#video1,
+    #radio2:checked~#video2,
+    #radio3:checked~#video3 {
       opacity: 1;
       transition: all ease-in-out 0.5s;
     }
@@ -242,6 +253,7 @@ export default {
 
     .active {
       width: 100%;
+
       @include respond(sm) {
         width: 33.33333333%;
       }
@@ -282,6 +294,7 @@ export default {
     }
   }
 }
+
 /*#t=30*/
 
 @media screen and (max-width: 600px) {
@@ -291,7 +304,11 @@ export default {
       'title'
       'subtitle'
       'btn' !important;
-    gap: 24px;
+    gap: 16px;
+    .slider__category {
+      margin-bottom: 0rem !important;
+  
+    }
   }
-}
-</style>
+
+}</style>

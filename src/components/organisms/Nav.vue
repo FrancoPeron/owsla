@@ -30,9 +30,9 @@ export default {
       <li class="nav__item">
         <a class="nav__link" target="_blank" href="https://owslagoods.netlify.app/">Merch</a>
       </li>
-      <li class="nav__item">
+      <!-- <li class="nav__item">
         <router-link class="nav__link" to="/contact" @click="scrollToTop">Contact</router-link>
-      </li>
+      </li> -->
     </ul>
   </nav>
 </template>
@@ -41,16 +41,12 @@ export default {
 .nav {
   @include flex(row, wrap);
   justify-content: center;
-  padding: 1rem;
-  @include respond(md) {
-    padding: 0;
-  }
 
   .nav__list {
     @include flex(column);
     align-items: center;
     gap: 1.5rem;
-    @include respond(md) {
+    @include respond(sm) {
       flex-direction: row;
     }
 
@@ -58,7 +54,7 @@ export default {
       .nav__link {
         position: relative;
 
-        @include font(fb2, w500, MonumentE, lsWidest);
+        @include font(fb1, w500, MonumentE, lsWidest);
         color: $cWhite;
         -webkit-text-stroke: 0.5px $cWhite;
         text-transform: uppercase;

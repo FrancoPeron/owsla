@@ -108,7 +108,7 @@
 		bN: none,
 	);
 
-  @include font(fb1, w300, MonumentE);
+  @include font(fb2, w300, MonumentE);
   // -webkit-text-stroke: thin;
   letter-spacing: 0.15rem;
   white-space: nowrap;
@@ -116,8 +116,8 @@
   text-align: center;
 
   width: fit-content;
-  height: 52px;
-  padding: 1rem 1.5rem;
+  height: 42px;
+  padding: 4px 1.25rem 0 1.25rem;
 
   cursor: pointer;
   transition: ease-in-out 0.3s;

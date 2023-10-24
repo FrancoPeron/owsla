@@ -103,7 +103,7 @@ export default {
     grid-column: span 6;
     margin: 32px 0 24px 0;
 
-    @include font(fh1, w500, MonumentE, lsWidest);
+    @include font(fh1, w500, MonumentE, lsWider);
     text-align: center;
     line-height: 100%;
   }
@@ -112,7 +112,7 @@ export default {
     grid-column: span 6;
     justify-self: center;
     max-width: 850px;
-    margin-bottom: 32px;
+    margin: 0 32px 32px 32px;
 
     @include font(ft2, w500, MontS, lsWider);
     text-align: center;
@@ -130,9 +130,10 @@ export default {
     height: fit-content;
     width: 100%;
     margin-top: 8rem;
-    padding: $padding-radio;
     background-color: $cWhite;
-    margin-top: 114px;
+    margin-top: 156px;
+
+    box-shadow: 0 0 0 42px #ffffff;
 
     @include respond(sm) {
       @include flex(row, wrap);

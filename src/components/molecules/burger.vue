@@ -10,7 +10,7 @@ watch(() => route.name, () => {
 )
 
 window.addEventListener('resize', (e) => {
-  if (window.innerWidth > 1024) {
+  if (window.innerWidth > 768) {
     burgerClose()
   }
 })
@@ -61,11 +61,11 @@ function burgerClose() {
   flex-direction: row-reverse;
   align-items: center;
   height: 28px;
-  width: 28px;
-  margin: auto;
+  min-width: 28px;
+  // margin: auto;
   cursor: pointer;
 
-  @include respond(md) {
+  @include respond(sm) {
     display: none;
   }
 
@@ -89,16 +89,16 @@ function burgerClose() {
     width: 100%;
 
     &:before {
-      top: -8px;
-      right: 4px;
-      width: 20px;
+      top: -9px;
+      right: 0px;
+      width: 19px;
       transition: all 0.5s;
     }
 
     &:after {
-      top: 8px;
-      right: 2px;
-      width: 24px;
+      top: 9px;
+      right: 0px;
+      width: 21px;
       transition: all 0.5s;
     }
   }
@@ -127,7 +127,7 @@ function burgerClose() {
 .burger-box {
   flex: 1;
   position: absolute;
-  top: 60px;
+  top: 0px;
   right: 0;
 
   width: 100%;
@@ -141,7 +141,7 @@ function burgerClose() {
   background: linear-gradient(0, #000000 0%, #000000d1 100%);
   backdrop-filter: blur(5px);
 
-  @include respond(md) {
+  @include respond(sm) {
     position: relative;
     top: 0;
 

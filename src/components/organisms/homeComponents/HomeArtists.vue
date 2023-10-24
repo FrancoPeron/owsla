@@ -90,7 +90,7 @@ export default {
   .our-artists__title {
     grid-area: title;
 
-    @include font(ft1, w500, MonumentE, lsWidest);
+    @include font(fh2, w500, MonumentE, lsWidest);
     text-align: center;
 
     @include respond(sm) {
@@ -117,10 +117,10 @@ export default {
       justify-self: end;
       z-index: 1;
       background: transparent;
-      padding: 0.4rem 0.7rem 0.7rem 0.7rem;
-      font-size: 1.6rem;
+      padding: 0.5rem 0.8rem 0.7rem 0.6rem;
+      font-size: 1.8rem;
       line-height: 1rem;
-      border: solid 2px black;
+      border: solid 3px black;
       color: black;
     }
 
@@ -128,6 +128,7 @@ export default {
       height: 3px !important;
       width: 100%;
       background: $cBlack;
+      border: transparent;
     }
   }
   .our-artists__list {
@@ -169,7 +170,7 @@ export default {
       }
 
       .artist__name {
-        @include font(fb2, w500, MonumentE);
+        @include font(fb1, w500, MonumentE);
         text-transform: uppercase;
         color: $cBlack;
         padding-top: 0.75rem;
@@ -185,7 +186,7 @@ export default {
   background-position: center;
   z-index: -1;
   background-repeat: no-repeat;
-  width: 45%;
+  width: 62%;
   height: 100%;
 }
 </style>
