@@ -78,6 +78,8 @@ export default {
       background-color: white;
       @include respond(sm) {
         width: 20%;
+        // min-width: 200px;
+        max-width: 200px;
       }
     }
     .header__logo-line:first-child{
