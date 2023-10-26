@@ -131,7 +131,7 @@ export default {
   }
 
   .footer__bg-home {
-    height: 800px;
+    height: 550px;
     background-image: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0.99) 3%, rgba(255, 255, 255, 0.98) 5%, rgba(255, 255, 255, 0.96) 8%, rgba(255, 255, 255, 0.940505) 12%, rgba(255, 255, 255, 0.889857) 16%, rgba(255, 255, 255, 0) 36%, rgba(255, 255, 255, 0) 100%), url(https://firebasestorage.googleapis.com/v0/b/owsla-8020a.appspot.com/o/background%2Ffooter-img.webp?alt=media&token=f549d424-4c67-4ef1-8456-87ade34b24df);
   }
 

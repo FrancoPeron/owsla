@@ -10,7 +10,7 @@ import MusicItem from '@/components/molecules/MusicItem.vue'
 
 /* || Data || ----------------------------------------*/
 const dataInfo = {
-  colectionRef: query(collection(db, 'music'), orderBy('date', 'desc'), limit(13)),
+  colectionRef: query(collection(db, 'music'), orderBy('date', 'desc'), limit(12)),
   limitItems: 16,
 };
 
@@ -27,7 +27,7 @@ const dataInfo = {
           </ItemsList>
         </template>
         <template #fallback>
-          <span v-for="(val, index) in 13" :key="index" class="sk-release skeleton"></span>
+          <span v-for="(val, index) in 12" :key="index" class="sk-release skeleton"></span>
         </template>
       </Suspense>
     </section>
