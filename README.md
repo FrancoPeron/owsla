@@ -12,7 +12,7 @@
 
 ## About The Project
 
-Este projecto nacio de mi fanatismo por OWSLA (sello discografico) y la nesesidad de un projecto frontend para un curso de coderhouse. Incialmente se iso en vanilla Javasrcipt pero lo mude a vue para practicar dicho framwork
+Este projecto nacio de mi fanatismo por OWSLA (sello discografico) y la nesesidad de un proyecto frontend para un curso de coderhouse. Incialmente se iso en vanilla Javasrcipt pero lo mude a vue para practicar dicho framwork
 
 La pagina oficial de OWSLA es: [www.owsla.com](www.owsla.com)
 
